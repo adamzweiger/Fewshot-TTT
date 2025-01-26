@@ -1,0 +1,366 @@
+{
+  "per_task_results": [
+    {
+      "task": "boolean_expressions",
+      "FSL_10_accuracy": 85.66666,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 80.08332,
+      "FSL_10_maj_accuracy": 85.75,
+      "ZSL_accuracy": 71.04,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 71.33334,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 69.66668,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 77.33334,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 80.41668,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "causal_judgement",
+      "FSL_10_accuracy": 58.41808,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 57.51412,
+      "FSL_10_maj_accuracy": 58.305080000000004,
+      "ZSL_accuracy": 53.4759,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 55.02822,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 53.7853,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 59.32202,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 56.72316,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "date_understanding",
+      "FSL_10_accuracy": 51.25,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 61.58334,
+      "FSL_10_maj_accuracy": 50.66666,
+      "ZSL_accuracy": 50.8,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 57.33334,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 58.74998,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.83332,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 62.74998,
+      "random_guessing_accuracy": 16.6667
+    },
+    {
+      "task": "disambiguation_qa",
+      "FSL_10_accuracy": 63.66668,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 62.99998,
+      "FSL_10_maj_accuracy": 63.0,
+      "ZSL_accuracy": 29.2,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 45.83332,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 49.25002,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 64.16666000000001,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 62.5,
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "dyck_languages",
+      "FSL_10_accuracy": 18.5,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 68.83334,
+      "FSL_10_maj_accuracy": 20.49998,
+      "ZSL_accuracy": 3.6,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 71.58334,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 2.66666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 67.25002,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 70.58332,
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "formal_fallacies",
+      "FSL_10_accuracy": 56.58334,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 57.58334,
+      "FSL_10_maj_accuracy": 56.16666,
+      "ZSL_accuracy": 0.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 56.16668,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 54.08334,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 55.33332,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 57.08334,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "geometric_shapes",
+      "FSL_10_accuracy": 44.91666,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.74998,
+      "FSL_10_maj_accuracy": 47.58334,
+      "ZSL_accuracy": 14.16,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 50.66668,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 40.0,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 52.66668,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 54.75002,
+      "random_guessing_accuracy": 9.0909
+    },
+    {
+      "task": "hyperbaton",
+      "FSL_10_accuracy": 63.83334,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 78.66666,
+      "FSL_10_maj_accuracy": 66.66668,
+      "ZSL_accuracy": 58.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 66.0,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 84.83334,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.75,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 77.91668,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "logical_deduction_five_objects",
+      "FSL_10_accuracy": 43.33332,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 41.58332,
+      "FSL_10_maj_accuracy": 44.66666,
+      "ZSL_accuracy": 41.6,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 37.75002,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 38.91668,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 41.33334,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 42.16666,
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "logical_deduction_seven_objects",
+      "FSL_10_accuracy": 49.24998,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 48.83332,
+      "FSL_10_maj_accuracy": 49.33334,
+      "ZSL_accuracy": 40.4,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 51.16666,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 46.5,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 47.0,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 50.16666,
+      "random_guessing_accuracy": 14.2857
+    },
+    {
+      "task": "logical_deduction_three_objects",
+      "FSL_10_accuracy": 68.5,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 69.83332,
+      "FSL_10_maj_accuracy": 68.75,
+      "ZSL_accuracy": 51.6,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 60.25,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 62.49998,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 66.75,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 70.16668,
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "movie_recommendation",
+      "FSL_10_accuracy": 69.49998,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 86.66666000000001,
+      "FSL_10_maj_accuracy": 69.58334,
+      "ZSL_accuracy": 53.2,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 88.74998,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 86.41666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 92.33332,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 86.58332,
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "multistep_arithmetic_two",
+      "FSL_10_accuracy": 2.75,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 2.5,
+      "FSL_10_maj_accuracy": 2.08334,
+      "ZSL_accuracy": 0.8,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 2.66668,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 1.08336,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 2.00002,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 2.5833399999999997,
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "navigate",
+      "FSL_10_accuracy": 63.83334,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 62.33334,
+      "FSL_10_maj_accuracy": 64.33333999999999,
+      "ZSL_accuracy": 43.84,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 61.91666,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 54.25,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.16666,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 62.25002,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "object_counting",
+      "FSL_10_accuracy": 50.75,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.74998,
+      "FSL_10_maj_accuracy": 51.24998,
+      "ZSL_accuracy": 44.4,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 41.91668,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 56.41666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.41666,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 56.91668,
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "penguins_in_a_table",
+      "FSL_10_accuracy": 47.0588,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 43.52942,
+      "FSL_10_maj_accuracy": 47.352920000000005,
+      "ZSL_accuracy": 47.2603,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 46.32354,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 44.41176,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 46.61764,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 42.05882,
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "reasoning_about_colored_objects",
+      "FSL_10_accuracy": 59.0,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 57.16666,
+      "FSL_10_maj_accuracy": 60.66666,
+      "ZSL_accuracy": 59.2,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 57.83332,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 54.66668,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 58.08334,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 58.75002,
+      "random_guessing_accuracy": 5.5556
+    },
+    {
+      "task": "ruin_names",
+      "FSL_10_accuracy": 60.5,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 81.91666,
+      "FSL_10_maj_accuracy": 62.33332,
+      "ZSL_accuracy": 53.6,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 85.75,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 81.66666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 84.16668,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 82.83334,
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "salient_translation_error_detection",
+      "FSL_10_accuracy": 48.08334,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 47.25,
+      "FSL_10_maj_accuracy": 50.33332,
+      "ZSL_accuracy": 42.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 38.66666,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 41.0,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 44.91666,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 47.91666,
+      "random_guessing_accuracy": 16.6667
+    },
+    {
+      "task": "snarks",
+      "FSL_10_accuracy": 70.23808,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 77.61902,
+      "FSL_10_maj_accuracy": 69.40476,
+      "ZSL_accuracy": 60.6742,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 72.14286,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 63.69048,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 66.78572,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 77.61904,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "sports_understanding",
+      "FSL_10_accuracy": 75.58332,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 75.91666,
+      "FSL_10_maj_accuracy": 75.25002,
+      "ZSL_accuracy": 76.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 69.58334,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 69.5,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 76.91664,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 76.58334,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "temporal_sequences",
+      "FSL_10_accuracy": 36.99998,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 99.33332,
+      "FSL_10_maj_accuracy": 37.00002,
+      "ZSL_accuracy": 93.2,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 99.66666,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 99.91666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 99.58332,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 99.5,
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "tracking_shuffled_objects_five_objects",
+      "FSL_10_accuracy": 20.08336,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 23.75,
+      "FSL_10_maj_accuracy": 20.74998,
+      "ZSL_accuracy": 18.72,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 21.16664,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 23.25,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 19.91666,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 24.0,
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "tracking_shuffled_objects_seven_objects",
+      "FSL_10_accuracy": 17.0,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 22.41666,
+      "FSL_10_maj_accuracy": 16.41668,
+      "ZSL_accuracy": 16.8,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 18.75,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 20.16668,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 15.83332,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 20.99998,
+      "random_guessing_accuracy": 14.2857
+    },
+    {
+      "task": "tracking_shuffled_objects_three_objects",
+      "FSL_10_accuracy": 33.00002,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 35.25,
+      "FSL_10_maj_accuracy": 31.66666,
+      "ZSL_accuracy": 30.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 32.83332,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 32.83334,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 32.08334,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 36.08334,
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "web_of_lies",
+      "FSL_10_accuracy": 49.5,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 50.50002,
+      "FSL_10_maj_accuracy": 51.49998,
+      "ZSL_accuracy": 0.0,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 51.58334,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 50.16666,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 49.25002,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 50.66666,
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "word_sorting",
+      "FSL_10_accuracy": 55.66666,
+      "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 56.41668,
+      "FSL_10_maj_accuracy": 57.08332,
+      "ZSL_accuracy": 50.88,
+      "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": 56.49998,
+      "FT_10_5_4_1e-4_64_64_0.05_accuracy": 49.08334,
+      "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.41666,
+      "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": 56.41666,
+      "random_guessing_accuracy": 0
+    }
+  ],
+  "aggregated_statistics": {
+    "FSL_10_accuracy": {
+      "average": 50.49870148148148,
+      "median": 51.25
+    },
+    "ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": {
+      "average": 57.76218962962963,
+      "median": 57.51412
+    },
+    "FSL_10_maj_accuracy": {
+      "average": 51.051705185185185,
+      "median": 51.49998
+    },
+    "ZSL_accuracy": {
+      "average": 40.90557037037037,
+      "median": 44.4
+    },
+    "ICFT_ex_trainLast_10_masked_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_accuracy": {
+      "average": 54.413380000000004,
+      "median": 56.16668
+    },
+    "FT_10_5_4_1e-4_64_64_0.05_accuracy": {
+      "average": 51.46188592592593,
+      "median": 53.7853
+    },
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": {
+      "average": 55.93427259259259,
+      "median": 58.08334
+    },
+    "ICFT_maj_10_masked_inputs_text_completion_dataset_40_True_True_5_False_5_1_1e-4_64_64_accuracy": {
+      "average": 58.03645925925926,
+      "median": 57.08334
+    },
+    "random_guessing_accuracy": {
+      "average": 26.35374814814815,
+      "median": 25.0
+    }
+  }
+}

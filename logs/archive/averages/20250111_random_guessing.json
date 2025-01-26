@@ -1,0 +1,110 @@
+[
+    {
+      "task": "boolean_expressions",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "causal_judgement",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "date_understanding",
+      "random_guessing_accuracy": 16.6667
+    },
+    {
+      "task": "disambiguation_qa",
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "dyck_languages",
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "formal_fallacies",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "geometric_shapes",
+      "random_guessing_accuracy": 9.0909
+    },
+    {
+      "task": "hyperbaton",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "logical_deduction_five_objects",
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "logical_deduction_seven_objects",
+      "random_guessing_accuracy": 14.2857
+    },
+    {
+      "task": "logical_deduction_three_objects",
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "movie_recommendation",
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "multistep_arithmetic_two",
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "navigate",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "object_counting",
+      "random_guessing_accuracy": 0
+    },
+    {
+      "task": "penguins_in_a_table",
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "reasoning_about_colored_objects",
+      "random_guessing_accuracy": 5.5556
+    },
+    {
+      "task": "ruin_names",
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "salient_translation_error_detection",
+      "random_guessing_accuracy": 16.6667
+    },
+    {
+      "task": "snarks",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "sports_understanding",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "temporal_sequences",
+      "random_guessing_accuracy": 25.0
+    },
+    {
+      "task": "tracking_shuffled_objects_five_objects",
+      "random_guessing_accuracy": 20.0
+    },
+    {
+      "task": "tracking_shuffled_objects_seven_objects",
+      "random_guessing_accuracy": 14.2857
+    },
+    {
+      "task": "tracking_shuffled_objects_three_objects",
+      "random_guessing_accuracy": 33.3333
+    },
+    {
+      "task": "web_of_lies",
+      "random_guessing_accuracy": 50.0
+    },
+    {
+      "task": "word_sorting",
+      "random_guessing_accuracy": 0
+    }
+  ]

@@ -1,0 +1,110 @@
+[
+  {
+    "task": "boolean_expressions",
+    "FSL_10_accuracy": 85.66666
+  },
+  {
+    "task": "causal_judgement",
+    "FSL_10_accuracy": 58.41808
+  },
+  {
+    "task": "date_understanding",
+    "FSL_10_accuracy": 51.25
+  },
+  {
+    "task": "disambiguation_qa",
+    "FSL_10_accuracy": 63.66668
+  },
+  {
+    "task": "dyck_languages",
+    "FSL_10_accuracy": 18.5
+  },
+  {
+    "task": "formal_fallacies",
+    "FSL_10_accuracy": 56.58334
+  },
+  {
+    "task": "geometric_shapes",
+    "FSL_10_accuracy": 44.91666
+  },
+  {
+    "task": "hyperbaton",
+    "FSL_10_accuracy": 63.83334
+  },
+  {
+    "task": "logical_deduction_five_objects",
+    "FSL_10_accuracy": 43.33332
+  },
+  {
+    "task": "logical_deduction_seven_objects",
+    "FSL_10_accuracy": 49.24998
+  },
+  {
+    "task": "logical_deduction_three_objects",
+    "FSL_10_accuracy": 68.5
+  },
+  {
+    "task": "movie_recommendation",
+    "FSL_10_accuracy": 69.49998
+  },
+  {
+    "task": "multistep_arithmetic_two",
+    "FSL_10_accuracy": 2.75
+  },
+  {
+    "task": "navigate",
+    "FSL_10_accuracy": 63.83334
+  },
+  {
+    "task": "object_counting",
+    "FSL_10_accuracy": 50.75
+  },
+  {
+    "task": "penguins_in_a_table",
+    "FSL_10_accuracy": 47.0588
+  },
+  {
+    "task": "reasoning_about_colored_objects",
+    "FSL_10_accuracy": 59.0
+  },
+  {
+    "task": "ruin_names",
+    "FSL_10_accuracy": 60.5
+  },
+  {
+    "task": "salient_translation_error_detection",
+    "FSL_10_accuracy": 48.08334
+  },
+  {
+    "task": "snarks",
+    "FSL_10_accuracy": 70.23808
+  },
+  {
+    "task": "sports_understanding",
+    "FSL_10_accuracy": 75.58332
+  },
+  {
+    "task": "temporal_sequences",
+    "FSL_10_accuracy": 36.99998
+  },
+  {
+    "task": "tracking_shuffled_objects_five_objects",
+    "FSL_10_accuracy": 20.08336
+  },
+  {
+    "task": "tracking_shuffled_objects_seven_objects",
+    "FSL_10_accuracy": 17.0
+  },
+  {
+    "task": "tracking_shuffled_objects_three_objects",
+    "FSL_10_accuracy": 33.00002
+  },
+  {
+    "task": "web_of_lies",
+    "FSL_10_accuracy": 49.5
+  },
+  {
+    "task": "word_sorting",
+    "FSL_10_accuracy": 55.66666
+  }
+]

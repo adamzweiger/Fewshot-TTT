@@ -1,0 +1,1263 @@
+INFO 01-21 15:15:48 config.py:478] This model supports multiple tasks: {'classify', 'embed', 'reward', 'score', 'generate'}. Defaulting to 'generate'.
+INFO 01-21 15:15:48 llm_engine.py:249] Initializing an LLM engine (v0.6.5) with config: model='/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=False, use_async_output_proc=True, mm_cache_preprocessor=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"candidate_compile_sizes":[],"compile_sizes":[],"capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+INFO 01-21 15:15:50 selector.py:120] Using Flash Attention backend.
+INFO 01-21 15:15:51 model_runner.py:1092] Starting to load model /data/cl/u/adamz/Models/Llama-3.1-8B-Instruct...
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:50<02:30, 50.30s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [01:37<01:36, 48.42s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [02:24<00:47, 47.60s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [02:35<00:00, 33.42s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [02:35<00:00, 38.93s/it]
+
+INFO 01-21 15:18:27 model_runner.py:1097] Loading model weights took 14.9888 GB
+INFO 01-21 15:18:29 worker.py:241] Memory profiling takes 1.98 seconds
+INFO 01-21 15:18:29 worker.py:241] the current vLLM instance can use total_gpu_memory (44.45GiB) x gpu_memory_utilization (0.90) = 40.00GiB
+INFO 01-21 15:18:29 worker.py:241] model weights take 14.99GiB; non_torch_memory takes 0.07GiB; PyTorch activation peak memory takes 1.23GiB; the rest of the memory reserved for KV Cache is 23.71GiB.
+INFO 01-21 15:18:29 gpu_executor.py:76] # GPU blocks: 12142, # CPU blocks: 2048
+INFO 01-21 15:18:29 gpu_executor.py:80] Maximum concurrency for 8192 tokens per request: 23.71x
+INFO 01-21 15:18:32 model_runner.py:1413] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 01-21 15:18:32 model_runner.py:1417] If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 01-21 15:18:48 model_runner.py:1527] Graph capturing finished in 16 secs, took 0.26 GiB
+INFO 01-21 15:18:48 llm_engine.py:446] init engine (profile, create kv cache, warmup model) took 20.46 seconds
+Evaluating tasks:   0%|          | 0/27 [00:00<?, ?it/s]=== Task: boolean_expressions - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:02<08:15,  2.07s/it, est. speed input: 93.56 toks/s, output: 0.48 toks/s][A
+Processed prompts:  18%|█▊        | 43/240 [00:03<00:11, 17.15it/s, est. speed input: 2681.00 toks/s, output: 13.82 toks/s][A
+Processed prompts:  35%|███▌      | 85/240 [00:04<00:05, 25.92it/s, est. speed input: 3980.75 toks/s, output: 20.52 toks/s][A
+Processed prompts:  53%|█████▎    | 127/240 [00:05<00:03, 31.05it/s, est. speed input: 4761.49 toks/s, output: 24.54 toks/s][A
+Processed prompts:  70%|███████   | 169/240 [00:05<00:01, 37.71it/s, est. speed input: 5537.61 toks/s, output: 28.54 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:05<00:00, 40.29it/s, est. speed input: 7815.87 toks/s, output: 40.29 toks/s]
+Few-shot (k=10) Accuracy: 87.92%
+Evaluation Time: 6.08 seconds
+
+Evaluating tasks:   4%|▎         | 1/27 [00:06<02:38,  6.09s/it]=== Task: causal_judgement - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/177 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   1%|          | 1/177 [00:01<05:46,  1.97s/it, est. speed input: 1226.69 toks/s, output: 0.51 toks/s][A
+Processed prompts:   2%|▏         | 4/177 [00:02<01:50,  1.57it/s, est. speed input: 3409.66 toks/s, output: 1.36 toks/s][A
+Processed prompts:   4%|▍         | 7/177 [00:03<01:19,  2.14it/s, est. speed input: 4445.14 toks/s, output: 1.79 toks/s][A
+Processed prompts:   6%|▌         | 10/177 [00:04<01:07,  2.46it/s, est. speed input: 5066.27 toks/s, output: 2.05 toks/s][A
+Processed prompts:   7%|▋         | 13/177 [00:05<01:00,  2.69it/s, est. speed input: 5501.27 toks/s, output: 2.23 toks/s][A
+Processed prompts:   9%|▉         | 16/177 [00:06<00:56,  2.86it/s, est. speed input: 5826.13 toks/s, output: 2.36 toks/s][A
+Processed prompts:  11%|█         | 19/177 [00:07<00:53,  2.95it/s, est. speed input: 6032.11 toks/s, output: 2.46 toks/s][A
+Processed prompts:  12%|█▏        | 22/177 [00:08<00:51,  3.02it/s, est. speed input: 6219.07 toks/s, output: 2.54 toks/s][A
+Processed prompts:  14%|█▍        | 25/177 [00:09<00:49,  3.06it/s, est. speed input: 6359.61 toks/s, output: 2.60 toks/s][A
+Processed prompts:  16%|█▌        | 28/177 [00:10<00:49,  3.02it/s, est. speed input: 6421.62 toks/s, output: 2.63 toks/s][A
+Processed prompts:  18%|█▊        | 31/177 [00:11<00:48,  3.01it/s, est. speed input: 6493.25 toks/s, output: 2.66 toks/s][A
+Processed prompts:  19%|█▉        | 34/177 [00:12<00:47,  3.02it/s, est. speed input: 6596.21 toks/s, output: 2.69 toks/s][A
+Processed prompts:  21%|██        | 37/177 [00:13<00:46,  3.02it/s, est. speed input: 6671.88 toks/s, output: 2.72 toks/s][A
+Processed prompts:  23%|██▎       | 40/177 [00:14<00:45,  3.02it/s, est. speed input: 6713.98 toks/s, output: 2.74 toks/s][A
+Processed prompts:  24%|██▍       | 43/177 [00:15<00:43,  3.06it/s, est. speed input: 6788.37 toks/s, output: 2.76 toks/s][A
+Processed prompts:  26%|██▌       | 46/177 [00:16<00:42,  3.06it/s, est. speed input: 6842.71 toks/s, output: 2.78 toks/s][A
+Processed prompts:  28%|██▊       | 49/177 [00:17<00:41,  3.08it/s, est. speed input: 6883.83 toks/s, output: 2.80 toks/s][A
+Processed prompts:  29%|██▉       | 52/177 [00:18<00:40,  3.10it/s, est. speed input: 6924.75 toks/s, output: 2.82 toks/s][A
+Processed prompts:  31%|███       | 55/177 [00:19<00:39,  3.08it/s, est. speed input: 6941.18 toks/s, output: 2.83 toks/s][A
+Processed prompts:  33%|███▎      | 58/177 [00:20<00:38,  3.07it/s, est. speed input: 6969.73 toks/s, output: 2.84 toks/s][A
+Processed prompts:  34%|███▍      | 61/177 [00:21<00:38,  3.03it/s, est. speed input: 6984.19 toks/s, output: 2.84 toks/s][A
+Processed prompts:  36%|███▌      | 64/177 [00:22<00:36,  3.07it/s, est. speed input: 7014.02 toks/s, output: 2.86 toks/s][A
+Processed prompts:  38%|███▊      | 67/177 [00:23<00:36,  3.02it/s, est. speed input: 7036.60 toks/s, output: 2.86 toks/s][A
+Processed prompts:  40%|███▉      | 70/177 [00:24<00:35,  2.98it/s, est. speed input: 7045.03 toks/s, output: 2.86 toks/s][A
+Processed prompts:  41%|████      | 73/177 [00:25<00:34,  3.00it/s, est. speed input: 7079.09 toks/s, output: 2.87 toks/s][A
+Processed prompts:  43%|████▎     | 76/177 [00:26<00:34,  2.96it/s, est. speed input: 7094.11 toks/s, output: 2.87 toks/s][A
+Processed prompts:  45%|████▍     | 79/177 [00:27<00:32,  3.02it/s, est. speed input: 7112.47 toks/s, output: 2.88 toks/s][A
+Processed prompts:  46%|████▋     | 82/177 [00:28<00:31,  3.03it/s, est. speed input: 7147.46 toks/s, output: 2.88 toks/s][A
+Processed prompts:  48%|████▊     | 85/177 [00:29<00:30,  3.01it/s, est. speed input: 7148.97 toks/s, output: 2.89 toks/s][A
+Processed prompts:  50%|████▉     | 88/177 [00:30<00:29,  3.01it/s, est. speed input: 7166.03 toks/s, output: 2.89 toks/s][A
+Processed prompts:  51%|█████▏    | 91/177 [00:31<00:28,  3.02it/s, est. speed input: 7173.33 toks/s, output: 2.90 toks/s][A
+Processed prompts:  53%|█████▎    | 94/177 [00:32<00:27,  3.06it/s, est. speed input: 7192.84 toks/s, output: 2.90 toks/s][A
+Processed prompts:  55%|█████▍    | 97/177 [00:33<00:26,  3.04it/s, est. speed input: 7198.14 toks/s, output: 2.91 toks/s][A
+Processed prompts:  56%|█████▋    | 100/177 [00:34<00:25,  3.02it/s, est. speed input: 7195.60 toks/s, output: 2.91 toks/s][A
+Processed prompts:  58%|█████▊    | 103/177 [00:35<00:24,  3.02it/s, est. speed input: 7209.31 toks/s, output: 2.91 toks/s][A
+Processed prompts:  60%|█████▉    | 106/177 [00:36<00:23,  3.06it/s, est. speed input: 7224.56 toks/s, output: 2.92 toks/s][A
+Processed prompts:  62%|██████▏   | 109/177 [00:37<00:22,  3.05it/s, est. speed input: 7231.66 toks/s, output: 2.92 toks/s][A
+Processed prompts:  63%|██████▎   | 112/177 [00:38<00:21,  3.02it/s, est. speed input: 7227.63 toks/s, output: 2.92 toks/s][A
+Processed prompts:  65%|██████▍   | 115/177 [00:39<00:20,  2.99it/s, est. speed input: 7224.03 toks/s, output: 2.92 toks/s][A
+Processed prompts:  67%|██████▋   | 118/177 [00:40<00:19,  2.95it/s, est. speed input: 7228.43 toks/s, output: 2.92 toks/s][A
+Processed prompts:  68%|██████▊   | 121/177 [00:41<00:18,  3.01it/s, est. speed input: 7246.75 toks/s, output: 2.93 toks/s][A
+Processed prompts:  70%|███████   | 124/177 [00:42<00:17,  3.02it/s, est. speed input: 7260.38 toks/s, output: 2.93 toks/s][A
+Processed prompts:  72%|███████▏  | 127/177 [00:43<00:16,  3.01it/s, est. speed input: 7261.38 toks/s, output: 2.93 toks/s][A
+Processed prompts:  73%|███████▎  | 130/177 [00:44<00:15,  2.99it/s, est. speed input: 7259.90 toks/s, output: 2.93 toks/s][A
+Processed prompts:  75%|███████▌  | 133/177 [00:45<00:14,  3.04it/s, est. speed input: 7272.20 toks/s, output: 2.93 toks/s][A
+Processed prompts:  77%|███████▋  | 136/177 [00:46<00:13,  3.07it/s, est. speed input: 7284.07 toks/s, output: 2.94 toks/s][A
+Processed prompts:  79%|███████▊  | 139/177 [00:47<00:12,  3.04it/s, est. speed input: 7281.35 toks/s, output: 2.94 toks/s][A
+Processed prompts:  80%|████████  | 142/177 [00:48<00:11,  3.01it/s, est. speed input: 7279.11 toks/s, output: 2.94 toks/s][A
+Processed prompts:  82%|████████▏ | 145/177 [00:49<00:10,  3.02it/s, est. speed input: 7286.16 toks/s, output: 2.94 toks/s][A
+Processed prompts:  84%|████████▎ | 148/177 [00:50<00:09,  3.05it/s, est. speed input: 7298.10 toks/s, output: 2.95 toks/s][A
+Processed prompts:  85%|████████▌ | 151/177 [00:51<00:08,  3.04it/s, est. speed input: 7298.89 toks/s, output: 2.95 toks/s][A
+Processed prompts:  87%|████████▋ | 154/177 [00:52<00:07,  3.01it/s, est. speed input: 7297.90 toks/s, output: 2.95 toks/s][A
+Processed prompts:  89%|████████▊ | 157/177 [00:53<00:06,  2.99it/s, est. speed input: 7299.82 toks/s, output: 2.95 toks/s][A
+Processed prompts:  90%|█████████ | 160/177 [00:54<00:05,  2.98it/s, est. speed input: 7299.29 toks/s, output: 2.95 toks/s][A
+Processed prompts:  92%|█████████▏| 163/177 [00:55<00:04,  2.97it/s, est. speed input: 7302.30 toks/s, output: 2.95 toks/s][A
+Processed prompts:  94%|█████████▍| 166/177 [00:56<00:03,  2.98it/s, est. speed input: 7307.37 toks/s, output: 2.95 toks/s][A
+Processed prompts:  95%|█████████▌| 169/177 [00:57<00:02,  3.02it/s, est. speed input: 7321.03 toks/s, output: 2.95 toks/s][A
+Processed prompts:  97%|█████████▋| 172/177 [00:58<00:01,  3.02it/s, est. speed input: 7321.70 toks/s, output: 2.95 toks/s][AProcessed prompts: 100%|██████████| 177/177 [00:58<00:00,  3.04it/s, est. speed input: 7525.32 toks/s, output: 3.04 toks/s]
+Few-shot (k=10) Accuracy: 58.76%
+Evaluation Time: 59.16 seconds
+
+Evaluating tasks:   7%|▋         | 2/27 [01:05<15:32, 37.31s/it]=== Task: date_understanding - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:39:47, 25.05s/it, est. speed input: 45.79 toks/s, output: 0.12 toks/s][A
+Processed prompts:  70%|███████   | 168/240 [00:35<00:12,  5.89it/s, est. speed input: 5327.33 toks/s, output: 14.00 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:35<00:00,  6.67it/s, est. speed input: 7610.11 toks/s, output: 20.00 toks/s]
+Few-shot (k=10) Accuracy: 50.83%
+Evaluation Time: 36.48 seconds
+
+Evaluating tasks:  11%|█         | 3/27 [01:41<14:46, 36.93s/it]=== Task: disambiguation_qa - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:40:24, 25.21s/it, est. speed input: 33.48 toks/s, output: 0.12 toks/s][A
+Processed prompts:  94%|█████████▍| 226/240 [00:26<00:01, 11.63it/s, est. speed input: 7103.67 toks/s, output: 25.13 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:26<00:00,  8.90it/s, est. speed input: 7542.68 toks/s, output: 26.69 toks/s]
+Few-shot (k=10) Accuracy: 63.75%
+Evaluation Time: 27.40 seconds
+
+Evaluating tasks:  15%|█▍        | 4/27 [02:09<12:42, 33.17s/it]=== Task: dyck_languages - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:14<56:48, 14.26s/it, est. speed input: 30.43 toks/s, output: 0.21 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:14<00:00, 16.83it/s, est. speed input: 7610.38 toks/s, output: 50.48 toks/s]
+Few-shot (k=10) Accuracy: 12.08%
+Evaluation Time: 14.50 seconds
+
+Evaluating tasks:  19%|█▊        | 5/27 [02:23<09:41, 26.44s/it]=== Task: formal_fallacies - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:01<07:54,  1.99s/it, est. speed input: 691.79 toks/s, output: 0.50 toks/s][A
+Processed prompts:   2%|▎         | 6/240 [00:02<01:34,  2.46it/s, est. speed input: 2827.02 toks/s, output: 2.06 toks/s][A
+Processed prompts:   5%|▌         | 12/240 [00:03<00:57,  3.95it/s, est. speed input: 4292.30 toks/s, output: 3.14 toks/s][A
+Processed prompts:   7%|▋         | 17/240 [00:04<00:49,  4.48it/s, est. speed input: 4923.38 toks/s, output: 3.60 toks/s][A
+Processed prompts:   9%|▉         | 22/240 [00:05<00:45,  4.81it/s, est. speed input: 5347.26 toks/s, output: 3.91 toks/s][A
+Processed prompts:  11%|█▏        | 27/240 [00:06<00:44,  4.75it/s, est. speed input: 5500.90 toks/s, output: 4.02 toks/s][A
+Processed prompts:  13%|█▎        | 32/240 [00:07<00:41,  4.98it/s, est. speed input: 5750.76 toks/s, output: 4.20 toks/s][A
+Processed prompts:  16%|█▌        | 38/240 [00:08<00:39,  5.17it/s, est. speed input: 5975.15 toks/s, output: 4.37 toks/s][A
+Processed prompts:  18%|█▊        | 43/240 [00:09<00:37,  5.27it/s, est. speed input: 6119.91 toks/s, output: 4.48 toks/s][A
+Processed prompts:  20%|██        | 49/240 [00:10<00:33,  5.66it/s, est. speed input: 6365.58 toks/s, output: 4.66 toks/s][A
+Processed prompts:  22%|██▎       | 54/240 [00:11<00:33,  5.59it/s, est. speed input: 6452.23 toks/s, output: 4.72 toks/s][A
+Processed prompts:  25%|██▍       | 59/240 [00:12<00:34,  5.27it/s, est. speed input: 6438.68 toks/s, output: 4.71 toks/s][A
+Processed prompts:  27%|██▋       | 64/240 [00:13<00:34,  5.06it/s, est. speed input: 6436.64 toks/s, output: 4.71 toks/s][A
+Processed prompts:  29%|██▉       | 70/240 [00:14<00:30,  5.49it/s, est. speed input: 6597.92 toks/s, output: 4.82 toks/s][A
+Processed prompts:  32%|███▏      | 76/240 [00:15<00:28,  5.80it/s, est. speed input: 6738.24 toks/s, output: 4.93 toks/s][A
+Processed prompts:  34%|███▍      | 81/240 [00:16<00:29,  5.42it/s, est. speed input: 6712.16 toks/s, output: 4.91 toks/s][A
+Processed prompts:  36%|███▌      | 86/240 [00:17<00:29,  5.17it/s, est. speed input: 6691.13 toks/s, output: 4.89 toks/s][A
+Processed prompts:  38%|███▊      | 92/240 [00:18<00:26,  5.56it/s, est. speed input: 6803.83 toks/s, output: 4.97 toks/s][A
+Processed prompts:  41%|████      | 98/240 [00:19<00:25,  5.55it/s, est. speed input: 6842.28 toks/s, output: 5.01 toks/s][A
+Processed prompts:  43%|████▎     | 103/240 [00:20<00:24,  5.54it/s, est. speed input: 6874.94 toks/s, output: 5.03 toks/s][A
+Processed prompts:  45%|████▌     | 109/240 [00:21<00:23,  5.54it/s, est. speed input: 6911.10 toks/s, output: 5.05 toks/s][A
+Processed prompts:  48%|████▊     | 114/240 [00:22<00:22,  5.53it/s, est. speed input: 6934.16 toks/s, output: 5.07 toks/s][A
+Processed prompts:  50%|█████     | 120/240 [00:23<00:21,  5.53it/s, est. speed input: 6961.02 toks/s, output: 5.09 toks/s][A
+Processed prompts:  52%|█████▏    | 125/240 [00:24<00:21,  5.25it/s, est. speed input: 6935.16 toks/s, output: 5.07 toks/s][A
+Processed prompts:  55%|█████▍    | 131/240 [00:25<00:19,  5.62it/s, est. speed input: 7007.44 toks/s, output: 5.13 toks/s][A
+Processed prompts:  57%|█████▋    | 137/240 [00:26<00:18,  5.59it/s, est. speed input: 7027.41 toks/s, output: 5.14 toks/s][A
+Processed prompts:  59%|█████▉    | 142/240 [00:27<00:17,  5.55it/s, est. speed input: 7041.81 toks/s, output: 5.15 toks/s][A
+Processed prompts:  62%|██████▏   | 148/240 [00:28<00:15,  5.82it/s, est. speed input: 7100.86 toks/s, output: 5.20 toks/s][A
+Processed prompts:  64%|██████▍   | 153/240 [00:29<00:15,  5.73it/s, est. speed input: 7117.29 toks/s, output: 5.21 toks/s][A
+Processed prompts:  66%|██████▌   | 158/240 [00:30<00:14,  5.66it/s, est. speed input: 7130.99 toks/s, output: 5.22 toks/s][A
+Processed prompts:  68%|██████▊   | 163/240 [00:31<00:13,  5.61it/s, est. speed input: 7142.09 toks/s, output: 5.22 toks/s][A
+Processed prompts:  70%|███████   | 168/240 [00:32<00:12,  5.55it/s, est. speed input: 7150.98 toks/s, output: 5.23 toks/s][A
+Processed prompts:  72%|███████▏  | 173/240 [00:33<00:12,  5.53it/s, est. speed input: 7162.98 toks/s, output: 5.24 toks/s][A
+Processed prompts:  74%|███████▍  | 178/240 [00:33<00:11,  5.49it/s, est. speed input: 7171.48 toks/s, output: 5.24 toks/s][A
+Processed prompts:  76%|███████▋  | 183/240 [00:35<00:10,  5.20it/s, est. speed input: 7146.20 toks/s, output: 5.22 toks/s][A
+Processed prompts:  78%|███████▊  | 188/240 [00:35<00:09,  5.28it/s, est. speed input: 7156.47 toks/s, output: 5.23 toks/s][A
+Processed prompts:  81%|████████  | 194/240 [00:36<00:08,  5.66it/s, est. speed input: 7203.88 toks/s, output: 5.26 toks/s][A
+Processed prompts:  83%|████████▎ | 199/240 [00:37<00:07,  5.61it/s, est. speed input: 7211.29 toks/s, output: 5.27 toks/s][A
+Processed prompts:  85%|████████▌ | 204/240 [00:38<00:06,  5.58it/s, est. speed input: 7220.64 toks/s, output: 5.27 toks/s][A
+Processed prompts:  87%|████████▋ | 209/240 [00:39<00:05,  5.55it/s, est. speed input: 7227.97 toks/s, output: 5.28 toks/s][A
+Processed prompts:  89%|████████▉ | 214/240 [00:40<00:04,  5.53it/s, est. speed input: 7234.88 toks/s, output: 5.28 toks/s][A
+Processed prompts:  91%|█████████▏| 219/240 [00:41<00:03,  5.50it/s, est. speed input: 7238.56 toks/s, output: 5.28 toks/s][A
+Processed prompts:  93%|█████████▎| 224/240 [00:42<00:03,  5.20it/s, est. speed input: 7215.50 toks/s, output: 5.27 toks/s][A
+Processed prompts:  95%|█████████▌| 229/240 [00:43<00:02,  5.28it/s, est. speed input: 7223.68 toks/s, output: 5.27 toks/s][A
+Processed prompts:  98%|█████████▊| 235/240 [00:43<00:00,  7.32it/s, est. speed input: 7377.46 toks/s, output: 5.39 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:43<00:00,  5.50it/s, est. speed input: 7530.60 toks/s, output: 5.50 toks/s]
+Few-shot (k=10) Accuracy: 55.42%
+Evaluation Time: 44.32 seconds
+
+Evaluating tasks:  22%|██▏       | 6/27 [03:07<11:22, 32.52s/it]=== Task: geometric_shapes - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:41:39, 25.52s/it, est. speed input: 52.27 toks/s, output: 0.12 toks/s][A
+Processed prompts:  59%|█████▉    | 142/240 [00:43<00:24,  3.97it/s, est. speed input: 4431.77 toks/s, output: 9.83 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:43<00:00,  5.54it/s, est. speed input: 7485.27 toks/s, output: 16.61 toks/s]
+Few-shot (k=10) Accuracy: 46.67%
+Evaluation Time: 43.86 seconds
+
+Evaluating tasks:  26%|██▌       | 7/27 [03:51<12:04, 36.23s/it]=== Task: hyperbaton - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:13<51:58, 13.05s/it, est. speed input: 31.34 toks/s, output: 0.23 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:13<00:00, 18.39it/s, est. speed input: 7457.54 toks/s, output: 55.16 toks/s]
+Few-shot (k=10) Accuracy: 60.00%
+Evaluation Time: 13.28 seconds
+
+Evaluating tasks:  30%|██▉       | 8/27 [04:05<09:09, 28.92s/it]=== Task: logical_deduction_five_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:40:38, 25.27s/it, est. speed input: 62.73 toks/s, output: 0.12 toks/s][A
+Processed prompts:  50%|█████     | 121/240 [00:50<00:42,  2.80it/s, est. speed input: 3788.28 toks/s, output: 7.17 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:50<00:00,  4.74it/s, est. speed input: 7515.99 toks/s, output: 14.22 toks/s]
+Few-shot (k=10) Accuracy: 43.33%
+Evaluation Time: 51.36 seconds
+
+Evaluating tasks:  33%|███▎      | 9/27 [04:56<10:46, 35.94s/it]=== Task: logical_deduction_seven_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:26<1:44:00, 26.11s/it, est. speed input: 87.05 toks/s, output: 0.11 toks/s][A
+Processed prompts:  36%|███▌      | 86/240 [00:52<01:19,  1.93it/s, est. speed input: 3697.75 toks/s, output: 4.94 toks/s][A
+Processed prompts:  71%|███████▏  | 171/240 [01:13<00:25,  2.75it/s, est. speed input: 5195.10 toks/s, output: 6.95 toks/s][AProcessed prompts: 100%|██████████| 240/240 [01:13<00:00,  3.25it/s, est. speed input: 7297.18 toks/s, output: 9.75 toks/s]
+Few-shot (k=10) Accuracy: 49.58%
+Evaluation Time: 74.82 seconds
+
+Evaluating tasks:  37%|███▋      | 10/27 [06:11<13:35, 47.94s/it]=== Task: logical_deduction_three_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:41:46, 25.55s/it, est. speed input: 45.68 toks/s, output: 0.12 toks/s][A
+Processed prompts:  69%|██████▉   | 165/240 [00:37<00:13,  5.54it/s, est. speed input: 5125.10 toks/s, output: 13.24 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:37<00:00,  6.42it/s, est. speed input: 7451.00 toks/s, output: 19.25 toks/s]
+Few-shot (k=10) Accuracy: 71.25%
+Evaluation Time: 37.95 seconds
+
+Evaluating tasks:  41%|████      | 11/27 [06:49<11:58, 44.89s/it]=== Task: movie_recommendation - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:22<1:28:25, 22.20s/it, est. speed input: 31.62 toks/s, output: 0.14 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:22<00:00, 10.81it/s, est. speed input: 7552.26 toks/s, output: 32.43 toks/s]
+Few-shot (k=10) Accuracy: 70.83%
+Evaluation Time: 22.54 seconds
+
+Evaluating tasks:  44%|████▍     | 12/27 [07:11<09:31, 38.09s/it]=== Task: multistep_arithmetic_two - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:12<47:48, 12.00s/it, est. speed input: 31.92 toks/s, output: 0.25 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:12<00:00, 19.99it/s, est. speed input: 7648.37 toks/s, output: 59.98 toks/s]
+Few-shot (k=10) Accuracy: 2.50%
+Evaluation Time: 12.18 seconds
+
+Evaluating tasks:  48%|████▊     | 13/27 [07:23<07:03, 30.24s/it]=== Task: navigate - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:02<08:05,  2.03s/it, est. speed input: 292.16 toks/s, output: 0.49 toks/s][A
+Processed prompts:   6%|▌         | 14/240 [00:03<00:40,  5.63it/s, est. speed input: 2754.03 toks/s, output: 4.60 toks/s][A
+Processed prompts:  11%|█▏        | 27/240 [00:04<00:25,  8.30it/s, est. speed input: 4005.05 toks/s, output: 6.65 toks/s][A
+Processed prompts:  17%|█▋        | 40/240 [00:05<00:20,  9.88it/s, est. speed input: 4736.31 toks/s, output: 7.89 toks/s][A
+Processed prompts:  22%|██▏       | 53/240 [00:06<00:17, 10.87it/s, est. speed input: 5235.36 toks/s, output: 8.71 toks/s][A
+Processed prompts:  28%|██▊       | 66/240 [00:07<00:15, 11.50it/s, est. speed input: 5589.33 toks/s, output: 9.30 toks/s][A
+Processed prompts:  33%|███▎      | 79/240 [00:08<00:13, 11.92it/s, est. speed input: 5849.47 toks/s, output: 9.74 toks/s][A
+Processed prompts:  38%|███▊      | 92/240 [00:09<00:12, 12.18it/s, est. speed input: 6050.15 toks/s, output: 10.08 toks/s][A
+Processed prompts:  44%|████▍     | 105/240 [00:10<00:10, 12.39it/s, est. speed input: 6217.24 toks/s, output: 10.36 toks/s][A
+Processed prompts:  49%|████▉     | 118/240 [00:11<00:09, 12.51it/s, est. speed input: 6349.99 toks/s, output: 10.58 toks/s][A
+Processed prompts:  55%|█████▍    | 131/240 [00:12<00:08, 12.59it/s, est. speed input: 6454.57 toks/s, output: 10.76 toks/s][A
+Processed prompts:  60%|██████    | 144/240 [00:13<00:07, 12.64it/s, est. speed input: 6548.85 toks/s, output: 10.92 toks/s][A
+Processed prompts:  65%|██████▌   | 157/240 [00:14<00:06, 12.68it/s, est. speed input: 6629.21 toks/s, output: 11.05 toks/s][A
+Processed prompts:  71%|███████   | 170/240 [00:15<00:05, 12.73it/s, est. speed input: 6705.28 toks/s, output: 11.17 toks/s][A
+Processed prompts:  76%|███████▋  | 183/240 [00:16<00:04, 12.77it/s, est. speed input: 6768.66 toks/s, output: 11.27 toks/s][A
+Processed prompts:  82%|████████▏ | 196/240 [00:17<00:03, 12.79it/s, est. speed input: 6824.17 toks/s, output: 11.37 toks/s][A
+Processed prompts:  87%|████████▋ | 209/240 [00:18<00:02, 12.82it/s, est. speed input: 6870.72 toks/s, output: 11.45 toks/s][A
+Processed prompts:  92%|█████████▎| 222/240 [00:18<00:01, 15.14it/s, est. speed input: 7104.56 toks/s, output: 11.84 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:18<00:00, 12.77it/s, est. speed input: 7662.32 toks/s, output: 12.77 toks/s]
+Few-shot (k=10) Accuracy: 63.75%
+Evaluation Time: 19.09 seconds
+
+Evaluating tasks:  52%|█████▏    | 14/27 [07:43<05:49, 26.88s/it]=== Task: object_counting - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:14<57:13, 14.36s/it, est. speed input: 30.42 toks/s, output: 0.14 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:14<00:00, 16.70it/s, est. speed input: 7525.40 toks/s, output: 33.41 toks/s]
+Few-shot (k=10) Accuracy: 56.25%
+Evaluation Time: 14.60 seconds
+
+Evaluating tasks:  56%|█████▌    | 15/27 [07:57<04:38, 23.18s/it]=== Task: penguins_in_a_table - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/136 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   1%|          | 1/136 [00:25<57:57, 25.76s/it, est. speed input: 72.25 toks/s, output: 0.12 toks/s][A
+Processed prompts:  76%|███████▌  | 103/136 [00:34<00:08,  3.85it/s, est. speed input: 5584.28 toks/s, output: 8.99 toks/s][AProcessed prompts: 100%|██████████| 136/136 [00:34<00:00,  3.95it/s, est. speed input: 7364.14 toks/s, output: 11.86 toks/s]
+Few-shot (k=10) Accuracy: 46.32%
+Evaluation Time: 34.90 seconds
+
+Evaluating tasks:  59%|█████▉    | 16/27 [08:32<04:53, 26.71s/it]=== Task: reasoning_about_colored_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:41:50, 25.57s/it, est. speed input: 54.01 toks/s, output: 0.12 toks/s][A
+Processed prompts:  58%|█████▊    | 139/240 [00:44<00:26,  3.77it/s, est. speed input: 4319.72 toks/s, output: 9.38 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:44<00:00,  5.40it/s, est. speed input: 7457.14 toks/s, output: 16.19 toks/s]
+Few-shot (k=10) Accuracy: 55.00%
+Evaluation Time: 45.07 seconds
+
+Evaluating tasks:  63%|██████▎   | 17/27 [09:17<05:22, 32.23s/it]=== Task: ruin_names - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:21<1:26:52, 21.81s/it, est. speed input: 31.46 toks/s, output: 0.14 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:21<00:00, 11.00it/s, est. speed input: 7532.96 toks/s, output: 33.01 toks/s]
+Few-shot (k=10) Accuracy: 59.58%
+Evaluation Time: 22.16 seconds
+
+Evaluating tasks:  67%|██████▋   | 18/27 [09:39<04:22, 29.20s/it]=== Task: salient_translation_error_detection - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:26<1:45:58, 26.61s/it, est. speed input: 110.99 toks/s, output: 0.11 toks/s][A
+Processed prompts:  27%|██▋       | 65/240 [00:53<02:02,  1.43it/s, est. speed input: 3644.23 toks/s, output: 3.66 toks/s][A
+Processed prompts:  54%|█████▍    | 129/240 [01:19<00:59,  1.88it/s, est. speed input: 4828.14 toks/s, output: 4.85 toks/s][A
+Processed prompts:  80%|████████  | 193/240 [01:39<00:20,  2.31it/s, est. speed input: 5770.76 toks/s, output: 5.80 toks/s][AProcessed prompts: 100%|██████████| 240/240 [01:39<00:00,  2.40it/s, est. speed input: 7176.54 toks/s, output: 7.21 toks/s]
+Few-shot (k=10) Accuracy: 49.58%
+Evaluation Time: 101.12 seconds
+
+Evaluating tasks:  70%|███████   | 19/27 [11:20<06:46, 50.81s/it]=== Task: snarks - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/168 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   1%|          | 1/168 [00:13<37:16, 13.39s/it, est. speed input: 44.06 toks/s, output: 0.22 toks/s][AProcessed prompts: 100%|██████████| 168/168 [00:13<00:00, 12.54it/s, est. speed input: 7577.98 toks/s, output: 37.63 toks/s]
+Few-shot (k=10) Accuracy: 60.12%
+Evaluation Time: 13.63 seconds
+
+Evaluating tasks:  74%|███████▍  | 20/27 [11:34<04:37, 39.64s/it]=== Task: sports_understanding - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:02<08:11,  2.05s/it, est. speed input: 135.32 toks/s, output: 0.49 toks/s][A
+Processed prompts:  12%|█▎        | 30/240 [00:03<00:17, 11.88it/s, est. speed input: 2674.09 toks/s, output: 9.63 toks/s][A
+Processed prompts:  25%|██▍       | 59/240 [00:04<00:10, 17.93it/s, est. speed input: 3958.11 toks/s, output: 14.24 toks/s][A
+Processed prompts:  37%|███▋      | 88/240 [00:05<00:07, 21.24it/s, est. speed input: 4702.15 toks/s, output: 16.90 toks/s][A
+Processed prompts:  49%|████▉     | 117/240 [00:06<00:05, 23.28it/s, est. speed input: 5192.99 toks/s, output: 18.67 toks/s][A
+Processed prompts:  61%|██████    | 146/240 [00:07<00:03, 24.58it/s, est. speed input: 5543.06 toks/s, output: 19.92 toks/s][A
+Processed prompts:  73%|███████▎  | 175/240 [00:08<00:02, 25.72it/s, est. speed input: 5828.79 toks/s, output: 20.94 toks/s][A
+Processed prompts:  85%|████████▌ | 204/240 [00:08<00:01, 33.72it/s, est. speed input: 6554.36 toks/s, output: 23.55 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:08<00:00, 27.60it/s, est. speed input: 7679.60 toks/s, output: 27.60 toks/s]
+Few-shot (k=10) Accuracy: 76.25%
+Evaluation Time: 8.89 seconds
+
+Evaluating tasks:  78%|███████▊  | 21/27 [11:43<03:02, 30.41s/it]=== Task: temporal_sequences - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:42:59, 25.86s/it, est. speed input: 72.51 toks/s, output: 0.12 toks/s][A
+Processed prompts:  42%|████▎     | 102/240 [00:51<00:59,  2.31it/s, est. speed input: 3738.24 toks/s, output: 5.92 toks/s][A
+Processed prompts:  85%|████████▍ | 203/240 [01:01<00:08,  4.24it/s, est. speed input: 6249.79 toks/s, output: 9.89 toks/s][AProcessed prompts: 100%|██████████| 240/240 [01:01<00:00,  3.90it/s, est. speed input: 7389.29 toks/s, output: 11.70 toks/s]
+Few-shot (k=10) Accuracy: 37.50%
+Evaluation Time: 62.75 seconds
+
+Evaluating tasks:  81%|████████▏ | 22/27 [12:46<03:20, 40.12s/it]=== Task: tracking_shuffled_objects_five_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:41:25, 25.46s/it, est. speed input: 72.18 toks/s, output: 0.12 toks/s][A
+Processed prompts:  44%|████▍     | 106/240 [00:50<00:54,  2.44it/s, est. speed input: 3781.98 toks/s, output: 6.24 toks/s][A
+Processed prompts:  88%|████████▊ | 211/240 [00:58<00:06,  4.75it/s, est. speed input: 6581.35 toks/s, output: 10.85 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:58<00:00,  4.11it/s, est. speed input: 7486.74 toks/s, output: 12.34 toks/s]
+Few-shot (k=10) Accuracy: 20.42%
+Evaluation Time: 59.30 seconds
+
+Evaluating tasks:  85%|████████▌ | 23/27 [13:45<03:03, 45.88s/it]=== Task: tracking_shuffled_objects_seven_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:42:16, 25.67s/it, est. speed input: 94.34 toks/s, output: 0.12 toks/s][A
+Processed prompts:  33%|███▎      | 80/240 [00:51<01:27,  1.83it/s, est. speed input: 3744.20 toks/s, output: 4.67 toks/s][A
+Processed prompts:  66%|██████▋   | 159/240 [01:17<00:33,  2.40it/s, est. speed input: 4961.41 toks/s, output: 6.19 toks/s][A
+Processed prompts:  99%|█████████▉| 238/240 [01:18<00:00,  4.29it/s, est. speed input: 7324.02 toks/s, output: 9.14 toks/s][AProcessed prompts: 100%|██████████| 240/240 [01:18<00:00,  3.07it/s, est. speed input: 7385.38 toks/s, output: 9.22 toks/s]
+Few-shot (k=10) Accuracy: 21.25%
+Evaluation Time: 79.21 seconds
+
+Evaluating tasks:  89%|████████▉ | 24/27 [15:04<02:47, 55.88s/it]=== Task: tracking_shuffled_objects_three_objects - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:25<1:40:07, 25.14s/it, est. speed input: 52.83 toks/s, output: 0.12 toks/s][A
+Processed prompts:  60%|██████    | 145/240 [00:41<00:22,  4.21it/s, est. speed input: 4578.18 toks/s, output: 10.38 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:41<00:00,  5.73it/s, est. speed input: 7577.60 toks/s, output: 17.18 toks/s]
+Few-shot (k=10) Accuracy: 37.92%
+Evaluation Time: 42.56 seconds
+
+Evaluating tasks:  93%|█████████▎| 25/27 [15:47<01:43, 51.88s/it]=== Task: web_of_lies - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:01<07:55,  1.99s/it, est. speed input: 297.80 toks/s, output: 0.50 toks/s][A
+Processed prompts:   6%|▌         | 14/240 [00:02<00:39,  5.74it/s, est. speed input: 2760.86 toks/s, output: 4.69 toks/s][A
+Processed prompts:  11%|█▏        | 27/240 [00:03<00:25,  8.48it/s, est. speed input: 3995.62 toks/s, output: 6.79 toks/s][A
+Processed prompts:  17%|█▋        | 40/240 [00:04<00:19, 10.08it/s, est. speed input: 4734.54 toks/s, output: 8.05 toks/s][A
+Processed prompts:  22%|██▏       | 53/240 [00:05<00:16, 11.08it/s, est. speed input: 5228.78 toks/s, output: 8.89 toks/s][A
+Processed prompts:  28%|██▊       | 66/240 [00:06<00:14, 11.73it/s, est. speed input: 5579.28 toks/s, output: 9.49 toks/s][A
+Processed prompts:  33%|███▎      | 79/240 [00:07<00:13, 12.16it/s, est. speed input: 5842.31 toks/s, output: 9.94 toks/s][A
+Processed prompts:  38%|███▊      | 92/240 [00:08<00:11, 12.44it/s, est. speed input: 6043.43 toks/s, output: 10.29 toks/s][A
+Processed prompts:  44%|████▍     | 105/240 [00:09<00:10, 12.64it/s, est. speed input: 6207.47 toks/s, output: 10.57 toks/s][A
+Processed prompts:  49%|████▉     | 118/240 [00:10<00:09, 12.76it/s, est. speed input: 6340.91 toks/s, output: 10.79 toks/s][A
+Processed prompts:  55%|█████▍    | 131/240 [00:11<00:08, 12.86it/s, est. speed input: 6450.77 toks/s, output: 10.98 toks/s][A
+Processed prompts:  60%|██████    | 144/240 [00:12<00:07, 12.90it/s, est. speed input: 6544.99 toks/s, output: 11.14 toks/s][A
+Processed prompts:  65%|██████▌   | 157/240 [00:13<00:06, 12.96it/s, est. speed input: 6626.50 toks/s, output: 11.28 toks/s][A
+Processed prompts:  71%|███████   | 170/240 [00:14<00:05, 13.00it/s, est. speed input: 6696.86 toks/s, output: 11.40 toks/s][A
+Processed prompts:  76%|███████▋  | 183/240 [00:15<00:04, 13.02it/s, est. speed input: 6758.79 toks/s, output: 11.50 toks/s][A
+Processed prompts:  82%|████████▏ | 196/240 [00:16<00:03, 13.04it/s, est. speed input: 6814.02 toks/s, output: 11.60 toks/s][A
+Processed prompts:  87%|████████▋ | 209/240 [00:17<00:02, 13.05it/s, est. speed input: 6861.49 toks/s, output: 11.68 toks/s][A
+Processed prompts:  92%|█████████▎| 222/240 [00:18<00:01, 15.50it/s, est. speed input: 7100.29 toks/s, output: 12.09 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:18<00:00, 13.04it/s, est. speed input: 7661.04 toks/s, output: 13.04 toks/s]
+Few-shot (k=10) Accuracy: 48.75%
+Evaluation Time: 18.69 seconds
+
+Evaluating tasks:  96%|█████████▋| 26/27 [16:06<00:41, 41.93s/it]=== Task: word_sorting - Few-shot (k=10) ===
+
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   0%|          | 1/240 [00:19<1:16:59, 19.33s/it, est. speed input: 30.37 toks/s, output: 0.26 toks/s][A
+Processed prompts:   2%|▏         | 5/240 [00:19<11:25,  2.92s/it, est. speed input: 150.70 toks/s, output: 1.49 toks/s] [A
+Processed prompts:   7%|▋         | 16/240 [00:19<02:33,  1.46it/s, est. speed input: 479.07 toks/s, output: 5.74 toks/s][A
+Processed prompts:  13%|█▎        | 31/240 [00:19<00:58,  3.57it/s, est. speed input: 922.22 toks/s, output: 12.80 toks/s][A
+Processed prompts:  16%|█▌        | 38/240 [00:20<00:41,  4.84it/s, est. speed input: 1122.62 toks/s, output: 17.00 toks/s][A
+Processed prompts:  22%|██▏       | 53/240 [00:20<00:21,  8.69it/s, est. speed input: 1557.30 toks/s, output: 26.99 toks/s][A
+Processed prompts:  25%|██▌       | 61/240 [00:20<00:16, 11.17it/s, est. speed input: 1781.79 toks/s, output: 32.86 toks/s][A
+Processed prompts:  30%|███       | 73/240 [00:20<00:10, 16.27it/s, est. speed input: 2121.87 toks/s, output: 43.01 toks/s][A
+Processed prompts:  36%|███▌      | 86/240 [00:20<00:06, 23.19it/s, est. speed input: 2488.59 toks/s, output: 55.23 toks/s][A
+Processed prompts:  44%|████▍     | 106/240 [00:20<00:03, 37.06it/s, est. speed input: 3056.37 toks/s, output: 75.61 toks/s][A
+Processed prompts:  50%|█████     | 120/240 [00:20<00:02, 47.27it/s, est. speed input: 3447.86 toks/s, output: 91.11 toks/s][A
+Processed prompts:  55%|█████▌    | 132/240 [00:20<00:01, 56.17it/s, est. speed input: 3779.30 toks/s, output: 105.52 toks/s][A
+Processed prompts:  64%|██████▍   | 153/240 [00:21<00:01, 74.38it/s, est. speed input: 4361.03 toks/s, output: 132.46 toks/s][A
+Processed prompts:  70%|███████   | 168/240 [00:21<00:00, 81.62it/s, est. speed input: 4766.63 toks/s, output: 153.84 toks/s][A
+Processed prompts:  78%|███████▊  | 187/240 [00:21<00:00, 96.12it/s, est. speed input: 5287.15 toks/s, output: 183.55 toks/s][A
+Processed prompts:  89%|████████▉ | 214/240 [00:21<00:00, 128.05it/s, est. speed input: 6040.16 toks/s, output: 229.27 toks/s][A
+Processed prompts:  97%|█████████▋| 232/240 [00:21<00:00, 130.59it/s, est. speed input: 6522.55 toks/s, output: 261.39 toks/s][AProcessed prompts: 100%|██████████| 240/240 [00:21<00:00, 11.02it/s, est. speed input: 6691.05 toks/s, output: 275.96 toks/s] 
+Few-shot (k=10) Accuracy: 52.50%
+Evaluation Time: 22.11 seconds
+
+Evaluating tasks: 100%|██████████| 27/27 [16:28<00:00, 35.98s/it]Evaluating tasks: 100%|██████████| 27/27 [16:28<00:00, 36.60s/it]
+
+Results Summary:
+
+{
+  "task": "boolean_expressions",
+  "FSL_10_4_accuracy": 87.9167,
+  "eval_time": 6.0838,
+  "examples": [
+    {
+      "question": "not ( True or False ) or True is",
+      "prediction": "true",
+      "true_answer": "true"
+    },
+    {
+      "question": "False or True and not not not False is",
+      "prediction": "true",
+      "true_answer": "true"
+    },
+    {
+      "question": "not not not False and True and False is",
+      "prediction": "false",
+      "true_answer": "false"
+    },
+    {
+      "question": "not not not not ( not False ) is",
+      "prediction": "true",
+      "true_answer": "true"
+    },
+    {
+      "question": "False or False and False or not True is",
+      "prediction": "false",
+      "true_answer": "false"
+    }
+  ]
+}
+{
+  "task": "causal_judgement",
+  "FSL_10_4_accuracy": 58.7571,
+  "eval_time": 59.1648,
+  "examples": [
+    {
+      "question": "How would a typical person answer each of the following questions about causation?\nAlex is playing a board game. Every turn in the game, you simultaneously roll two-sided dice and flip a coin. Alex will either win or lose the game on his next turn. Alex will only win the game if the total of his dice roll is greater than 2 AND the coin comes up heads. It is very likely that he will roll higher than 2, and the coin has equal odds of coming up heads or tails. Alex flips the coin and rolls his dice at exactly the same time. The coin comes up heads, and he rolls a 12, so just as expected, he rolled greater than 2. Alex wins the game. Did Alex win because of the coin flip?\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "yes"
+    },
+    {
+      "question": "How would a typical person answer each of the following questions about causation?\nTom has a huge garden and loves flowers. He employed two gardeners who take care of the plants on his 30 flower beds: Alex and Benni. Both can independently decide on their working hours and arrange who cares for which flower beds. Alex and Benni are very reliable and Tom is satisfied with their work. Nevertheless he wants to optimize the plant growth. Since Tom has read in a magazine that plants grow better when they are fertilized, he decides to let Alex and Benni fertilize his plants. The magazine recommends the use of the chemicals A X200R or B Y33R, since both are especially effective. However, Tom also read that it can damage plants when they are exposed to multiple different types of chemicals. Tom therefore decides that he only wants to use one fertilizer. He goes for A X200R. Tom instructs Alex and Benni to buy the chemical A X200R and to use only this fertilizer. Alex volunteers for buying several bottles of this chemical for Benni and himself. After a few weeks, Tom goes for a walk in his garden. He realizes that some of his plants are much prettier and bigger than before. However, he also realizes that some of his plants have lost their beautiful color and are dried up. That makes Tom very sad and reflective. He wonders whether the drying of his plants might have something to do with the fertilization. He wants to investigate this matter and talks to Alex and Benni. Alex tells him that he followed Tom's instruction: \"I only bought and used the chemical A X200R which I had funneled into the blue can.\" Benni suddenly is startled and says to Alex: \"What? You funneled A X200R into the blue can? But you told me you had funneled it into the green can! That's why I always used the green can!\" Alex replies: \"Did I? Then I am sorry!\" Tom remembers that he had filled B Y33R in a green can - long before he had read about the chemicals in his magazine. He had never used it. So Benni must have accidentally, without knowing it, applied the chemical B Y33R, whereas only Alex applied A X200R. Tom realizes that the plants dried up in the flower beds on which both A X200R and B Y33R were applied by the gardeners. Did the fertilization by Alex cause the plant to dry out?\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "How would a typical person answer each of the following questions about causation?\nThe CEO of a company is sitting in his office when his Vice President of R&D comes in and says, 'We are thinking of starting a new programme. It will help us increase profits, but it will also help the environment.' The CEO responds that he doesn't care about harming the environment and just wants to make as much profit as possible. The programme is carried out, profits are made and the environment is helped. Did the CEO intentionally help the environment?\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "How would a typical person answer each of the following questions about causation?\nBill's wife, Sue, is out of town for the weekend. She leaves Bill a message that says, 'I just saw this marvelous bookend. It's called a Bartlett bookend. So pretty! I'm going to go back tomorrow and get one. It will be perfect for the left side of our bookshelf'. Bill goes and visits his friend. Bill and his friend talk for a while, and when Bill asks if his friend is willing to sell the bookend, his friend tells him it's a precious heirloom and he can't part with it. Bill waits until later when his friend is in the bathroom, and slips the bookend into his bag. Finally, Bill leaves his friend's house with the stolen right-side Bartlett bookend in his bag. Then the next day, Sue goes and buys the left-side Bartlett bookend. So, when Sue got home, they had the paired set of bookends. Did Sue cause them to possess the paired set of bookends?\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "How would a typical person answer each of the following questions about causation?\nJoe was feeling quite dehydrated, so he stopped by the local smoothie shop to buy the largest sized drink available. Before ordering, the cashier told him that if he bought a Mega-Sized Smoothie he would get it in a special commemorative cup. Joe replied, 'I don't care about a commemorative cup, I just want the biggest smoothie you have.' Sure enough, Joe received the Mega-Sized Smoothie in a commemorative cup. Did Joe intentionally obtain the commemorative cup?\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    }
+  ]
+}
+{
+  "task": "date_understanding",
+  "FSL_10_4_accuracy": 50.8333,
+  "eval_time": 36.4753,
+  "examples": [
+    {
+      "question": "Today is 3/5, and it is Jane's second time in the year 1973 to see a meteor shower. What is the date tomorrow in MM/DD/YYYY?\nOptions:\n(A) 03/08/1983\n(B) 03/06/1973\n(C) 03/02/1973\n(D) 04/05/1973\n(E) 03/05/2007\n(F) 01/02/1973",
+      "prediction": "(d)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Jane got her job in 2016. Today is her 3-year work anniversary. She still remember that on Dec 2, her second day at work, she spilled coffee on her laptop. What is the date a month ago in MM/DD/YYYY?\nOptions:\n(A) 11/01/2019\n(B) 11/02/2019\n(C) 09/06/2019\n(D) 11/01/1933\n(E) 11/01/2089\n(F) 08/04/2019",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date a month ago in MM/DD/YYYY?\nOptions:\n(A) 11/12/2016\n(B) 01/21/2017\n(C) 01/14/2017\n(D) 01/28/2017\n(E) 02/03/2017",
+      "prediction": "(c)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Jane scheduled 3 apointments with 5 poeple for tomorrow (Tue, 7/9/1972). What is the date 10 days ago in MM/DD/YYYY?\nOptions:\n(A) 07/03/1972\n(B) 10/28/1971\n(C) 06/28/1972\n(D) 06/14/1972\n(E) 09/28/1972\n(F) 06/23/1972",
+      "prediction": "(a)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "In the US, Thanksgiving is on the fourth Thursday of November. Today is the US Thanksgiving of 2001. What is the date yesterday in MM/DD/YYYY?\nOptions:\n(A) 09/12/2002\n(B) 11/30/2002\n(C) 11/21/2002\n(D) 11/21/2076\n(E) 11/07/2002\n(F) 11/15/2002",
+      "prediction": "(e)",
+      "true_answer": "(c)"
+    }
+  ]
+}
+{
+  "task": "disambiguation_qa",
+  "FSL_10_4_accuracy": 63.75,
+  "eval_time": 27.4039,
+  "examples": [
+    {
+      "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The visitor tells the teacher that he likes the cake.\nOptions:\n(A) The visitor likes the cake\n(B) The teacher likes the cake\n(C) Ambiguous",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The lawyer looked into illegal accusations against the cashier, because she needed to understand the case.\nOptions:\n(A) The lawyer needed to understand\n(B) The cashier needed to understand\n(C) Ambiguous",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: My parent called their secretary for more information\nOptions:\n(A) They were my parent's secretary\n(B) They were the secretary's secretary\n(C) Ambiguous",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The driver yelled at the tailor after he broke a window.\nOptions:\n(A) The driver broke a window\n(B) The tailor broke a window\n(C) Ambiguous",
+      "prediction": "(b)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The laborer handed the secretary a hammer because they asked for a tool.\nOptions:\n(A) The laborer asked for a tool\n(B) The secretary asked for a tool\n(C) Ambiguous",
+      "prediction": "(a)",
+      "true_answer": "(b)"
+    }
+  ]
+}
+{
+  "task": "dyck_languages",
+  "FSL_10_4_accuracy": 12.0833,
+  "eval_time": 14.5048,
+  "examples": [
+    {
+      "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: { [ [ ] [ ]",
+      "prediction": "] ]",
+      "true_answer": "] }"
+    },
+    {
+      "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( { } < > { < { ( < > ) } >",
+      "prediction": ") }",
+      "true_answer": "} )"
+    },
+    {
+      "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: [ [ ( { { ( { } ) } < < ( [ [ { } < [ { < [ { ( ) ( [ { } ] ) } ] < > > } ] ( < { ( [ ] ) } > ) > ] ( [ < ( ) > ] ) ] ) > > }",
+      "prediction": "] ]",
+      "true_answer": ") ] ]"
+    },
+    {
+      "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( < [ ( )",
+      "prediction": ") ]",
+      "true_answer": "] > )"
+    },
+    {
+      "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( < < > > [ [ [ { { < { } ( { } ) > } } < { { { } } } < > > ] ] ( )",
+      "prediction": ") ]",
+      "true_answer": "] )"
+    }
+  ]
+}
+{
+  "task": "formal_fallacies",
+  "FSL_10_4_accuracy": 55.4167,
+  "eval_time": 44.3199,
+  "examples": [
+    {
+      "question": "\"Is Fred a fan of Liverpool? Are supporters of Real Madrid devotees of PSG? In European football, it is sometimes difficult to keep track of the mutual admiration and dislike. The following argument seeks to clarify some such relations: To start with, Garry is an opponent to Sevilla FC. Now, every admirer of FC Pyunik is neither an opponent to Sevilla FC nor a supporter of RC Celta de Vigo. In consequence, Garry is not an admirer of FC Pyunik.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+      "prediction": "valid",
+      "true_answer": "valid"
+    },
+    {
+      "question": "\"It is not always easy to grasp who is consuming which products. The following argument pertains to this question: First premise: Whoever is not a regular consumer of Pantene shampoo is not a rare consumer of South of France soap or not a rare consumer of Kiss My Face soap. Second premise: Being a rare consumer of South of France soap is necessary for not being a frequent consumer of Proactiv soap. Third premise: Nobody is neither a frequent consumer of Proactiv soap nor a rare consumer of Kiss My Face soap. So, necessarily, whoever is not a frequent consumer of Proactiv soap is a regular consumer of Pantene shampoo.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+      "prediction": "valid",
+      "true_answer": "valid"
+    },
+    {
+      "question": "\"Is Titanium oxide an ingredient of my washing power? Which chemicals does my perfume contain? It is really difficult to keep track of all chemicals one is regularly exposed to. The following argument seeks to clarify some such relations: First, whatever is neither an ingredient of Drop Dead Gorgeous nor an ingredient of LE MARC LIP CREME is an ingredient of Peaches N Cream. Second, bisphenol A (BPA) is neither an ingredient of Drop Dead Gorgeous nor an ingredient of LE MARC LIP CREME. We may conclude: Bisphenol A (BPA) is an ingredient of Peaches N Cream.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+      "prediction": "valid",
+      "true_answer": "valid"
+    },
+    {
+      "question": "\"Here comes a perfectly valid argument: To start with, no stepbrother of Bryan is both a nephew of Wilburn and a son of Howard. Now, whoever is not a son of Howard is a son of Adrian. Moreover, nobody is neither a nephew of Wilburn nor a son of Adrian. Hence, everyone who is a stepbrother of Bryan is a son of Adrian, too.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+      "prediction": "valid",
+      "true_answer": "valid"
+    },
+    {
+      "question": "\"Consumer research aims at understanding whether users of some products also tend to consume other ones, or not. The following argument seeks to clarify some such relations: To begin with, being a frequent consumer of Dove soap is sufficient for being an owner of a Bumble and bumble shampoo. So, necessarily, everyone who is an owner of a Bumble and bumble shampoo is a frequent consumer of Dove soap, too.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+      "prediction": "invalid",
+      "true_answer": "invalid"
+    }
+  ]
+}
+{
+  "task": "geometric_shapes",
+  "FSL_10_4_accuracy": 46.6667,
+  "eval_time": 43.861,
+  "examples": [
+    {
+      "question": "This SVG path element <path d=\"M 34.44,60.27 L 75.18,65.91 L 32.23,14.36 M 32.23,14.36 L 34.44,60.27\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+      "prediction": "(j)",
+      "true_answer": "(j)"
+    },
+    {
+      "question": "This SVG path element <path d=\"M 89.63,34.92 L 98.15,63.53 A 29.85,29.85 261.53 0,1 77.16,7.80 L 89.63,34.92\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+      "prediction": "(i)",
+      "true_answer": "(i)"
+    },
+    {
+      "question": "This SVG path element <path d=\"M 45.00,97.00 L 87.00,78.00 L 80.00,31.00 L 37.00,9.00 L -3.00,46.00 L 9.00,82.00 L 45.00,97.00\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+      "prediction": "(e)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "This SVG path element <path d=\"M 83.17,32.03 L 87.90,19.01 L 76.80,8.19 L 69.67,12.38 L 72.92,22.11 M 72.92,22.11 L 83.17,32.03\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+      "prediction": "(h)",
+      "true_answer": "(g)"
+    },
+    {
+      "question": "This SVG path element <path d=\"M 37.73,31.58 L 41.81,33.73 M 41.81,33.73 L 49.19,34.44 L 44.69,40.33 M 44.69,40.33 L 43.49,44.78 L 40.07,42.34 M 40.07,42.34 L 32.69,41.63 M 32.69,41.63 L 37.19,35.74 L 37.73,31.58\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+      "prediction": "(h)",
+      "true_answer": "(f)"
+    }
+  ]
+}
+{
+  "task": "hyperbaton",
+  "FSL_10_4_accuracy": 60.0,
+  "eval_time": 13.2788,
+  "examples": [
+    {
+      "question": "Which sentence has the correct adjective order:\nOptions:\n(A) paper Indian ancient pink pyramidal ship\n(B) ancient pyramidal pink Indian paper ship",
+      "prediction": "(a)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Which sentence has the correct adjective order:\nOptions:\n(A) mysterious medium-size red Indonesian monkey\n(B) mysterious Indonesian medium-size red monkey",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Which sentence has the correct adjective order:\nOptions:\n(A) enormous circular Pakistani snorkeling gold yellow baby\n(B) enormous circular yellow Pakistani gold snorkeling baby",
+      "prediction": "(a)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Which sentence has the correct adjective order:\nOptions:\n(A) Russian huge repulsive archaic triangular ship\n(B) repulsive huge archaic triangular Russian ship",
+      "prediction": "(a)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Which sentence has the correct adjective order:\nOptions:\n(A) big brand-new orange fiberglass snorkeling knife\n(B) snorkeling fiberglass brand-new orange big knife",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    }
+  ]
+}
+{
+  "task": "logical_deduction_five_objects",
+  "FSL_10_4_accuracy": 43.3333,
+  "eval_time": 51.3645,
+  "examples": [
+    {
+      "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells five fruits: loquats, peaches, pears, plums, and watermelons. The watermelons are the most expensive. The peaches are more expensive than the loquats. The plums are the second-cheapest. The pears are the third-most expensive.\nOptions:\n(A) The loquats are the cheapest\n(B) The peaches are the cheapest\n(C) The pears are the cheapest\n(D) The plums are the cheapest\n(E) The watermelons are the cheapest",
+      "prediction": "(d)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: an owl, a robin, a blue jay, a hawk, and a hummingbird. The owl is the second from the right. The robin is the second from the left. The robin is to the right of the blue jay. The hummingbird is to the right of the hawk.\nOptions:\n(A) The owl is the third from the left\n(B) The robin is the third from the left\n(C) The blue jay is the third from the left\n(D) The hawk is the third from the left\n(E) The hummingbird is the third from the left",
+      "prediction": "(c)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are five books: a blue book, a purple book, a yellow book, a black book, and a green book. The purple book is the third from the left. The yellow book is to the left of the black book. The green book is to the left of the purple book. The blue book is to the left of the green book.\nOptions:\n(A) The blue book is the rightmost\n(B) The purple book is the rightmost\n(C) The yellow book is the rightmost\n(D) The black book is the rightmost\n(E) The green book is the rightmost",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a quail, an owl, a raven, a falcon, and a robin. The owl is the leftmost. The robin is to the left of the raven. The quail is the rightmost. The raven is the third from the left.\nOptions:\n(A) The quail is the third from the left\n(B) The owl is the third from the left\n(C) The raven is the third from the left\n(D) The falcon is the third from the left\n(E) The robin is the third from the left",
+      "prediction": "(c)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a raven, an owl, a cardinal, a hummingbird, and a robin. The cardinal is the rightmost. The raven is to the left of the owl. The robin is to the right of the hummingbird. The hummingbird is the third from the left.\nOptions:\n(A) The raven is the second from the right\n(B) The owl is the second from the right\n(C) The cardinal is the second from the right\n(D) The hummingbird is the second from the right\n(E) The robin is the second from the right",
+      "prediction": "(e)",
+      "true_answer": "(e)"
+    }
+  ]
+}
+{
+  "task": "logical_deduction_seven_objects",
+  "FSL_10_4_accuracy": 49.5833,
+  "eval_time": 74.8207,
+  "examples": [
+    {
+      "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are seven books: a white book, a gray book, a yellow book, a purple book, a red book, a black book, and a green book. The black book is the second from the right. The red book is to the left of the green book. The red book is the second from the left. The gray book is the third from the right. The yellow book is the third from the left. The white book is the fourth from the left.\nOptions:\n(A) The white book is the second from the left\n(B) The gray book is the second from the left\n(C) The yellow book is the second from the left\n(D) The purple book is the second from the left\n(E) The red book is the second from the left\n(F) The black book is the second from the left\n(G) The green book is the second from the left",
+      "prediction": "(e)",
+      "true_answer": "(e)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are seven books: a brown book, a gray book, an orange book, a green book, a black book, a purple book, and a yellow book. The purple book is the leftmost. The brown book is to the right of the yellow book. The green book is to the left of the orange book. The orange book is to the left of the gray book. The black book is the third from the left. The green book is the third from the right.\nOptions:\n(A) The brown book is the fourth from the left\n(B) The gray book is the fourth from the left\n(C) The orange book is the fourth from the left\n(D) The green book is the fourth from the left\n(E) The black book is the fourth from the left\n(F) The purple book is the fourth from the left\n(G) The yellow book is the fourth from the left",
+      "prediction": "(e)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Joe, Rob, Eli, Dan, Mya, Ada, and Ana. Joe finished above Ana. Ana finished second-to-last. Mya finished fourth. Dan finished third. Ada finished second. Eli finished third-to-last.\nOptions:\n(A) Joe finished second-to-last\n(B) Rob finished second-to-last\n(C) Eli finished second-to-last\n(D) Dan finished second-to-last\n(E) Mya finished second-to-last\n(F) Ada finished second-to-last\n(G) Ana finished second-to-last",
+      "prediction": "(g)",
+      "true_answer": "(g)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Joe, Dan, Ada, Amy, Rob, Mya, and Mel. Ada finished below Amy. Joe finished below Dan. Dan finished below Ada. Mel finished third-to-last. Amy finished third. Rob finished below Mya.\nOptions:\n(A) Joe finished third\n(B) Dan finished third\n(C) Ada finished third\n(D) Amy finished third\n(E) Rob finished third\n(F) Mya finished third\n(G) Mel finished third",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells seven fruits: watermelons, oranges, mangoes, cantaloupes, kiwis, pears, and peaches. The pears are the second-cheapest. The peaches are more expensive than the cantaloupes. The peaches are less expensive than the mangoes. The cantaloupes are more expensive than the kiwis. The oranges are the fourth-most expensive. The watermelons are the second-most expensive.\nOptions:\n(A) The watermelons are the third-cheapest\n(B) The oranges are the third-cheapest\n(C) The mangoes are the third-cheapest\n(D) The cantaloupes are the third-cheapest\n(E) The kiwis are the third-cheapest\n(F) The pears are the third-cheapest\n(G) The peaches are the third-cheapest",
+      "prediction": "(f)",
+      "true_answer": "(d)"
+    }
+  ]
+}
+{
+  "task": "logical_deduction_three_objects",
+  "FSL_10_4_accuracy": 71.25,
+  "eval_time": 37.946,
+  "examples": [
+    {
+      "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: apples, pears, and loquats. The pears are more expensive than the loquats. The pears are less expensive than the apples.\nOptions:\n(A) The apples are the second-most expensive\n(B) The pears are the second-most expensive\n(C) The loquats are the second-most expensive",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Eli, Mya, and Eve. Eve finished below Eli. Eve finished above Mya.\nOptions:\n(A) Eli finished last\n(B) Mya finished last\n(C) Eve finished last",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: cantaloupes, apples, and loquats. The loquats are more expensive than the apples. The cantaloupes are less expensive than the apples.\nOptions:\n(A) The cantaloupes are the second-most expensive\n(B) The apples are the second-most expensive\n(C) The loquats are the second-most expensive",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Amy, Dan, and Mel. Mel finished above Amy. Dan finished below Amy.\nOptions:\n(A) Amy finished first\n(B) Dan finished first\n(C) Mel finished first",
+      "prediction": "(c)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are three birds: a blue jay, a falcon, and a hummingbird. The blue jay is to the right of the falcon. The hummingbird is to the left of the falcon.\nOptions:\n(A) The blue jay is the rightmost\n(B) The falcon is the rightmost\n(C) The hummingbird is the rightmost",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    }
+  ]
+}
+{
+  "task": "movie_recommendation",
+  "FSL_10_4_accuracy": 70.8333,
+  "eval_time": 22.5445,
+  "examples": [
+    {
+      "question": "Find a movie similar to Don Juan DeMarco, Mr Holland's Opus, What's Eating Gilbert Grape, Pulp Fiction:\nOptions:\n(A) Get Shorty\n(B) Kolya\n(C) Death Wish 2\n(D) Gold Diggers of 1933",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Find a movie similar to Braveheart, Pretty Woman, Schindler's List, Apollo 13:\nOptions:\n(A) Bad Taste\n(B) My Big Fat Greek Wedding 2\n(C) The Santa Clause 2\n(D) Dances with Wolves",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Find a movie similar to The Blues Brothers, The Usual Suspects, Forrest Gump, The Silence of the Lambs:\nOptions:\n(A) Independence Day\n(B) A Place in the Sun\n(C) Son in Law\n(D) Hot Tub Time Machine",
+      "prediction": "(c)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Find a movie similar to Batman, Pulp Fiction, Apollo 13, Schindler's List:\nOptions:\n(A) The Last Kiss\n(B) Europa\n(C) Braveheart\n(D) Rise of the Planet of the Apes",
+      "prediction": "(c)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Find a movie similar to Schindler's List, The Shawshank Redemption, Terminator 2 Judgment Day, Aladdin:\nOptions:\n(A) The Double Life of Veronique\n(B) Bridget Jones's Diary\n(C) The Lion King\n(D) Cujo",
+      "prediction": "(c)",
+      "true_answer": "(c)"
+    }
+  ]
+}
+{
+  "task": "multistep_arithmetic_two",
+  "FSL_10_4_accuracy": 2.5,
+  "eval_time": 12.1811,
+  "examples": [
+    {
+      "question": "((-1 + -6 + -3 * -2) * (-9 * -1 + 2 - 3)) =",
+      "prediction": "-108",
+      "true_answer": "-8"
+    },
+    {
+      "question": "((-8 - -6 * 7 * 0) * (0 + -5 * -8 - 0)) =",
+      "prediction": "0",
+      "true_answer": "-320"
+    },
+    {
+      "question": "((-8 - -1 + -8 + -3) * (-4 * 6 - 2 - 3)) =",
+      "prediction": "-1440",
+      "true_answer": "522"
+    },
+    {
+      "question": "((-2 + -9 - -2 * 2) - (6 * 1 * -2 * -1)) =",
+      "prediction": "-15",
+      "true_answer": "-19"
+    },
+    {
+      "question": "((-2 * -1 + 1 * -3) - (7 * -7 + -5 * 6)) =",
+      "prediction": "64",
+      "true_answer": "78"
+    }
+  ]
+}
+{
+  "task": "navigate",
+  "FSL_10_4_accuracy": 63.75,
+  "eval_time": 19.0932,
+  "examples": [
+    {
+      "question": "If you follow these instructions, do you return to the starting point? Take 8 steps. Take 2 steps. Turn right. Turn right. Take 10 steps.\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "yes"
+    },
+    {
+      "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 5 steps. Take 1 step. Take 6 steps. Turn left. Take 7 steps. Take 2 steps. Take 4 steps.\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "If you follow these instructions, do you return to the starting point? Take 2 steps. Take 10 steps. Take 8 steps.\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "If you follow these instructions, do you return to the starting point? Always face forward. Take 4 steps forward. Take 5 steps right. Take 7 steps left.\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "If you follow these instructions, do you return to the starting point? Take 6 steps. Turn left. Turn left. Take 1 step. Take 5 steps. Turn around.\nOptions:\n- Yes\n- No",
+      "prediction": "no",
+      "true_answer": "yes"
+    }
+  ]
+}
+{
+  "task": "object_counting",
+  "FSL_10_4_accuracy": 56.25,
+  "eval_time": 14.6032,
+  "examples": [
+    {
+      "question": "I have a flute, and a trombone. How many musical instruments do I have?",
+      "prediction": "2",
+      "true_answer": "2"
+    },
+    {
+      "question": "I have a garlic, a cabbage, an onion, a head of broccoli, a yam, and two potatoes. How many vegetables do I have?",
+      "prediction": "7",
+      "true_answer": "7"
+    },
+    {
+      "question": "I have four couches, a microwave, a table, a chair, a fridge, four stoves, a lamp, a car, an oven, and a toaster. How many objects do I have?",
+      "prediction": "15",
+      "true_answer": "16"
+    },
+    {
+      "question": "I have a microwave, a lamp, four cars, a stove, a toaster, and a bed. How many objects do I have?",
+      "prediction": "9",
+      "true_answer": "9"
+    },
+    {
+      "question": "I have two cows, a fish, a chicken, a snake, and two mice. How many animals do I have?",
+      "prediction": "7",
+      "true_answer": "7"
+    }
+  ]
+}
+{
+  "task": "penguins_in_a_table",
+  "FSL_10_4_accuracy": 46.3235,
+  "eval_time": 34.9035,
+  "examples": [
+    {
+      "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nHow many penguins are less than 8 years old and weight more than 12 kg?\nOptions:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5",
+      "prediction": "(c)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nAnd here is a similar table, but listing giraffes:\nname, age, height (cm), weight (kg)\nJody, 5, 430, 620\nGladys, 10, 420, 590\nMarian, 2, 310, 410\nDonna, 9, 440, 650\nHow many giraffes are there in the tables?\nOptions:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  Which penguin is older than the other ones?\nOptions:\n(A) Louis\n(B) Bernard\n(C) Vincent\n(D) Gwen\n(E) James",
+      "prediction": "(d)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nWe then delete the penguin named Bernard from the table.\nHow many penguins are more than 8 years old?\nOptions:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5",
+      "prediction": "(c)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nWhich is the oldest penguin?\nOptions:\n(A) Louis\n(B) Bernard\n(C) Vincent\n(D) Gwen\n(E) James",
+      "prediction": "(e)",
+      "true_answer": "(e)"
+    }
+  ]
+}
+{
+  "task": "reasoning_about_colored_objects",
+  "FSL_10_4_accuracy": 55.0,
+  "eval_time": 45.0668,
+  "examples": [
+    {
+      "question": "On the floor, you see a burgundy scrunchiephone charger and a teal bracelet. What color is the scrunchiephone charger?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+      "prediction": "(l)",
+      "true_answer": "(l)"
+    },
+    {
+      "question": "On the table, you see a bunch of things arranged in a row: a yellow pair of sunglasses, a brown fidget spinner, a silver cup, and a mauve teddy bear. How many non-yellow things do you see to the right of the silver thing?\nOptions:\n(A) zero\n(B) one\n(C) two\n(D) three\n(E) four\n(F) five\n(G) six",
+      "prediction": "(c)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "On the nightstand, you see a magenta notebook, a grey keychain, a black pencil, a gold pen, a mauve booklet, and a blue sheet of paper. What color is the booklet?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+      "prediction": "(i)",
+      "true_answer": "(i)"
+    },
+    {
+      "question": "On the desk, I see a purple sheet of paper, a burgundy necklace, a magenta pen, a green paperclip, and a brown notebook. Is the paperclip fuchsia?\nOptions:\n(A) yes\n(B) no",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "On the table, you see the following items arranged in a row: a brown crayon, a blue mug, a black dog leash, a mauve stress ball, and a silver textbook. What is the color of the left-most item?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+      "prediction": "(f)",
+      "true_answer": "(f)"
+    }
+  ]
+}
+{
+  "task": "ruin_names",
+  "FSL_10_4_accuracy": 59.5833,
+  "eval_time": 22.1563,
+  "examples": [
+    {
+      "question": "Which of the following is a humorous edit of this artist or movie name: 'no time to die'?\nOptions:\n(A) no time to diet\n(B) noetime to die\n(C) no timu to die\n(D) no time to diz",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Which of the following is a humorous edit of this artist or movie name: 'depeche mode'?\nOptions:\n(A) depecxhe mode\n(B) depeche hmode\n(C) depeche mole\n(D) depeche gmode",
+      "prediction": "(c)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Which of the following is a humorous edit of this artist or movie name: 'full metal jacket'?\nOptions:\n(A) fullmmetal jacket\n(B) full mpetal jacket\n(C) full metal jactet\n(D) dull metal jacket",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Which of the following is a humorous edit of this artist or movie name: 'pantera'?\nOptions:\n(A) paitera\n(B) spantera\n(C) lantern\n(D) panera",
+      "prediction": "(c)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Which of the following is a humorous edit of this artist or movie name: 'gold finger'?\nOptions:\n(A) pold finger\n(B) golt finger\n(C) gohd finger\n(D) mold finger",
+      "prediction": "(a)",
+      "true_answer": "(d)"
+    }
+  ]
+}
+{
+  "task": "salient_translation_error_detection",
+  "FSL_10_4_accuracy": 49.5833,
+  "eval_time": 101.1236,
+  "examples": [
+    {
+      "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Erwin Schmidt ist ein \u00f6sterreichischer Jazzmusiker.\nTranslation: Erwin Schmidt is an Austrian hit musician.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+      "prediction": "(d)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Dieser Teil der Liste beinhaltet die Denkmale in Potsdam, die sich in Stra\u00dfen befinden, die mit A beginnen.\nTranslation: This part of the list includes the monuments in Potsdam, which are located in streets that begin with C.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+      "prediction": "(c)",
+      "true_answer": "(f)"
+    },
+    {
+      "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Das D\u00e9partement Moselle ist das franz\u00f6sische D\u00e9partement mit der Ordnungsnummer 57.\nTranslation: The Moselle d\u00e9partement is a department in northern France, serial number 67.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Holungen ist ein Dorf des Untereichsfelds im Nordwesten von Th\u00fcringen.\nTranslation: Holungen is a mall in the Untereichsfeld region in the northwest of Thuringia.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+      "prediction": "(d)",
+      "true_answer": "(f)"
+    },
+    {
+      "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: In der Liste der Kulturdenkmale in Stuttgart-S\u00fcd sind alle unbeweglichen Bau- und Kunstdenkmale in Stuttgart-S\u00fcd aufgelistet, die in der Liste der Kulturdenkmale.\nTranslation: In the list of monuments in Stuttgart-S\u00fcd are listed all monuments in Stuttgart-S\u00fcd, which are in the list of monuments.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+      "prediction": "(f)",
+      "true_answer": "(a)"
+    }
+  ]
+}
+{
+  "task": "snarks",
+  "FSL_10_4_accuracy": 60.119,
+  "eval_time": 13.6286,
+  "examples": [
+    {
+      "question": "Which statement is sarcastic?\nOptions:\n(A) Because Romania is not a real country, obviously\n(B) Because Atlantis is not a real country, obviously",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Which statement is sarcastic?\nOptions:\n(A) We should start a petition to ban breathing\n(B) We should start a petition to ban vaping",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Which statement is sarcastic?\nOptions:\n(A) That's how the internet works, it's a series of networks\n(B) That's how the internet works, it's a series of tubes",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Which statement is sarcastic?\nOptions:\n(A) Try having your landscape fill the entirety of the photo. That'd look good\n(B) Try having your face fill the entirety of the photo. That'd look good",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Which statement is sarcastic?\nOptions:\n(A) I'm a serious symphony fan so when I go I hope the crowd is dead silent and everyone is in their seats so I can pay extra good attention\n(B) I'm a serious hockey fan so when I go I hope the crowd is dead silent and everyone is in their seats so I can pay extra good attention",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    }
+  ]
+}
+{
+  "task": "sports_understanding",
+  "FSL_10_4_accuracy": 76.25,
+  "eval_time": 8.8882,
+  "examples": [
+    {
+      "question": "Is the following sentence plausible? \"Mitchell Trubisky caught the screen pass.\"",
+      "prediction": "no",
+      "true_answer": "yes"
+    },
+    {
+      "question": "Is the following sentence plausible? \"Philip Rivers drove into the restricted area.\"",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "Is the following sentence plausible? \"George Springer committed a blocking foul.\"",
+      "prediction": "yes",
+      "true_answer": "no"
+    },
+    {
+      "question": "Is the following sentence plausible? \"Malcolm Brogdon banked the shot in.\"",
+      "prediction": "yes",
+      "true_answer": "yes"
+    },
+    {
+      "question": "Is the following sentence plausible? \"Domantas Sabonis gained five yards in the AFC championship.\"",
+      "prediction": "no",
+      "true_answer": "no"
+    }
+  ]
+}
+{
+  "task": "temporal_sequences",
+  "FSL_10_4_accuracy": 37.5,
+  "eval_time": 62.748,
+  "examples": [
+    {
+      "question": "Today, Mark went to the football field. Between what times could they have gone?\nWe know that:\nMark woke up at 5am.\nSteven saw Mark walking towards the Statue of Liberty from 5am to 6am.\nWilliam saw Mark working out at the gym from 6am to 7am.\nJennifer saw Mark reading at the library from 7am to 9pm.\nThe football field was closed after 10pm.\nBetween what times could Mark have gone to the football field?\nOptions:\n(A) 7am to 9pm\n(B) 6am to 7am\n(C) 5am to 6am\n(D) 9pm to 10pm",
+      "prediction": "(a)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Today, Thomas went to the football field. Between what times could they have gone?\nWe know that:\nThomas woke up at 8am.\nDavid saw Thomas fixing their computer at the electronic store from 8am to 10am.\nJennifer saw Thomas buying lunch at the deli from 10am to 12pm.\nLisa saw Thomas walking towards the Statue of Liberty from 12pm to 2pm.\nSarah saw Thomas buying a phone at the electronics store from 2pm to 5pm.\nKimberly saw Thomas buying a bike at the bike shop from 6pm to 9pm.\nThe football field was closed after 9pm.\nBetween what times could Thomas have gone to the football field?\nOptions:\n(A) 12pm to 2pm\n(B) 8am to 10am\n(C) 2pm to 5pm\n(D) 5pm to 6pm",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Today, James went to the restaurant. Between what times could they have gone?\nWe know that:\nJames woke up at 12pm.\nElizabeth saw James stretching at a yoga studio from 3pm to 4pm.\nMichael saw James fixing their computer at the electronic store from 4pm to 7pm.\nMary saw James working at the office from 7pm to 9pm.\nNancy saw James working out at the gym from 9pm to 10pm.\nThe restaurant was closed after 10pm.\nBetween what times could James have gone to the restaurant?\nOptions:\n(A) 12pm to 3pm\n(B) 3pm to 4pm\n(C) 7pm to 9pm\n(D) 9pm to 10pm",
+      "prediction": "(a)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Today, Sarah went to the bakery. Between what times could they have gone?\nWe know that:\nSarah woke up at 9am.\nJohn saw Sarah getting a coffee at the cafe from 10am to 12pm.\nThomas saw Sarah buying lunch at the deli from 12pm to 4pm.\nRichard saw Sarah driving to the water park from 4pm to 5pm.\nThe bakery was closed after 5pm.\nBetween what times could Sarah have gone to the bakery?\nOptions:\n(A) 4pm to 5pm\n(B) 12pm to 4pm\n(C) 9am to 10am\n(D) 10am to 12pm",
+      "prediction": "(d)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Today, Steven went to the gas station. Between what times could they have gone?\nWe know that:\nSteven woke up at 7am.\nAshley saw Steven stretching at a yoga studio from 7am to 10am.\nWilliam saw Steven reading at the library from 1pm to 2pm.\nJennifer saw Steven working at the office from 2pm to 3pm.\nMichael saw Steven watching a movie at the theater from 3pm to 7pm.\nMary saw Steven waiting at the train station from 7pm to 10pm.\nThe gas station was closed after 10pm.\nBetween what times could Steven have gone to the gas station?\nOptions:\n(A) 7am to 10am\n(B) 7pm to 10pm\n(C) 10am to 1pm\n(D) 3pm to 7pm",
+      "prediction": "(d)",
+      "true_answer": "(c)"
+    }
+  ]
+}
+{
+  "task": "tracking_shuffled_objects_five_objects",
+  "FSL_10_4_accuracy": 20.4167,
+  "eval_time": 59.2971,
+  "examples": [
+    {
+      "question": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Hound of the Baskervilles, Bob gets The Fellowship of the Ring, Claire gets Ulysses, Dave gets Lolita, and Eve gets Moby Dick.\nAs the semester proceeds, they start trading around the new books. First, Bob and Alice swap books. Then, Claire and Eve swap books. Then, Claire and Dave swap books. Then, Bob and Dave swap books. Finally, Claire and Eve swap books. At the end of the semester, Claire has\nOptions:\n(A) Hound of the Baskervilles\n(B) The Fellowship of the Ring\n(C) Ulysses\n(D) Lolita\n(E) Moby Dick",
+      "prediction": "(d)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, and Eve are playing a game. At the start of the game, they are each holding a ball: Alice has a orange ball, Bob has a black ball, Claire has a red ball, Dave has a pink ball, and Eve has a blue ball.\nAs the game progresses, pairs of players trade balls. First, Eve and Bob swap balls. Then, Claire and Eve swap balls. Then, Bob and Dave swap balls. Then, Eve and Alice swap balls. Finally, Dave and Bob swap balls. At the end of the game, Alice has the\nOptions:\n(A) orange ball\n(B) black ball\n(C) red ball\n(D) pink ball\n(E) blue ball",
+      "prediction": "(d)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Melissa, Bob is dancing with Rodrigo, Claire is dancing with Lola, Dave is dancing with Patrick, and Eve is dancing with Jamie.\nThroughout the song, the dancers often trade partners. First, Claire and Bob switch partners. Then, Claire and Eve switch partners. Then, Eve and Dave switch partners. Then, Claire and Alice switch partners. Finally, Bob and Eve switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Melissa\n(B) Rodrigo\n(C) Lola\n(D) Patrick\n(E) Jamie",
+      "prediction": "(d)",
+      "true_answer": "(e)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Catch-22, Bob gets The Fellowship of the Ring, Claire gets Lolita, Dave gets Frankenstein, and Eve gets The Odyssey.\nAs the semester proceeds, they start trading around the new books. First, Alice and Bob swap books. Then, Alice and Dave swap books. Then, Alice and Claire swap books. Then, Bob and Eve swap books. Finally, Alice and Dave swap books. At the end of the semester, Claire has\nOptions:\n(A) Catch-22\n(B) The Fellowship of the Ring\n(C) Lolita\n(D) Frankenstein\n(E) The Odyssey",
+      "prediction": "(c)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Lolita, Bob gets The Great Gatsby, Claire gets Frankenstein, Dave gets Hound of the Baskervilles, and Eve gets Ulysses.\nAs the semester proceeds, they start trading around the new books. First, Eve and Alice swap books. Then, Dave and Bob swap books. Then, Eve and Claire swap books. Then, Bob and Alice swap books. Finally, Claire and Dave swap books. At the end of the semester, Alice has\nOptions:\n(A) Lolita\n(B) The Great Gatsby\n(C) Frankenstein\n(D) Hound of the Baskervilles\n(E) Ulysses",
+      "prediction": "(e)",
+      "true_answer": "(d)"
+    }
+  ]
+}
+{
+  "task": "tracking_shuffled_objects_seven_objects",
+  "FSL_10_4_accuracy": 21.25,
+  "eval_time": 79.2064,
+  "examples": [
+    {
+      "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Ulysses, Bob gets The Fellowship of the Ring, Claire gets The Odyssey, Dave gets Lolita, Eve gets Hound of the Baskervilles, Fred gets Frankenstein, and Gertrude gets The Great Gatsby.\nAs the semester proceeds, they start trading around the new books. First, Fred and Dave swap books. Then, Alice and Claire swap books. Then, Eve and Dave swap books. Then, Bob and Eve swap books. Then, Gertrude and Claire swap books. Then, Eve and Gertrude swap books. Finally, Dave and Bob swap books. At the end of the semester, Dave has\nOptions:\n(A) Ulysses\n(B) The Fellowship of the Ring\n(C) The Odyssey\n(D) Lolita\n(E) Hound of the Baskervilles\n(F) Frankenstein\n(G) The Great Gatsby",
+      "prediction": "(f)",
+      "true_answer": "(f)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Patrick, Bob is dancing with Rodrigo, Claire is dancing with Lola, Dave is dancing with Izzi, Eve is dancing with Sam, Fred is dancing with Karl, and Gertrude is dancing with Melissa.\nThroughout the song, the dancers often trade partners. First, Bob and Fred switch partners. Then, Claire and Alice switch partners. Then, Claire and Dave switch partners. Then, Gertrude and Alice switch partners. Then, Claire and Bob switch partners. Then, Dave and Fred switch partners. Finally, Eve and Alice switch partners. At the end of the dance, Eve is dancing with\nOptions:\n(A) Patrick\n(B) Rodrigo\n(C) Lola\n(D) Izzi\n(E) Sam\n(F) Karl\n(G) Melissa",
+      "prediction": "(g)",
+      "true_answer": "(g)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are playing a game. At the start of the game, they are each holding a ball: Alice has a pink ball, Bob has a white ball, Claire has a brown ball, Dave has a blue ball, Eve has a yellow ball, Fred has a black ball, and Gertrude has a purple ball.\nAs the game progresses, pairs of players trade balls. First, Fred and Gertrude swap balls. Then, Gertrude and Bob swap balls. Then, Fred and Claire swap balls. Then, Claire and Dave swap balls. Then, Claire and Eve swap balls. Then, Alice and Bob swap balls. Finally, Claire and Eve swap balls. At the end of the game, Claire has the\nOptions:\n(A) pink ball\n(B) white ball\n(C) brown ball\n(D) blue ball\n(E) yellow ball\n(F) black ball\n(G) purple ball",
+      "prediction": "(e)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Patrick, Bob is dancing with Lola, Claire is dancing with Izzi, Dave is dancing with Rodrigo, Eve is dancing with Helga, Fred is dancing with Sam, and Gertrude is dancing with Melissa.\nThroughout the song, the dancers often trade partners. First, Eve and Bob switch partners. Then, Eve and Dave switch partners. Then, Fred and Gertrude switch partners. Then, Gertrude and Alice switch partners. Then, Alice and Dave switch partners. Then, Claire and Alice switch partners. Finally, Alice and Dave switch partners. At the end of the dance, Eve is dancing with\nOptions:\n(A) Patrick\n(B) Lola\n(C) Izzi\n(D) Rodrigo\n(E) Helga\n(F) Sam\n(G) Melissa",
+      "prediction": "(d)",
+      "true_answer": "(d)"
+    },
+    {
+      "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Pearl, Bob gets The Fellowship of the Ring, Claire gets Catch-22, Dave gets The Great Gatsby, Eve gets Frankenstein, Fred gets Ulysses, and Gertrude gets The Odyssey.\nAs the semester proceeds, they start trading around the new books. First, Gertrude and Bob swap books. Then, Alice and Fred swap books. Then, Gertrude and Claire swap books. Then, Fred and Eve swap books. Then, Claire and Dave swap books. Then, Eve and Bob swap books. Finally, Fred and Gertrude swap books. At the end of the semester, Eve has\nOptions:\n(A) The Pearl\n(B) The Fellowship of the Ring\n(C) Catch-22\n(D) The Great Gatsby\n(E) Frankenstein\n(F) Ulysses\n(G) The Odyssey",
+      "prediction": "(e)",
+      "true_answer": "(g)"
+    }
+  ]
+}
+{
+  "task": "tracking_shuffled_objects_three_objects",
+  "FSL_10_4_accuracy": 37.9167,
+  "eval_time": 42.5604,
+  "examples": [
+    {
+      "question": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a black ball, Bob has a purple present, and Claire has a blue present.\nAs the event progresses, pairs of people swap gifts. First, Claire and Alice swap their gifts. Then, Bob and Claire swap their gifts. Finally, Alice and Bob swap their gifts. At the end of the event, Alice has the\nOptions:\n(A) black ball\n(B) purple present\n(C) blue present",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a black ball, Bob has a orange ball, and Claire has a white present.\nAs the event progresses, pairs of people swap gifts. First, Claire and Bob swap their gifts. Then, Bob and Alice swap their gifts. Finally, Bob and Claire swap their gifts. At the end of the event, Claire has the\nOptions:\n(A) black ball\n(B) orange ball\n(C) white present",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    },
+    {
+      "question": "Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Sam, Bob is dancing with Jamie, and Claire is dancing with Melissa.\nThroughout the song, the dancers often trade partners. First, Alice and Claire switch partners. Then, Claire and Bob switch partners. Finally, Alice and Bob switch partners. At the end of the dance, Claire is dancing with\nOptions:\n(A) Sam\n(B) Jamie\n(C) Melissa",
+      "prediction": "(b)",
+      "true_answer": "(b)"
+    },
+    {
+      "question": "Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Jamie, Bob is dancing with Patrick, and Claire is dancing with Melissa.\nThroughout the song, the dancers often trade partners. First, Claire and Bob switch partners. Then, Bob and Alice switch partners. Finally, Alice and Claire switch partners. At the end of the dance, Claire is dancing with\nOptions:\n(A) Jamie\n(B) Patrick\n(C) Melissa",
+      "prediction": "(a)",
+      "true_answer": "(c)"
+    },
+    {
+      "question": "Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing goalkeeper, Bob is playing left midfielder, and Claire is playing striker.\nAs the game progresses, pairs of players occasionally swap positions. First, Bob and Claire trade positions. Then, Bob and Alice trade positions. Finally, Claire and Alice trade positions. At the end of the match, Bob is playing\nOptions:\n(A) goalkeeper\n(B) left midfielder\n(C) striker",
+      "prediction": "(b)",
+      "true_answer": "(a)"
+    }
+  ]
+}
+{
+  "task": "web_of_lies",
+  "FSL_10_4_accuracy": 48.75,
+  "eval_time": 18.6948,
+  "examples": [
+    {
+      "question": "Question: Yoland tells the truth. Michaela says Yoland tells the truth. Sima says Michaela tells the truth. Shaunda says Sima tells the truth. Osvaldo says Shaunda lies. Does Osvaldo tell the truth?",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "Question: Conception tells the truth. Teressa says Conception lies. Sal says Teressa tells the truth. Fidel says Sal tells the truth. Shenna says Fidel lies. Does Shenna tell the truth?",
+      "prediction": "no",
+      "true_answer": "yes"
+    },
+    {
+      "question": "Question: Rashida lies. Osvaldo says Rashida tells the truth. Sherrie says Osvaldo tells the truth. Gwenn says Sherrie tells the truth. Jerry says Gwenn lies. Does Jerry tell the truth?",
+      "prediction": "no",
+      "true_answer": "yes"
+    },
+    {
+      "question": "Question: Audrie lies. Sherrie says Audrie lies. Willian says Sherrie tells the truth. Conception says Willian tells the truth. Gwenn says Conception lies. Does Gwenn tell the truth?",
+      "prediction": "no",
+      "true_answer": "no"
+    },
+    {
+      "question": "Question: Teressa tells the truth. Vernell says Teressa lies. Sherrie says Vernell tells the truth. Tamika says Sherrie lies. Millicent says Tamika tells the truth. Does Millicent tell the truth?",
+      "prediction": "no",
+      "true_answer": "yes"
+    }
+  ]
+}
+{
+  "task": "word_sorting",
+  "FSL_10_4_accuracy": 52.5,
+  "eval_time": 22.1118,
+  "examples": [
+    {
+      "question": "Sort the following words alphabetically: List: fallen juvenile bermuda diagram ezra screechy aristocratic musty absorption slack quartile nod nigeria testicle congo cheerful eucre cesium",
+      "prediction": "absorption aristocratic bermuda cheerful cesium congo diagram eucre ezra fallen juvenile musty nod nigeria quartile screechy slack testicle thunder thunder",
+      "true_answer": "absorption aristocratic bermuda cesium cheerful congo diagram eucre ezra fallen juvenile musty nigeria nod quartile screechy slack testicle"
+    },
+    {
+      "question": "Sort the following words alphabetically: List: zinc coriolanus leather easternmost highwaymen scavenge musky cutlet synaptic creak heaven paula astigmat muscular godson boyish",
+      "prediction": "astigmat boyish creak cutlet easternmost godson heaven highwaymen leather muscular musky paula scavenge synaptic thunder zinc",
+      "true_answer": "astigmat boyish coriolanus creak cutlet easternmost godson heaven highwaymen leather muscular musky paula scavenge synaptic zinc"
+    },
+    {
+      "question": "Sort the following words alphabetically: List: almost delphic semitic unbeknownst astute deadlock libertarian antic levitate execution sanction scathe storehouse dandelion affable sweeney fortunate leverage horntail apache",
+      "prediction": "affable almost apache astute deadlock delphic fortunate horntail levitate libertarian leverage sanction scathe semitic sweeney storehouse thunder unbeknownst",
+      "true_answer": "affable almost antic apache astute dandelion deadlock delphic execution fortunate horntail leverage levitate libertarian sanction scathe semitic storehouse sweeney unbeknownst"
+    },
+    {
+      "question": "Sort the following words alphabetically: List: inflammation slump schiller jacqueline darkle piano fungi sojourn macaque joanne gobble boldface sst",
+      "prediction": "boldface darkle fungi gobble inflammation jacqueline joanne macaque piano schiller slump sojourn sst thunder",
+      "true_answer": "boldface darkle fungi gobble inflammation jacqueline joanne macaque piano schiller slump sojourn sst"
+    },
+    {
+      "question": "Sort the following words alphabetically: List: marshmallow doge alpenstock ocean accept angus drool jutish resistive chromium vociferous castigate prize octennial stonewort concision elizabethan",
+      "prediction": "accept alpenstock angus castigate chromium concision doge drool elizabethan jutish marshmallow ocean octennial prize resistive stonewort thunder vociferous",
+      "true_answer": "accept alpenstock angus castigate chromium concision doge drool elizabethan jutish marshmallow ocean octennial prize resistive stonewort vociferous"
+    }
+  ]
+}
+
+Saved baseline results to logs/current/20250121_FSL_10_4_gpu0.json.
+[rank0]:[W121 15:35:17.359261206 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

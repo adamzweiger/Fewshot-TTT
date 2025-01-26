@@ -1,0 +1,6 @@
+[submodule "external/BIG-Bench-Hard"]
+	path = external/BIG-Bench-Hard
+	url = https://github.com/suzgunmirac/BIG-Bench-Hard
+[submodule "external/torchtune"]
+	path = external/torchtune
+	url = https://github.com/adamzweiger/torchtune.git

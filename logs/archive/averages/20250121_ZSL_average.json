@@ -1,0 +1,110 @@
+[
+  {
+    "task": "boolean_expressions",
+    "ZSL_accuracy": 71.04
+  },
+  {
+    "task": "causal_judgement",
+    "ZSL_accuracy": 53.4759
+  },
+  {
+    "task": "date_understanding",
+    "ZSL_accuracy": 50.8
+  },
+  {
+    "task": "disambiguation_qa",
+    "ZSL_accuracy": 29.2
+  },
+  {
+    "task": "dyck_languages",
+    "ZSL_accuracy": 3.6
+  },
+  {
+    "task": "formal_fallacies",
+    "ZSL_accuracy": 0.0
+  },
+  {
+    "task": "geometric_shapes",
+    "ZSL_accuracy": 14.16
+  },
+  {
+    "task": "hyperbaton",
+    "ZSL_accuracy": 58.0
+  },
+  {
+    "task": "logical_deduction_five_objects",
+    "ZSL_accuracy": 41.6
+  },
+  {
+    "task": "logical_deduction_seven_objects",
+    "ZSL_accuracy": 40.4
+  },
+  {
+    "task": "logical_deduction_three_objects",
+    "ZSL_accuracy": 51.6
+  },
+  {
+    "task": "movie_recommendation",
+    "ZSL_accuracy": 53.2
+  },
+  {
+    "task": "multistep_arithmetic_two",
+    "ZSL_accuracy": 0.8
+  },
+  {
+    "task": "navigate",
+    "ZSL_accuracy": 43.84
+  },
+  {
+    "task": "object_counting",
+    "ZSL_accuracy": 44.4
+  },
+  {
+    "task": "penguins_in_a_table",
+    "ZSL_accuracy": 47.2603
+  },
+  {
+    "task": "reasoning_about_colored_objects",
+    "ZSL_accuracy": 59.2
+  },
+  {
+    "task": "ruin_names",
+    "ZSL_accuracy": 53.6
+  },
+  {
+    "task": "salient_translation_error_detection",
+    "ZSL_accuracy": 42.0
+  },
+  {
+    "task": "snarks",
+    "ZSL_accuracy": 60.6742
+  },
+  {
+    "task": "sports_understanding",
+    "ZSL_accuracy": 76.0
+  },
+  {
+    "task": "temporal_sequences",
+    "ZSL_accuracy": 93.2
+  },
+  {
+    "task": "tracking_shuffled_objects_five_objects",
+    "ZSL_accuracy": 18.72
+  },
+  {
+    "task": "tracking_shuffled_objects_seven_objects",
+    "ZSL_accuracy": 16.8
+  },
+  {
+    "task": "tracking_shuffled_objects_three_objects",
+    "ZSL_accuracy": 30.0
+  },
+  {
+    "task": "web_of_lies",
+    "ZSL_accuracy": 0.0
+  },
+  {
+    "task": "word_sorting",
+    "ZSL_accuracy": 50.88
+  }
+]

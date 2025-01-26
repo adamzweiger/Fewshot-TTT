@@ -1,0 +1,110 @@
+[
+  {
+    "task": "boolean_expressions",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 77.33334
+  },
+  {
+    "task": "causal_judgement",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 59.32202
+  },
+  {
+    "task": "date_understanding",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.83332
+  },
+  {
+    "task": "disambiguation_qa",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 64.16666000000001
+  },
+  {
+    "task": "dyck_languages",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 67.25002
+  },
+  {
+    "task": "formal_fallacies",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 55.33332
+  },
+  {
+    "task": "geometric_shapes",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 52.66668
+  },
+  {
+    "task": "hyperbaton",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.75
+  },
+  {
+    "task": "logical_deduction_five_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 41.33334
+  },
+  {
+    "task": "logical_deduction_seven_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 47.0
+  },
+  {
+    "task": "logical_deduction_three_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 66.75
+  },
+  {
+    "task": "movie_recommendation",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 92.33332
+  },
+  {
+    "task": "multistep_arithmetic_two",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 2.00002
+  },
+  {
+    "task": "navigate",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 60.16666
+  },
+  {
+    "task": "object_counting",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.41666
+  },
+  {
+    "task": "penguins_in_a_table",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 46.61764
+  },
+  {
+    "task": "reasoning_about_colored_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 58.08334
+  },
+  {
+    "task": "ruin_names",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 84.16668
+  },
+  {
+    "task": "salient_translation_error_detection",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 44.91666
+  },
+  {
+    "task": "snarks",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 66.78572
+  },
+  {
+    "task": "sports_understanding",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 76.91664
+  },
+  {
+    "task": "temporal_sequences",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 99.58332
+  },
+  {
+    "task": "tracking_shuffled_objects_five_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 19.91666
+  },
+  {
+    "task": "tracking_shuffled_objects_seven_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 15.83332
+  },
+  {
+    "task": "tracking_shuffled_objects_three_objects",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 32.08334
+  },
+  {
+    "task": "web_of_lies",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 49.25002
+  },
+  {
+    "task": "word_sorting",
+    "ICFT_ex_trainAll_10_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05_accuracy": 54.41666
+  }
+]

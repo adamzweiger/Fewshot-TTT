@@ -1,0 +1,1721 @@
+
+=== Finetuning with the following hyperparameters ===
+Batch size: 5
+Epochs: 4
+Learning rate: 0.0001
+LoRA rank: 64
+LoRA alpha: 64
+k (few-shot examples): 10
+
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/boolean_expressions_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737490707.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 580.60 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.54it/s]1|1|Loss: 0.6490578055381775:  50%|█████     | 1/2 [00:00<00:00,  1.54it/s]1|1|Loss: 0.6490578055381775: 100%|██████████| 2/2 [00:00<00:00,  2.22it/s]1|2|Loss: 1.5734539031982422: 100%|██████████| 2/2 [00:00<00:00,  2.22it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 4.53 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 1.5734539031982422: 100%|██████████| 2/2 [00:05<00:00,  2.75s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.16it/s][A
+2|3|Loss: 0.2296047955751419:  50%|█████     | 1/2 [00:00<00:00,  3.16it/s][A
+2|3|Loss: 0.2296047955751419: 100%|██████████| 2/2 [00:00<00:00,  3.16it/s][A
+2|4|Loss: 0.8689972162246704: 100%|██████████| 2/2 [00:00<00:00,  3.16it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 17.65 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.8689972162246704: 100%|██████████| 2/2 [00:18<00:00,  9.15s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  3.20it/s]3|5|Loss: 0.10597171634435654:  50%|█████     | 1/2 [00:00<00:00,  3.20it/s]3|5|Loss: 0.10597171634435654: 100%|██████████| 2/2 [00:00<00:00,  3.20it/s]3|6|Loss: 0.16079746186733246: 100%|██████████| 2/2 [00:00<00:00,  3.20it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 16.75 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.16079746186733246: 100%|██████████| 2/2 [00:17<00:00,  8.69s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.22it/s][A
+4|7|Loss: 0.08629246056079865:  50%|█████     | 1/2 [00:00<00:00,  3.22it/s][A
+4|7|Loss: 0.08629246056079865: 100%|██████████| 2/2 [00:00<00:00,  3.24it/s][A
+4|8|Loss: 0.10670210421085358: 100%|██████████| 2/2 [00:00<00:00,  3.24it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 8.26 seconds.
+4|8|Loss: 0.10670210421085358: 100%|██████████| 2/2 [00:08<00:00,  4.44s/it]
+Finetuning completed for task: boolean_expressions in 95.17s
+Deleted dataset file: /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/causal_judgement_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737490773.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 479.88 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:02<00:02,  2.23s/it]1|1|Loss: 1.0462034940719604:  50%|█████     | 1/2 [00:02<00:02,  2.23s/it]1|1|Loss: 1.0462034940719604: 100%|██████████| 2/2 [00:03<00:00,  1.79s/it]1|2|Loss: 0.5530678033828735: 100%|██████████| 2/2 [00:03<00:00,  1.79s/it]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 7.29 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.5530678033828735: 100%|██████████| 2/2 [00:11<00:00,  5.51s/it]
+
+ 50%|█████     | 1/2 [00:01<00:01,  1.90s/it][A
+2|3|Loss: 0.1960250437259674:  50%|█████     | 1/2 [00:01<00:01,  1.90s/it][A
+2|3|Loss: 0.1960250437259674: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it][A
+2|4|Loss: 0.061128079891204834: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 15.77 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.061128079891204834: 100%|██████████| 2/2 [00:19<00:00,  9.82s/it]
+ 50%|█████     | 1/2 [00:01<00:01,  1.90s/it]3|5|Loss: 0.0010515619069337845:  50%|█████     | 1/2 [00:01<00:01,  1.90s/it]3|5|Loss: 0.0010515619069337845: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it]3|6|Loss: 2.2291702407528646e-05: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 11.68 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 2.2291702407528646e-05: 100%|██████████| 2/2 [00:15<00:00,  7.78s/it]
+
+ 50%|█████     | 1/2 [00:01<00:01,  1.97s/it][A
+4|7|Loss: 8.92799798748456e-05:  50%|█████     | 1/2 [00:01<00:01,  1.97s/it][A
+4|7|Loss: 8.92799798748456e-05: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it][A
+4|8|Loss: 1.8238719349028543e-05: 100%|██████████| 2/2 [00:03<00:00,  1.94s/it][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 2.03 seconds.
+4|8|Loss: 1.8238719349028543e-05: 100%|██████████| 2/2 [00:05<00:00,  2.96s/it]
+Finetuning completed for task: causal_judgement in 66.57s
+Deleted dataset file: /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/date_understanding_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737490840.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 557.79 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.04it/s]1|1|Loss: 0.6261031031608582:  50%|█████     | 1/2 [00:00<00:00,  1.04it/s]1|1|Loss: 0.6261031031608582: 100%|██████████| 2/2 [00:01<00:00,  1.41it/s]1|2|Loss: 0.6292988061904907: 100%|██████████| 2/2 [00:01<00:00,  1.41it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 8.88 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.6292988061904907: 100%|██████████| 2/2 [00:10<00:00,  5.19s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.05it/s][A
+2|3|Loss: 0.22502712905406952:  50%|█████     | 1/2 [00:00<00:00,  2.05it/s][A
+2|3|Loss: 0.22502712905406952: 100%|██████████| 2/2 [00:01<00:00,  1.93it/s][A
+2|4|Loss: 0.1679195761680603: 100%|██████████| 2/2 [00:01<00:00,  1.93it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 15.05 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.1679195761680603: 100%|██████████| 2/2 [00:16<00:00,  8.04s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.87it/s]3|5|Loss: 0.02247614413499832:  50%|█████     | 1/2 [00:00<00:00,  1.87it/s]3|5|Loss: 0.02247614413499832: 100%|██████████| 2/2 [00:01<00:00,  1.88it/s]3|6|Loss: 0.023067574948072433: 100%|██████████| 2/2 [00:01<00:00,  1.88it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 16.04 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.023067574948072433: 100%|██████████| 2/2 [00:17<00:00,  8.56s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.87it/s][A
+4|7|Loss: 0.008470009081065655:  50%|█████     | 1/2 [00:00<00:00,  1.87it/s][A
+4|7|Loss: 0.008470009081065655: 100%|██████████| 2/2 [00:01<00:00,  1.99it/s][A
+4|8|Loss: 0.0006246123230084777: 100%|██████████| 2/2 [00:01<00:00,  1.99it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 4.24 seconds.
+4|8|Loss: 0.0006246123230084777: 100%|██████████| 2/2 [00:05<00:00,  2.63s/it]
+Finetuning completed for task: date_understanding in 63.74s
+Deleted dataset file: /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/disambiguation_qa_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737490903.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 748.47 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.23it/s]1|1|Loss: 0.7836589813232422:  50%|█████     | 1/2 [00:00<00:00,  1.23it/s]1|1|Loss: 0.7836589813232422: 100%|██████████| 2/2 [00:01<00:00,  1.68it/s]1|2|Loss: 0.5385771989822388: 100%|██████████| 2/2 [00:01<00:00,  1.68it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 13.72 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.5385771989822388: 100%|██████████| 2/2 [00:14<00:00,  7.49s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.24it/s][A
+2|3|Loss: 0.5795865654945374:  50%|█████     | 1/2 [00:00<00:00,  2.24it/s][A
+2|3|Loss: 0.5795865654945374: 100%|██████████| 2/2 [00:00<00:00,  2.24it/s][A
+2|4|Loss: 0.3785620629787445: 100%|██████████| 2/2 [00:00<00:00,  2.24it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 39.02 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.3785620629787445: 100%|██████████| 2/2 [00:39<00:00, 19.96s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.24it/s]3|5|Loss: 0.3074030578136444:  50%|█████     | 1/2 [00:00<00:00,  2.24it/s]3|5|Loss: 0.3074030578136444: 100%|██████████| 2/2 [00:00<00:00,  2.20it/s]3|6|Loss: 0.24280035495758057: 100%|██████████| 2/2 [00:00<00:00,  2.20it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 30.56 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.24280035495758057: 100%|██████████| 2/2 [00:31<00:00, 15.74s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.27it/s][A
+4|7|Loss: 0.2354433685541153:  50%|█████     | 1/2 [00:00<00:00,  2.27it/s][A
+4|7|Loss: 0.2354433685541153: 100%|██████████| 2/2 [00:00<00:00,  2.19it/s][A
+4|8|Loss: 0.27366089820861816: 100%|██████████| 2/2 [00:00<00:00,  2.19it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 21.64 seconds.
+4|8|Loss: 0.27366089820861816: 100%|██████████| 2/2 [00:22<00:00, 11.29s/it]
+Finetuning completed for task: disambiguation_qa in 122.86s
+Deleted dataset file: /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/dyck_languages_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491026.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 512.34 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.59it/s]1|1|Loss: 3.2555642127990723:  50%|█████     | 1/2 [00:00<00:00,  1.59it/s]1|1|Loss: 3.2555642127990723: 100%|██████████| 2/2 [00:00<00:00,  2.17it/s]1|2|Loss: 1.3903270959854126: 100%|██████████| 2/2 [00:00<00:00,  2.17it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 32.92 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 1.3903270959854126: 100%|██████████| 2/2 [00:33<00:00, 16.96s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.19it/s][A
+2|3|Loss: 0.6229783892631531:  50%|█████     | 1/2 [00:00<00:00,  3.19it/s][A
+2|3|Loss: 0.6229783892631531: 100%|██████████| 2/2 [00:00<00:00,  2.80it/s][A
+2|4|Loss: 0.8869783282279968: 100%|██████████| 2/2 [00:00<00:00,  2.80it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 39.76 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.8869783282279968: 100%|██████████| 2/2 [00:40<00:00, 20.24s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  3.13it/s]3|5|Loss: 0.32706233859062195:  50%|█████     | 1/2 [00:00<00:00,  3.13it/s]3|5|Loss: 0.32706233859062195: 100%|██████████| 2/2 [00:00<00:00,  2.83it/s]3|6|Loss: 0.32820674777030945: 100%|██████████| 2/2 [00:00<00:00,  2.83it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 41.32 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.32820674777030945: 100%|██████████| 2/2 [00:42<00:00, 21.01s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.14it/s][A
+4|7|Loss: 0.2177388072013855:  50%|█████     | 1/2 [00:00<00:00,  3.14it/s][A
+4|7|Loss: 0.2177388072013855: 100%|██████████| 2/2 [00:00<00:00,  2.79it/s][A
+4|8|Loss: 0.21868106722831726: 100%|██████████| 2/2 [00:00<00:00,  2.79it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 24.58 seconds.
+4|8|Loss: 0.21868106722831726: 100%|██████████| 2/2 [00:25<00:00, 12.65s/it]
+Finetuning completed for task: dyck_languages in 156.29s
+Deleted dataset file: /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/formal_fallacies_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491184.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 446.19 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.12it/s]1|1|Loss: 2.8700108528137207:  50%|█████     | 1/2 [00:00<00:00,  1.12it/s]1|1|Loss: 2.8700108528137207: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]1|2|Loss: 0.9322258234024048: 100%|██████████| 2/2 [00:01<00:00,  1.34it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 34.78 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.9322258234024048: 100%|██████████| 2/2 [00:36<00:00, 18.17s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.63it/s][A
+2|3|Loss: 0.6547718644142151:  50%|█████     | 1/2 [00:00<00:00,  1.63it/s][A
+2|3|Loss: 0.6547718644142151: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s][A
+2|4|Loss: 0.5988795757293701: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 43.34 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.5988795757293701: 100%|██████████| 2/2 [00:44<00:00, 22.32s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.61it/s]3|5|Loss: 0.4419451653957367:  50%|█████     | 1/2 [00:00<00:00,  1.61it/s]3|5|Loss: 0.4419451653957367: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s]3|6|Loss: 0.36497804522514343: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 47.56 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.36497804522514343: 100%|██████████| 2/2 [00:48<00:00, 24.43s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.61it/s][A
+4|7|Loss: 0.2683367431163788:  50%|█████     | 1/2 [00:00<00:00,  1.61it/s][A
+4|7|Loss: 0.2683367431163788: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s][A
+4|8|Loss: 0.4036753177642822: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 26.66 seconds.
+4|8|Loss: 0.4036753177642822: 100%|██████████| 2/2 [00:27<00:00, 13.98s/it]
+Finetuning completed for task: formal_fallacies in 173.54s
+Deleted dataset file: /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/geometric_shapes_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491358.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 542.74 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.01it/s]1|1|Loss: 1.570309042930603:  50%|█████     | 1/2 [00:00<00:00,  1.01it/s]1|1|Loss: 1.570309042930603: 100%|██████████| 2/2 [00:01<00:00,  1.25it/s]1|2|Loss: 0.7896907925605774: 100%|██████████| 2/2 [00:01<00:00,  1.25it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 43.36 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.7896907925605774: 100%|██████████| 2/2 [00:45<00:00, 22.52s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.52it/s][A
+2|3|Loss: 0.4205598831176758:  50%|█████     | 1/2 [00:00<00:00,  1.52it/s][A
+2|3|Loss: 0.4205598831176758: 100%|██████████| 2/2 [00:01<00:00,  1.39it/s][A
+2|4|Loss: 0.4398513436317444: 100%|██████████| 2/2 [00:01<00:00,  1.39it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 52.21 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.4398513436317444: 100%|██████████| 2/2 [00:53<00:00, 26.83s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.36it/s]3|5|Loss: 0.31469500064849854:  50%|█████     | 1/2 [00:00<00:00,  1.36it/s]3|5|Loss: 0.31469500064849854: 100%|██████████| 2/2 [00:01<00:00,  1.44it/s]3|6|Loss: 0.3308456838130951: 100%|██████████| 2/2 [00:01<00:00,  1.44it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 52.52 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.3308456838130951: 100%|██████████| 2/2 [00:53<00:00, 26.98s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.37it/s][A
+4|7|Loss: 0.04462038353085518:  50%|█████     | 1/2 [00:00<00:00,  1.37it/s][A
+4|7|Loss: 0.04462038353085518: 100%|██████████| 2/2 [00:01<00:00,  1.42it/s][A
+4|8|Loss: 0.2584910988807678: 100%|██████████| 2/2 [00:01<00:00,  1.42it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 29.12 seconds.
+4|8|Loss: 0.2584910988807678: 100%|██████████| 2/2 [00:30<00:00, 15.29s/it]
+Finetuning completed for task: geometric_shapes in 199.34s
+Deleted dataset file: /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/hyperbaton_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491558.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 526.06 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.66it/s]1|1|Loss: 0.5271628499031067:  50%|█████     | 1/2 [00:00<00:00,  1.66it/s]1|1|Loss: 0.5271628499031067: 100%|██████████| 2/2 [00:00<00:00,  2.21it/s]1|2|Loss: 0.20760729908943176: 100%|██████████| 2/2 [00:00<00:00,  2.21it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 50.65 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.20760729908943176: 100%|██████████| 2/2 [00:51<00:00, 25.82s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.18it/s][A
+2|3|Loss: 0.09502928704023361:  50%|█████     | 1/2 [00:00<00:00,  3.18it/s][A
+2|3|Loss: 0.09502928704023361: 100%|██████████| 2/2 [00:00<00:00,  3.02it/s][A
+2|4|Loss: 0.20895600318908691: 100%|██████████| 2/2 [00:00<00:00,  3.02it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 50.62 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.20895600318908691: 100%|██████████| 2/2 [00:51<00:00, 25.65s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  3.20it/s]3|5|Loss: 0.05247965827584267:  50%|█████     | 1/2 [00:00<00:00,  3.20it/s]3|5|Loss: 0.05247965827584267: 100%|██████████| 2/2 [00:00<00:00,  3.00it/s]3|6|Loss: 0.06551384180784225: 100%|██████████| 2/2 [00:00<00:00,  3.00it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 46.60 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.06551384180784225: 100%|██████████| 2/2 [00:47<00:00, 23.64s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.26it/s][A
+4|7|Loss: 0.026902057230472565:  50%|█████     | 1/2 [00:00<00:00,  3.26it/s][A
+4|7|Loss: 0.026902057230472565: 100%|██████████| 2/2 [00:00<00:00,  3.02it/s][A
+4|8|Loss: 0.014853297732770443: 100%|██████████| 2/2 [00:00<00:00,  3.02it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 25.66 seconds.
+4|8|Loss: 0.014853297732770443: 100%|██████████| 2/2 [00:26<00:00, 13.17s/it]
+Finetuning completed for task: hyperbaton in 192.64s
+Deleted dataset file: /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/logical_deduction_five_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491750.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 563.59 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.00it/s]1|1|Loss: 0.7413094639778137:  50%|█████     | 1/2 [00:00<00:00,  1.00it/s]1|1|Loss: 0.7413094639778137: 100%|██████████| 2/2 [00:01<00:00,  1.15it/s]1|2|Loss: 0.47945407032966614: 100%|██████████| 2/2 [00:01<00:00,  1.15it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 46.70 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.47945407032966614: 100%|██████████| 2/2 [00:48<00:00, 24.25s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.36it/s][A
+2|3|Loss: 0.11519556492567062:  50%|█████     | 1/2 [00:00<00:00,  1.36it/s][A
+2|3|Loss: 0.11519556492567062: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s][A
+2|4|Loss: 0.11050758510828018: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.92 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.11050758510828018: 100%|██████████| 2/2 [00:55<00:00, 27.73s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.34it/s]3|5|Loss: 0.009198364801704884:  50%|█████     | 1/2 [00:00<00:00,  1.34it/s]3|5|Loss: 0.009198364801704884: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]3|6|Loss: 0.16155539453029633: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 55.66 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.16155539453029633: 100%|██████████| 2/2 [00:57<00:00, 28.61s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.34it/s][A
+4|7|Loss: 0.002236603293567896:  50%|█████     | 1/2 [00:00<00:00,  1.34it/s][A
+4|7|Loss: 0.002236603293567896: 100%|██████████| 2/2 [00:01<00:00,  1.30it/s][A
+4|8|Loss: 0.002968658460304141: 100%|██████████| 2/2 [00:01<00:00,  1.30it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 31.99 seconds.
+4|8|Loss: 0.002968658460304141: 100%|██████████| 2/2 [00:33<00:00, 16.78s/it]
+Finetuning completed for task: logical_deduction_five_objects in 210.50s
+Deleted dataset file: /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/logical_deduction_seven_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737491961.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 457.75 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.10s/it]1|1|Loss: 0.626268744468689:  50%|█████     | 1/2 [00:01<00:01,  1.10s/it]1|1|Loss: 0.626268744468689: 100%|██████████| 2/2 [00:01<00:00,  1.03it/s]1|2|Loss: 0.5564141273498535: 100%|██████████| 2/2 [00:01<00:00,  1.03it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 52.17 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.5564141273498535: 100%|██████████| 2/2 [00:54<00:00, 27.10s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.14it/s][A
+2|3|Loss: 0.4096347987651825:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s][A
+2|3|Loss: 0.4096347987651825: 100%|██████████| 2/2 [00:01<00:00,  1.13it/s][A
+2|4|Loss: 0.09196096658706665: 100%|██████████| 2/2 [00:01<00:00,  1.13it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 54.16 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.09196096658706665: 100%|██████████| 2/2 [00:55<00:00, 27.98s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.14it/s]3|5|Loss: 0.1953648030757904:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s]3|5|Loss: 0.1953648030757904: 100%|██████████| 2/2 [00:01<00:00,  1.13it/s]3|6|Loss: 0.040378790348768234: 100%|██████████| 2/2 [00:01<00:00,  1.13it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 51.96 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.040378790348768234: 100%|██████████| 2/2 [00:53<00:00, 26.88s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.18it/s][A
+4|7|Loss: 0.07687223702669144:  50%|█████     | 1/2 [00:00<00:00,  1.18it/s][A
+4|7|Loss: 0.07687223702669144: 100%|██████████| 2/2 [00:01<00:00,  1.14it/s][A
+4|8|Loss: 0.014209260232746601: 100%|██████████| 2/2 [00:01<00:00,  1.14it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 29.76 seconds.
+4|8|Loss: 0.014209260232746601: 100%|██████████| 2/2 [00:31<00:00, 15.77s/it]
+Finetuning completed for task: logical_deduction_seven_objects in 211.65s
+Deleted dataset file: /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/logical_deduction_three_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737492173.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 496.00 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.28it/s]1|1|Loss: 0.5459142327308655:  50%|█████     | 1/2 [00:00<00:00,  1.28it/s]1|1|Loss: 0.5459142327308655: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s]1|2|Loss: 0.48882389068603516: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 45.13 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.48882389068603516: 100%|██████████| 2/2 [00:46<00:00, 23.26s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.82it/s][A
+2|3|Loss: 0.16950921714305878:  50%|█████     | 1/2 [00:00<00:00,  1.82it/s][A
+2|3|Loss: 0.16950921714305878: 100%|██████████| 2/2 [00:01<00:00,  1.74it/s][A
+2|4|Loss: 0.08548413217067719: 100%|██████████| 2/2 [00:01<00:00,  1.74it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 55.12 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.08548413217067719: 100%|██████████| 2/2 [00:56<00:00, 28.15s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.78it/s]3|5|Loss: 0.030107133090496063:  50%|█████     | 1/2 [00:00<00:00,  1.78it/s]3|5|Loss: 0.030107133090496063: 100%|██████████| 2/2 [00:01<00:00,  1.76it/s]3|6|Loss: 0.0009605232626199722: 100%|██████████| 2/2 [00:01<00:00,  1.76it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 56.24 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.0009605232626199722: 100%|██████████| 2/2 [00:57<00:00, 28.70s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.79it/s][A
+4|7|Loss: 0.0013066757237538695:  50%|█████     | 1/2 [00:00<00:00,  1.79it/s][A
+4|7|Loss: 0.0013066757237538695: 100%|██████████| 2/2 [00:01<00:00,  1.74it/s][A
+4|8|Loss: 0.00048748572589829564: 100%|██████████| 2/2 [00:01<00:00,  1.74it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 29.00 seconds.
+4|8|Loss: 0.00048748572589829564: 100%|██████████| 2/2 [00:30<00:00, 15.09s/it]
+Finetuning completed for task: logical_deduction_three_objects in 206.23s
+Deleted dataset file: /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/movie_recommendation_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737492380.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 451.11 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.43it/s]1|1|Loss: 0.795546293258667:  50%|█████     | 1/2 [00:00<00:00,  1.43it/s]1|1|Loss: 0.795546293258667: 100%|██████████| 2/2 [00:01<00:00,  1.84it/s]1|2|Loss: 0.41936925053596497: 100%|██████████| 2/2 [00:01<00:00,  1.84it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 46.51 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.41936925053596497: 100%|██████████| 2/2 [00:47<00:00, 23.84s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.61it/s][A
+2|3|Loss: 0.03476638346910477:  50%|█████     | 1/2 [00:00<00:00,  2.61it/s][A
+2|3|Loss: 0.03476638346910477: 100%|██████████| 2/2 [00:00<00:00,  2.38it/s][A
+2|4|Loss: 0.03431924059987068: 100%|██████████| 2/2 [00:00<00:00,  2.38it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.28 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.03431924059987068: 100%|██████████| 2/2 [00:54<00:00, 27.07s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.64it/s]3|5|Loss: 0.0008405261323787272:  50%|█████     | 1/2 [00:00<00:00,  2.64it/s]3|5|Loss: 0.0008405261323787272: 100%|██████████| 2/2 [00:00<00:00,  2.45it/s]3|6|Loss: 0.0011559081031009555: 100%|██████████| 2/2 [00:00<00:00,  2.45it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 50.24 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.0011559081031009555: 100%|██████████| 2/2 [00:51<00:00, 25.54s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.61it/s][A
+4|7|Loss: 0.0002057706587947905:  50%|█████     | 1/2 [00:00<00:00,  2.61it/s][A
+4|7|Loss: 0.0002057706587947905: 100%|██████████| 2/2 [00:00<00:00,  2.38it/s][A
+4|8|Loss: 0.0003785364388022572: 100%|██████████| 2/2 [00:00<00:00,  2.38it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 28.74 seconds.
+4|8|Loss: 0.0003785364388022572: 100%|██████████| 2/2 [00:29<00:00, 14.80s/it]
+Finetuning completed for task: movie_recommendation in 198.68s
+Deleted dataset file: /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/multistep_arithmetic_two_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737492580.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 463.34 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.62it/s]1|1|Loss: 3.8736836910247803:  50%|█████     | 1/2 [00:00<00:00,  1.62it/s]1|1|Loss: 3.8736836910247803: 100%|██████████| 2/2 [00:00<00:00,  2.16it/s]1|2|Loss: 2.6866037845611572: 100%|██████████| 2/2 [00:00<00:00,  2.16it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 50.31 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 2.6866037845611572: 100%|██████████| 2/2 [00:51<00:00, 25.66s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.31it/s][A
+2|3|Loss: 2.954072952270508:  50%|█████     | 1/2 [00:00<00:00,  3.31it/s][A
+2|3|Loss: 2.954072952270508: 100%|██████████| 2/2 [00:00<00:00,  3.09it/s][A
+2|4|Loss: 2.100433826446533: 100%|██████████| 2/2 [00:00<00:00,  3.09it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.08 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 2.100433826446533: 100%|██████████| 2/2 [00:58<00:00, 29.38s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  3.37it/s]3|5|Loss: 2.0373685359954834:  50%|█████     | 1/2 [00:00<00:00,  3.37it/s]3|5|Loss: 2.0373685359954834: 100%|██████████| 2/2 [00:00<00:00,  3.05it/s]3|6|Loss: 1.466252088546753: 100%|██████████| 2/2 [00:00<00:00,  3.05it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.50 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 1.466252088546753: 100%|██████████| 2/2 [00:54<00:00, 27.09s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.35it/s][A
+4|7|Loss: 1.3472198247909546:  50%|█████     | 1/2 [00:00<00:00,  3.35it/s][A
+4|7|Loss: 1.3472198247909546: 100%|██████████| 2/2 [00:00<00:00,  3.01it/s][A
+4|8|Loss: 1.1326611042022705: 100%|██████████| 2/2 [00:00<00:00,  3.01it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 33.84 seconds.
+4|8|Loss: 1.1326611042022705: 100%|██████████| 2/2 [00:34<00:00, 17.27s/it]
+Finetuning completed for task: multistep_arithmetic_two in 214.83s
+Deleted dataset file: /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/navigate_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737492795.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 438.30 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.30it/s]1|1|Loss: 1.82748281955719:  50%|█████     | 1/2 [00:00<00:00,  1.30it/s]1|1|Loss: 1.82748281955719: 100%|██████████| 2/2 [00:01<00:00,  1.72it/s]1|2|Loss: 0.8095417022705078: 100%|██████████| 2/2 [00:01<00:00,  1.72it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 55.82 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.8095417022705078: 100%|██████████| 2/2 [00:57<00:00, 28.54s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.54it/s][A
+2|3|Loss: 0.3885297477245331:  50%|█████     | 1/2 [00:00<00:00,  2.54it/s][A
+2|3|Loss: 0.3885297477245331: 100%|██████████| 2/2 [00:00<00:00,  2.24it/s][A
+2|4|Loss: 2.1476480960845947: 100%|██████████| 2/2 [00:00<00:00,  2.24it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 60.63 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 2.1476480960845947: 100%|██████████| 2/2 [01:01<00:00, 30.77s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.22it/s]3|5|Loss: 0.5779494643211365:  50%|█████     | 1/2 [00:00<00:00,  2.22it/s]3|5|Loss: 0.5779494643211365: 100%|██████████| 2/2 [00:00<00:00,  2.27it/s]3|6|Loss: 0.6428338885307312: 100%|██████████| 2/2 [00:00<00:00,  2.27it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 64.76 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.6428338885307312: 100%|██████████| 2/2 [01:05<00:00, 32.84s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.20it/s][A
+4|7|Loss: 0.5173067450523376:  50%|█████     | 1/2 [00:00<00:00,  2.20it/s][A
+4|7|Loss: 0.5173067450523376: 100%|██████████| 2/2 [00:00<00:00,  2.28it/s][A
+4|8|Loss: 0.6509832739830017: 100%|██████████| 2/2 [00:00<00:00,  2.28it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 33.61 seconds.
+4|8|Loss: 0.6509832739830017: 100%|██████████| 2/2 [00:34<00:00, 17.26s/it]
+Finetuning completed for task: navigate in 234.77s
+Deleted dataset file: /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/object_counting_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737493030.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 539.49 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.49it/s]1|1|Loss: 0.8011444211006165:  50%|█████     | 1/2 [00:00<00:00,  1.49it/s]1|1|Loss: 0.8011444211006165: 100%|██████████| 2/2 [00:01<00:00,  1.98it/s]1|2|Loss: 1.5575507879257202: 100%|██████████| 2/2 [00:01<00:00,  1.98it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.39 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 1.5575507879257202: 100%|██████████| 2/2 [00:54<00:00, 27.24s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.97it/s][A
+2|3|Loss: 0.9575830698013306:  50%|█████     | 1/2 [00:00<00:00,  2.97it/s][A
+2|3|Loss: 0.9575830698013306: 100%|██████████| 2/2 [00:00<00:00,  2.94it/s][A
+2|4|Loss: 0.23386891186237335: 100%|██████████| 2/2 [00:00<00:00,  2.94it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 52.57 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.23386891186237335: 100%|██████████| 2/2 [00:53<00:00, 26.64s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  3.21it/s]3|5|Loss: 0.19482463598251343:  50%|█████     | 1/2 [00:00<00:00,  3.21it/s]3|5|Loss: 0.19482463598251343: 100%|██████████| 2/2 [00:00<00:00,  2.82it/s]3|6|Loss: 0.2878570556640625: 100%|██████████| 2/2 [00:00<00:00,  2.82it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.51 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.2878570556640625: 100%|██████████| 2/2 [00:59<00:00, 29.62s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.05it/s][A
+4|7|Loss: 0.1701069325208664:  50%|█████     | 1/2 [00:00<00:00,  3.05it/s][A
+4|7|Loss: 0.1701069325208664: 100%|██████████| 2/2 [00:00<00:00,  2.77it/s][A
+4|8|Loss: 0.1766943782567978: 100%|██████████| 2/2 [00:00<00:00,  2.77it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 31.99 seconds.
+4|8|Loss: 0.1766943782567978: 100%|██████████| 2/2 [00:32<00:00, 16.37s/it]
+Finetuning completed for task: object_counting in 215.61s
+Deleted dataset file: /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/penguins_in_a_table_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737493246.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 508.22 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.10s/it]1|1|Loss: 0.6910626888275146:  50%|█████     | 1/2 [00:01<00:01,  1.10s/it]1|1|Loss: 0.6910626888275146: 100%|██████████| 2/2 [00:01<00:00,  1.08it/s]1|2|Loss: 0.6855403184890747: 100%|██████████| 2/2 [00:01<00:00,  1.08it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 51.96 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.6855403184890747: 100%|██████████| 2/2 [00:53<00:00, 26.96s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.14it/s][A
+2|3|Loss: 0.2951574921607971:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s][A
+2|3|Loss: 0.2951574921607971: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s][A
+2|4|Loss: 0.0892975926399231: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 51.02 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.0892975926399231: 100%|██████████| 2/2 [00:52<00:00, 26.29s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.15it/s]3|5|Loss: 0.1798558384180069:  50%|█████     | 1/2 [00:00<00:00,  1.15it/s]3|5|Loss: 0.1798558384180069: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]3|6|Loss: 0.029655607417225838: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.65 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.029655607417225838: 100%|██████████| 2/2 [00:59<00:00, 29.66s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.29it/s][A
+4|7|Loss: 0.039060529321432114:  50%|█████     | 1/2 [00:00<00:00,  1.29it/s][A
+4|7|Loss: 0.039060529321432114: 100%|██████████| 2/2 [00:01<00:00,  1.18it/s][A
+4|8|Loss: 0.13170833885669708: 100%|██████████| 2/2 [00:01<00:00,  1.18it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 27.89 seconds.
+4|8|Loss: 0.13170833885669708: 100%|██████████| 2/2 [00:29<00:00, 14.80s/it]
+Finetuning completed for task: penguins_in_a_table in 212.46s
+Deleted dataset file: /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/reasoning_about_colored_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737493458.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 448.39 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.14it/s]1|1|Loss: 0.4989278316497803:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s]1|1|Loss: 0.4989278316497803: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]1|2|Loss: 0.16723735630512238: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 47.35 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.16723735630512238: 100%|██████████| 2/2 [00:48<00:00, 24.47s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.55it/s][A
+2|3|Loss: 0.008213936351239681:  50%|█████     | 1/2 [00:00<00:00,  1.55it/s][A
+2|3|Loss: 0.008213936351239681: 100%|██████████| 2/2 [00:01<00:00,  1.53it/s][A
+2|4|Loss: 0.20386865735054016: 100%|██████████| 2/2 [00:01<00:00,  1.53it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 44.17 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.20386865735054016: 100%|██████████| 2/2 [00:45<00:00, 22.74s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.55it/s]3|5|Loss: 0.0012589351972565055:  50%|█████     | 1/2 [00:00<00:00,  1.55it/s]3|5|Loss: 0.0012589351972565055: 100%|██████████| 2/2 [00:01<00:00,  1.52it/s]3|6|Loss: 0.002000245964154601: 100%|██████████| 2/2 [00:01<00:00,  1.52it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 52.75 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.002000245964154601: 100%|██████████| 2/2 [00:54<00:00, 27.05s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.55it/s][A
+4|7|Loss: 0.009684293530881405:  50%|█████     | 1/2 [00:00<00:00,  1.55it/s][A
+4|7|Loss: 0.009684293530881405: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s][A
+4|8|Loss: 0.004288936965167522: 100%|██████████| 2/2 [00:01<00:00,  1.50it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 31.68 seconds.
+4|8|Loss: 0.004288936965167522: 100%|██████████| 2/2 [00:33<00:00, 16.52s/it]
+Finetuning completed for task: reasoning_about_colored_objects in 198.19s
+Deleted dataset file: /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/ruin_names_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737493657.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 457.67 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.49it/s]1|1|Loss: 0.5892993807792664:  50%|█████     | 1/2 [00:00<00:00,  1.49it/s]1|1|Loss: 0.5892993807792664: 100%|██████████| 2/2 [00:01<00:00,  1.81it/s]1|2|Loss: 0.012040778994560242: 100%|██████████| 2/2 [00:01<00:00,  1.81it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 60.94 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.012040778994560242: 100%|██████████| 2/2 [01:02<00:00, 31.06s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.25it/s][A
+2|3|Loss: 0.0005644933553412557:  50%|█████     | 1/2 [00:00<00:00,  2.25it/s][A
+2|3|Loss: 0.0005644933553412557: 100%|██████████| 2/2 [00:00<00:00,  2.29it/s][A
+2|4|Loss: 0.00012177444295957685: 100%|██████████| 2/2 [00:00<00:00,  2.29it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 39.45 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.00012177444295957685: 100%|██████████| 2/2 [00:40<00:00, 20.18s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.27it/s]3|5|Loss: 5.246583532425575e-05:  50%|█████     | 1/2 [00:00<00:00,  2.27it/s]3|5|Loss: 5.246583532425575e-05: 100%|██████████| 2/2 [00:00<00:00,  2.17it/s]3|6|Loss: 2.1425554223242216e-05: 100%|██████████| 2/2 [00:00<00:00,  2.17it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.47 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 2.1425554223242216e-05: 100%|██████████| 2/2 [00:54<00:00, 27.21s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.53it/s][A
+4|7|Loss: 1.4924848983355332e-05:  50%|█████     | 1/2 [00:00<00:00,  2.53it/s][A
+4|7|Loss: 1.4924848983355332e-05: 100%|██████████| 2/2 [00:00<00:00,  2.25it/s][A
+4|8|Loss: 1.677650652709417e-05: 100%|██████████| 2/2 [00:00<00:00,  2.25it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 30.53 seconds.
+4|8|Loss: 1.677650652709417e-05: 100%|██████████| 2/2 [00:31<00:00, 15.72s/it]
+Finetuning completed for task: ruin_names in 204.86s
+Deleted dataset file: /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/salient_translation_error_detection_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737493862.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 510.11 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.34s/it]1|1|Loss: 1.1113340854644775:  50%|█████     | 1/2 [00:01<00:01,  1.34s/it]1|1|Loss: 1.1113340854644775: 100%|██████████| 2/2 [00:02<00:00,  1.21s/it]1|2|Loss: 0.6239036917686462: 100%|██████████| 2/2 [00:02<00:00,  1.21s/it]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.12 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.6239036917686462: 100%|██████████| 2/2 [00:59<00:00, 29.81s/it]
+
+ 50%|█████     | 1/2 [00:01<00:01,  1.09s/it][A
+2|3|Loss: 0.22917376458644867:  50%|█████     | 1/2 [00:01<00:01,  1.09s/it][A
+2|3|Loss: 0.22917376458644867: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it][A
+2|4|Loss: 0.1260477900505066: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 40.04 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.1260477900505066: 100%|██████████| 2/2 [00:42<00:00, 21.13s/it]
+ 50%|█████     | 1/2 [00:01<00:01,  1.09s/it]3|5|Loss: 0.08169461786746979:  50%|█████     | 1/2 [00:01<00:01,  1.09s/it]3|5|Loss: 0.08169461786746979: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]3|6|Loss: 0.009455684572458267: 100%|██████████| 2/2 [00:02<00:00,  1.09s/it]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 55.69 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.009455684572458267: 100%|██████████| 2/2 [00:57<00:00, 28.96s/it]
+
+ 50%|█████     | 1/2 [00:01<00:01,  1.09s/it][A
+4|7|Loss: 0.005226934794336557:  50%|█████     | 1/2 [00:01<00:01,  1.09s/it][A
+4|7|Loss: 0.005226934794336557: 100%|██████████| 2/2 [00:02<00:00,  1.11s/it][A
+4|8|Loss: 0.002984342398121953: 100%|██████████| 2/2 [00:02<00:00,  1.11s/it][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 30.42 seconds.
+4|8|Loss: 0.002984342398121953: 100%|██████████| 2/2 [00:32<00:00, 16.33s/it]
+Finetuning completed for task: salient_translation_error_detection in 208.98s
+Deleted dataset file: /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/snarks_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737494071.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 505.89 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.52it/s]1|1|Loss: 0.7129319906234741:  50%|█████     | 1/2 [00:00<00:00,  1.52it/s]1|1|Loss: 0.7129319906234741: 100%|██████████| 2/2 [00:01<00:00,  1.98it/s]1|2|Loss: 0.29323697090148926: 100%|██████████| 2/2 [00:01<00:00,  1.98it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.88 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.29323697090148926: 100%|██████████| 2/2 [00:54<00:00, 27.49s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.52it/s][A
+2|3|Loss: 0.11668379604816437:  50%|█████     | 1/2 [00:00<00:00,  2.52it/s][A
+2|3|Loss: 0.11668379604816437: 100%|██████████| 2/2 [00:00<00:00,  2.61it/s][A
+2|4|Loss: 0.08011885732412338: 100%|██████████| 2/2 [00:00<00:00,  2.61it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 36.72 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.08011885732412338: 100%|██████████| 2/2 [00:37<00:00, 18.76s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.53it/s]3|5|Loss: 0.0318763442337513:  50%|█████     | 1/2 [00:00<00:00,  2.53it/s]3|5|Loss: 0.0318763442337513: 100%|██████████| 2/2 [00:00<00:00,  2.55it/s]3|6|Loss: 0.021426595747470856: 100%|██████████| 2/2 [00:00<00:00,  2.55it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 51.91 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.021426595747470856: 100%|██████████| 2/2 [00:52<00:00, 26.36s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.75it/s][A
+4|7|Loss: 0.004835506901144981:  50%|█████     | 1/2 [00:00<00:00,  2.75it/s][A
+4|7|Loss: 0.004835506901144981: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s][A
+4|8|Loss: 0.008615099824965: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s]   [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 28.71 seconds.
+4|8|Loss: 0.008615099824965: 100%|██████████| 2/2 [00:29<00:00, 14.77s/it]
+Finetuning completed for task: snarks in 190.79s
+Deleted dataset file: /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/sports_understanding_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737494263.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 523.54 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.59it/s]1|1|Loss: 0.35306549072265625:  50%|█████     | 1/2 [00:00<00:00,  1.59it/s]1|1|Loss: 0.35306549072265625: 100%|██████████| 2/2 [00:00<00:00,  2.20it/s]1|2|Loss: 1.4473990201950073: 100%|██████████| 2/2 [00:00<00:00,  2.20it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.30 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 1.4473990201950073: 100%|██████████| 2/2 [00:59<00:00, 29.65s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.29it/s][A
+2|3|Loss: 0.03234793618321419:  50%|█████     | 1/2 [00:00<00:00,  3.29it/s][A
+2|3|Loss: 0.03234793618321419: 100%|██████████| 2/2 [00:00<00:00,  3.09it/s][A
+2|4|Loss: 0.031224269419908524: 100%|██████████| 2/2 [00:00<00:00,  3.09it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 42.82 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.031224269419908524: 100%|██████████| 2/2 [00:43<00:00, 21.75s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.73it/s]3|5|Loss: 0.06467222422361374:  50%|█████     | 1/2 [00:00<00:00,  2.73it/s]3|5|Loss: 0.06467222422361374: 100%|██████████| 2/2 [00:00<00:00,  2.94it/s]3|6|Loss: 0.0141862528398633: 100%|██████████| 2/2 [00:00<00:00,  2.94it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 42.93 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.0141862528398633: 100%|██████████| 2/2 [00:43<00:00, 21.81s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  3.33it/s][A
+4|7|Loss: 0.025314828380942345:  50%|█████     | 1/2 [00:00<00:00,  3.33it/s][A
+4|7|Loss: 0.025314828380942345: 100%|██████████| 2/2 [00:00<00:00,  3.06it/s][A
+4|8|Loss: 0.012538057751953602: 100%|██████████| 2/2 [00:00<00:00,  3.06it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 28.95 seconds.
+4|8|Loss: 0.012538057751953602: 100%|██████████| 2/2 [00:29<00:00, 14.82s/it]
+Finetuning completed for task: sports_understanding in 193.29s
+Deleted dataset file: /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/temporal_sequences_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737494456.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 440.11 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.01s/it]1|1|Loss: 0.3361521363258362:  50%|█████     | 1/2 [00:01<00:01,  1.01s/it]1|1|Loss: 0.3361521363258362: 100%|██████████| 2/2 [00:01<00:00,  1.12it/s]1|2|Loss: 0.008943792432546616: 100%|██████████| 2/2 [00:01<00:00,  1.12it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 59.50 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.008943792432546616: 100%|██████████| 2/2 [01:01<00:00, 30.68s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+2|3|Loss: 1.2175089068477973e-05:  50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+2|3|Loss: 1.2175089068477973e-05: 100%|██████████| 2/2 [00:01<00:00,  1.25it/s][A
+2|4|Loss: 5.722041578337667e-07: 100%|██████████| 2/2 [00:01<00:00,  1.25it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 54.13 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 5.722041578337667e-07: 100%|██████████| 2/2 [00:55<00:00, 27.88s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.30it/s]3|5|Loss: 2.0662938027271593e-07:  50%|█████     | 1/2 [00:00<00:00,  1.30it/s]3|5|Loss: 2.0662938027271593e-07: 100%|██████████| 2/2 [00:01<00:00,  1.28it/s]3|6|Loss: 1.4305112472356996e-07: 100%|██████████| 2/2 [00:01<00:00,  1.28it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 15.11 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 1.4305112472356996e-07: 100%|██████████| 2/2 [00:16<00:00,  8.34s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+4|7|Loss: 1.1920926823449918e-07:  50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+4|7|Loss: 1.1920926823449918e-07: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s][A
+4|8|Loss: 1.271565537308561e-07: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s] [AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 27.44 seconds.
+4|8|Loss: 1.271565537308561e-07: 100%|██████████| 2/2 [00:29<00:00, 14.52s/it]
+Finetuning completed for task: temporal_sequences in 179.13s
+Deleted dataset file: /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/tracking_shuffled_objects_five_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737494634.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 493.00 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.04s/it]1|1|Loss: 1.2183541059494019:  50%|█████     | 1/2 [00:01<00:01,  1.04s/it]1|1|Loss: 1.2183541059494019: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]1|2|Loss: 0.7102853655815125: 100%|██████████| 2/2 [00:01<00:00,  1.10it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.57 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.7102853655815125: 100%|██████████| 2/2 [01:00<00:00, 30.23s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.29it/s][A
+2|3|Loss: 0.486299604177475:  50%|█████     | 1/2 [00:00<00:00,  1.29it/s][A
+2|3|Loss: 0.486299604177475: 100%|██████████| 2/2 [00:01<00:00,  1.24it/s][A
+2|4|Loss: 0.5259873270988464: 100%|██████████| 2/2 [00:01<00:00,  1.24it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 59.91 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.5259873270988464: 100%|██████████| 2/2 [01:01<00:00, 30.77s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.26it/s]3|5|Loss: 0.3580087721347809:  50%|█████     | 1/2 [00:00<00:00,  1.26it/s]3|5|Loss: 0.3580087721347809: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]3|6|Loss: 0.4034929871559143: 100%|██████████| 2/2 [00:01<00:00,  1.23it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 40.45 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.4034929871559143: 100%|██████████| 2/2 [00:42<00:00, 21.05s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+4|7|Loss: 0.4144454300403595:  50%|█████     | 1/2 [00:00<00:00,  1.27it/s][A
+4|7|Loss: 0.4144454300403595: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s][A
+4|8|Loss: 0.20695114135742188: 100%|██████████| 2/2 [00:01<00:00,  1.26it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 20.50 seconds.
+4|8|Loss: 0.20695114135742188: 100%|██████████| 2/2 [00:22<00:00, 11.05s/it]
+Finetuning completed for task: tracking_shuffled_objects_five_objects in 201.61s
+Deleted dataset file: /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/tracking_shuffled_objects_seven_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737494836.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 484.22 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:01<00:01,  1.11s/it]1|1|Loss: 1.3308043479919434:  50%|█████     | 1/2 [00:01<00:01,  1.11s/it]1|1|Loss: 1.3308043479919434: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]1|2|Loss: 0.6980040073394775: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.24 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.6980040073394775: 100%|██████████| 2/2 [00:59<00:00, 29.70s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.02it/s][A
+2|3|Loss: 0.45387476682662964:  50%|█████     | 1/2 [00:00<00:00,  1.02it/s][A
+2|3|Loss: 0.45387476682662964: 100%|██████████| 2/2 [00:01<00:00,  1.07it/s][A
+2|4|Loss: 0.23765812814235687: 100%|██████████| 2/2 [00:01<00:00,  1.07it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.78 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.23765812814235687: 100%|██████████| 2/2 [00:59<00:00, 29.85s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.14it/s]3|5|Loss: 0.27949246764183044:  50%|█████     | 1/2 [00:00<00:00,  1.14it/s]3|5|Loss: 0.27949246764183044: 100%|██████████| 2/2 [00:01<00:00,  1.05it/s]3|6|Loss: 0.12034623324871063: 100%|██████████| 2/2 [00:01<00:00,  1.05it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 46.28 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.12034623324871063: 100%|██████████| 2/2 [00:48<00:00, 24.09s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.15it/s][A
+4|7|Loss: 0.08347805589437485:  50%|█████     | 1/2 [00:00<00:00,  1.15it/s][A
+4|7|Loss: 0.08347805589437485: 100%|██████████| 2/2 [00:01<00:00,  1.06it/s][A
+4|8|Loss: 0.19852370023727417: 100%|██████████| 2/2 [00:01<00:00,  1.06it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 10.87 seconds.
+4|8|Loss: 0.19852370023727417: 100%|██████████| 2/2 [00:12<00:00,  6.37s/it]
+Finetuning completed for task: tracking_shuffled_objects_seven_objects in 195.73s
+Deleted dataset file: /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/tracking_shuffled_objects_three_objects_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737495032.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 500.57 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.13it/s]1|1|Loss: 1.1665014028549194:  50%|█████     | 1/2 [00:00<00:00,  1.13it/s]1|1|Loss: 1.1665014028549194: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]1|2|Loss: 0.5016063451766968: 100%|██████████| 2/2 [00:01<00:00,  1.33it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 60.95 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.5016063451766968: 100%|██████████| 2/2 [01:02<00:00, 31.26s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.60it/s][A
+2|3|Loss: 0.33683547377586365:  50%|█████     | 1/2 [00:00<00:00,  1.60it/s][A
+2|3|Loss: 0.33683547377586365: 100%|██████████| 2/2 [00:01<00:00,  1.55it/s][A
+2|4|Loss: 0.41769373416900635: 100%|██████████| 2/2 [00:01<00:00,  1.55it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 60.96 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.41769373416900635: 100%|██████████| 2/2 [01:02<00:00, 31.14s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  1.60it/s]3|5|Loss: 0.2837141156196594:  50%|█████     | 1/2 [00:00<00:00,  1.60it/s]3|5|Loss: 0.2837141156196594: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s]3|6|Loss: 0.22460253536701202: 100%|██████████| 2/2 [00:01<00:00,  1.58it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.97 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.22460253536701202: 100%|██████████| 2/2 [00:59<00:00, 29.63s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  1.60it/s][A
+4|7|Loss: 0.16265615820884705:  50%|█████     | 1/2 [00:00<00:00,  1.60it/s][A
+4|7|Loss: 0.16265615820884705: 100%|██████████| 2/2 [00:01<00:00,  1.56it/s][A
+4|8|Loss: 0.31186601519584656: 100%|██████████| 2/2 [00:01<00:00,  1.56it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 13.18 seconds.
+4|8|Loss: 0.31186601519584656: 100%|██████████| 2/2 [00:14<00:00,  7.24s/it]
+Finetuning completed for task: tracking_shuffled_objects_three_objects in 213.65s
+Deleted dataset file: /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/web_of_lies_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737495245.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 466.71 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.66it/s]1|1|Loss: 7.0962138175964355:  50%|█████     | 1/2 [00:00<00:00,  1.66it/s]1|1|Loss: 7.0962138175964355: 100%|██████████| 2/2 [00:00<00:00,  2.09it/s]1|2|Loss: 0.9723554849624634: 100%|██████████| 2/2 [00:00<00:00,  2.09it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.85 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.9723554849624634: 100%|██████████| 2/2 [00:59<00:00, 29.94s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.98it/s][A
+2|3|Loss: 0.7232049107551575:  50%|█████     | 1/2 [00:00<00:00,  2.98it/s][A
+2|3|Loss: 0.7232049107551575: 100%|██████████| 2/2 [00:00<00:00,  2.71it/s][A
+2|4|Loss: 0.6629878282546997: 100%|██████████| 2/2 [00:00<00:00,  2.71it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 59.23 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.6629878282546997: 100%|██████████| 2/2 [00:59<00:00, 30.00s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.74it/s]3|5|Loss: 0.5435080528259277:  50%|█████     | 1/2 [00:00<00:00,  2.74it/s]3|5|Loss: 0.5435080528259277: 100%|██████████| 2/2 [00:00<00:00,  2.55it/s]3|6|Loss: 0.7115435600280762: 100%|██████████| 2/2 [00:00<00:00,  2.55it/s]Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 57.09 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.7115435600280762: 100%|██████████| 2/2 [00:57<00:00, 28.95s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.64it/s][A
+4|7|Loss: 0.5626611113548279:  50%|█████     | 1/2 [00:00<00:00,  2.64it/s][A
+4|7|Loss: 0.5626611113548279: 100%|██████████| 2/2 [00:00<00:00,  2.59it/s][A
+4|8|Loss: 0.5340794920921326: 100%|██████████| 2/2 [00:00<00:00,  2.59it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 18.26 seconds.
+4|8|Loss: 0.5340794920921326: 100%|██████████| 2/2 [00:19<00:00,  9.53s/it]
+Finetuning completed for task: web_of_lies in 211.75s
+Deleted dataset file: /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+Running torchtune command: tune run lora_finetune_single_device --config /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/word_sorting_config.yaml
+Setting manual seed to local seed 42. Local seed is seed + rank = 42 + 0
+Hint: enable_activation_checkpointing is True, but enable_activation_offloading isn't. Enabling activation offloading should reduce memory further.
+Writing logs to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/log_1737495457.txt
+Model is initialized with precision torch.bfloat16.
+Memory stats after model init:
+	GPU peak memory allocation: 15.33 GiB
+	GPU peak memory reserved: 15.35 GiB
+	GPU peak memory active: 15.33 GiB
+Tokenizer is initialized from file.
+Optimizer and loss are initialized.
+Loss is initialized.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10 examples [00:00, 512.38 examples/s]
+Dataset and Sampler are initialized.
+Learning rate scheduler is initialized.
+ Profiling disabled.
+ Profiler config after instantiation: {'enabled': False}
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  1.53it/s]1|1|Loss: 0.19680897891521454:  50%|█████     | 1/2 [00:00<00:00,  1.53it/s]1|1|Loss: 0.19680897891521454: 100%|██████████| 2/2 [00:01<00:00,  1.90it/s]1|2|Loss: 0.0694090873003006: 100%|██████████| 2/2 [00:01<00:00,  1.90it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_0.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 61.91 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A1|2|Loss: 0.0694090873003006: 100%|██████████| 2/2 [01:03<00:00, 31.52s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.59it/s][A
+2|3|Loss: 0.04690837115049362:  50%|█████     | 1/2 [00:00<00:00,  2.59it/s][A
+2|3|Loss: 0.04690837115049362: 100%|██████████| 2/2 [00:00<00:00,  2.42it/s][A
+2|4|Loss: 0.09267190098762512: 100%|██████████| 2/2 [00:00<00:00,  2.42it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_1.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 58.38 seconds.
+  0%|          | 0/2 [00:00<?, ?it/s]2|4|Loss: 0.09267190098762512: 100%|██████████| 2/2 [00:59<00:00, 29.62s/it]
+ 50%|█████     | 1/2 [00:00<00:00,  2.52it/s]3|5|Loss: 0.02727903239428997:  50%|█████     | 1/2 [00:00<00:00,  2.52it/s]3|5|Loss: 0.02727903239428997: 100%|██████████| 2/2 [00:00<00:00,  2.47it/s]3|6|Loss: 0.0140202846378088: 100%|██████████| 2/2 [00:00<00:00,  2.47it/s] Starting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_2.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Recipe checkpoint of size 0.63 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/recipe_state.pt
+Checkpoint saved in 53.41 seconds.
+
+  0%|          | 0/2 [00:00<?, ?it/s][A3|6|Loss: 0.0140202846378088: 100%|██████████| 2/2 [00:54<00:00, 27.13s/it]
+
+ 50%|█████     | 1/2 [00:00<00:00,  2.52it/s][A
+4|7|Loss: 0.019656812772154808:  50%|█████     | 1/2 [00:00<00:00,  2.52it/s][A
+4|7|Loss: 0.019656812772154808: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s][A
+4|8|Loss: 0.009333704598248005: 100%|██████████| 2/2 [00:00<00:00,  2.48it/s][AStarting checkpoint save...
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_3.pt
+Adapter checkpoint of size 0.31 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_model.bin
+Adapter checkpoint of size 0.00 GB saved to /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter/adapter_config.json
+Saving final epoch checkpoint.
+Please note that you have set adapter_only=True, so only adapter weights will be saved.You need to merge the adapter weights into your base model for further use. See FullModelHFCheckpointer.save_checkpoint for more details.
+Checkpoint saved in 19.67 seconds.
+4|8|Loss: 0.009333704598248005: 100%|██████████| 2/2 [00:20<00:00, 10.25s/it]
+Finetuning completed for task: word_sorting in 211.50s
+Deleted dataset file: /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_dataset.json
+
+All finetuning done for tasks [0:27]. Finetuning time: 4991.01s
+
+=== Loading base LLM with LoRA enabled for evaluation... ===
+INFO 01-21 16:41:11 config.py:478] This model supports multiple tasks: {'score', 'classify', 'reward', 'generate', 'embed'}. Defaulting to 'generate'.
+INFO 01-21 16:41:11 llm_engine.py:249] Initializing an LLM engine (v0.6.5) with config: model='/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=1024, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=/data/cl/u/adamz/Models/Llama-3.1-8B-Instruct, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=False, chunked_prefill_enabled=False, use_async_output_proc=True, mm_cache_preprocessor=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"candidate_compile_sizes":[],"compile_sizes":[],"capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+INFO 01-21 16:41:12 selector.py:120] Using Flash Attention backend.
+INFO 01-21 16:41:13 model_runner.py:1092] Starting to load model /data/cl/u/adamz/Models/Llama-3.1-8B-Instruct...
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:02,  1.21it/s]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:01<00:01,  1.18it/s]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:02<00:00,  1.17it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.61it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:02<00:00,  1.42it/s]
+
+INFO 01-21 16:41:16 model_runner.py:1097] Loading model weights took 14.9927 GB
+INFO 01-21 16:41:16 punica_selector.py:11] Using PunicaWrapperGPU.
+INFO 01-21 16:41:18 worker.py:241] Memory profiling takes 2.26 seconds
+INFO 01-21 16:41:18 worker.py:241] the current vLLM instance can use total_gpu_memory (44.45GiB) x gpu_memory_utilization (0.90) = 40.00GiB
+INFO 01-21 16:41:18 worker.py:241] model weights take 14.99GiB; non_torch_memory takes 0.44GiB; PyTorch activation peak memory takes 1.19GiB; the rest of the memory reserved for KV Cache is 23.38GiB.
+INFO 01-21 16:41:18 gpu_executor.py:76] # GPU blocks: 11969, # CPU blocks: 2048
+INFO 01-21 16:41:18 gpu_executor.py:80] Maximum concurrency for 1024 tokens per request: 187.02x
+INFO 01-21 16:41:21 model_runner.py:1413] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 01-21 16:41:21 model_runner.py:1417] If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 01-21 16:41:40 model_runner.py:1527] Graph capturing finished in 19 secs, took 0.45 GiB
+INFO 01-21 16:41:40 llm_engine.py:446] init engine (profile, create kv cache, warmup model) took 24.46 seconds
+/data/cl/u/adamz/TTT/src/methods/ft.py:357: DeprecationWarning: The 'lora_local_path' attribute is deprecated and will be removed in a future version. Please use 'lora_path' instead.
+  lora_request = LoRARequest(
+WARNING 01-21 16:41:40 tokenizer.py:191] No tokenizer found in /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]/data/cl/u/adamz/miniconda3/envs/tttenv/lib/python3.12/site-packages/vllm/lora/models.py:270: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  tensors = torch.load(lora_bin_file_path, map_location=device)
+Processed prompts:   0%|          | 1/240 [00:01<07:39,  1.92s/it, est. speed input: 17.70 toks/s, output: 0.52 toks/s]Processed prompts:  25%|██▌       | 61/240 [00:02<00:04, 36.42it/s, est. speed input: 924.63 toks/s, output: 27.19 toks/s]Processed prompts:  50%|█████     | 121/240 [00:02<00:01, 68.86it/s, est. speed input: 1604.10 toks/s, output: 47.18 toks/s]Processed prompts: 100%|██████████| 240/240 [00:02<00:00, 91.43it/s, est. speed input: 3108.85 toks/s, output: 91.44 toks/s]
+Task: boolean_expressions, accuracy=74.17%, ft_time=95.17s, eval_time=2.71s
+WARNING 01-21 16:41:43 tokenizer.py:191] No tokenizer found in /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/177 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   1%|          | 1/177 [00:01<03:05,  1.05s/it, est. speed input: 203.46 toks/s, output: 0.95 toks/s]Processed prompts:   5%|▌         | 9/177 [00:01<00:20,  8.20it/s, est. speed input: 1592.71 toks/s, output: 6.54 toks/s]Processed prompts:  10%|▉         | 17/177 [00:01<00:12, 13.27it/s, est. speed input: 2387.21 toks/s, output: 10.03 toks/s]Processed prompts:  15%|█▍        | 26/177 [00:01<00:08, 18.37it/s, est. speed input: 3080.36 toks/s, output: 13.14 toks/s]Processed prompts:  19%|█▊        | 33/177 [00:02<00:07, 20.45it/s, est. speed input: 3594.52 toks/s, output: 14.67 toks/s]Processed prompts:  23%|██▎       | 41/177 [00:02<00:06, 21.91it/s, est. speed input: 3968.21 toks/s, output: 15.97 toks/s]Processed prompts:  27%|██▋       | 48/177 [00:02<00:05, 22.04it/s, est. speed input: 4071.57 toks/s, output: 16.66 toks/s]Processed prompts:  32%|███▏      | 56/177 [00:03<00:05, 23.02it/s, est. speed input: 4259.51 toks/s, output: 17.51 toks/s]Processed prompts:  36%|███▌      | 64/177 [00:03<00:04, 23.72it/s, est. speed input: 4427.35 toks/s, output: 18.21 toks/s]Processed prompts:  41%|████      | 72/177 [00:03<00:04, 24.61it/s, est. speed input: 4642.92 toks/s, output: 18.88 toks/s]Processed prompts:  45%|████▍     | 79/177 [00:04<00:04, 23.85it/s, est. speed input: 4716.44 toks/s, output: 19.13 toks/s]Processed prompts:  49%|████▉     | 87/177 [00:04<00:03, 24.28it/s, est. speed input: 4792.94 toks/s, output: 19.57 toks/s]Processed prompts:  54%|█████▎    | 95/177 [00:04<00:03, 26.06it/s, est. speed input: 4958.11 toks/s, output: 20.20 toks/s]Processed prompts:  59%|█████▉    | 104/177 [00:05<00:02, 27.18it/s, est. speed input: 5054.03 toks/s, output: 20.78 toks/s]Processed prompts:  63%|██████▎   | 111/177 [00:05<00:02, 25.94it/s, est. speed input: 5115.25 toks/s, output: 20.91 toks/s]Processed prompts:  67%|██████▋   | 118/177 [00:05<00:02, 24.79it/s, est. speed input: 5139.28 toks/s, output: 20.98 toks/s]Processed prompts:  71%|███████   | 125/177 [00:05<00:02, 24.05it/s, est. speed input: 5183.74 toks/s, output: 21.06 toks/s]Processed prompts:  75%|███████▌  | 133/177 [00:06<00:01, 24.38it/s, est. speed input: 5229.20 toks/s, output: 21.26 toks/s]Processed prompts:  80%|████████  | 142/177 [00:06<00:01, 25.95it/s, est. speed input: 5284.41 toks/s, output: 21.65 toks/s]Processed prompts:  85%|████████▍ | 150/177 [00:06<00:01, 26.09it/s, est. speed input: 5344.32 toks/s, output: 21.86 toks/s]Processed prompts:  90%|████████▉ | 159/177 [00:07<00:00, 26.75it/s, est. speed input: 5369.10 toks/s, output: 22.15 toks/s]Processed prompts:  94%|█████████▍| 166/177 [00:07<00:00, 31.27it/s, est. speed input: 5542.50 toks/s, output: 22.74 toks/s]Processed prompts: 100%|██████████| 177/177 [00:07<00:00, 24.14it/s, est. speed input: 5863.20 toks/s, output: 24.14 toks/s]
+Task: causal_judgement, accuracy=53.67%, ft_time=66.57s, eval_time=7.46s
+WARNING 01-21 16:41:51 tokenizer.py:191] No tokenizer found in /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:05<22:21,  5.61s/it, est. speed input: 21.73 toks/s, output: 0.53 toks/s]Processed prompts: 100%|██████████| 240/240 [00:05<00:00, 42.73it/s, est. speed input: 5067.35 toks/s, output: 128.20 toks/s]
+Task: date_understanding, accuracy=55.83%, ft_time=63.74s, eval_time=5.70s
+WARNING 01-21 16:41:56 tokenizer.py:191] No tokenizer found in /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:04<18:37,  4.67s/it, est. speed input: 21.61 toks/s, output: 0.64 toks/s]Processed prompts: 100%|██████████| 240/240 [00:04<00:00, 51.31it/s, est. speed input: 5116.19 toks/s, output: 153.92 toks/s]
+Task: disambiguation_qa, accuracy=30.00%, ft_time=122.86s, eval_time=4.76s
+WARNING 01-21 16:42:01 tokenizer.py:191] No tokenizer found in /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:03<13:14,  3.32s/it, est. speed input: 27.69 toks/s, output: 0.90 toks/s]Processed prompts: 100%|██████████| 240/240 [00:03<00:00, 72.16it/s, est. speed input: 4788.40 toks/s, output: 216.48 toks/s]
+Task: dyck_languages, accuracy=0.83%, ft_time=156.29s, eval_time=3.39s
+WARNING 01-21 16:42:05 tokenizer.py:191] No tokenizer found in /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:01<04:00,  1.01s/it, est. speed input: 128.20 toks/s, output: 0.99 toks/s]Processed prompts:   6%|▋         | 15/240 [00:01<00:15, 14.39it/s, est. speed input: 1610.96 toks/s, output: 11.33 toks/s]Processed prompts:  12%|█▏        | 28/240 [00:01<00:09, 22.86it/s, est. speed input: 2523.16 toks/s, output: 17.21 toks/s]Processed prompts:  17%|█▋        | 41/240 [00:01<00:07, 28.37it/s, est. speed input: 3103.10 toks/s, output: 21.06 toks/s]Processed prompts:  22%|██▏       | 53/240 [00:02<00:05, 31.17it/s, est. speed input: 3552.81 toks/s, output: 23.38 toks/s]Processed prompts:  28%|██▊       | 67/240 [00:02<00:04, 35.12it/s, est. speed input: 3865.62 toks/s, output: 25.94 toks/s]Processed prompts:  34%|███▍      | 81/240 [00:02<00:04, 37.76it/s, est. speed input: 4142.39 toks/s, output: 27.90 toks/s]Processed prompts:  40%|███▉      | 95/240 [00:03<00:03, 39.63it/s, est. speed input: 4353.22 toks/s, output: 29.49 toks/s]Processed prompts:  45%|████▌     | 109/240 [00:03<00:03, 41.02it/s, est. speed input: 4504.31 toks/s, output: 30.81 toks/s]Processed prompts:  51%|█████▏    | 123/240 [00:03<00:02, 41.89it/s, est. speed input: 4659.32 toks/s, output: 31.89 toks/s]Processed prompts:  57%|█████▋    | 136/240 [00:04<00:02, 41.69it/s, est. speed input: 4774.84 toks/s, output: 32.60 toks/s]Processed prompts:  62%|██████▏   | 149/240 [00:04<00:02, 41.32it/s, est. speed input: 4865.84 toks/s, output: 33.16 toks/s]Processed prompts:  68%|██████▊   | 162/240 [00:04<00:01, 41.09it/s, est. speed input: 4944.76 toks/s, output: 33.65 toks/s]Processed prompts:  73%|███████▎  | 176/240 [00:05<00:01, 41.90it/s, est. speed input: 5041.28 toks/s, output: 34.29 toks/s]Processed prompts:  79%|███████▉  | 190/240 [00:05<00:01, 42.51it/s, est. speed input: 5106.42 toks/s, output: 34.85 toks/s]Processed prompts:  85%|████████▍ | 203/240 [00:05<00:00, 42.01it/s, est. speed input: 5183.83 toks/s, output: 35.18 toks/s]Processed prompts:  90%|█████████ | 216/240 [00:06<00:00, 44.03it/s, est. speed input: 5281.45 toks/s, output: 35.81 toks/s]Processed prompts: 100%|██████████| 240/240 [00:06<00:00, 39.54it/s, est. speed input: 5818.60 toks/s, output: 39.54 toks/s]
+Task: formal_fallacies, accuracy=51.25%, ft_time=173.54s, eval_time=6.19s
+WARNING 01-21 16:42:11 tokenizer.py:191] No tokenizer found in /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:06<26:10,  6.57s/it, est. speed input: 18.57 toks/s, output: 0.46 toks/s]Processed prompts: 100%|██████████| 240/240 [00:06<00:00, 36.52it/s, est. speed input: 5411.69 toks/s, output: 109.55 toks/s]
+Task: geometric_shapes, accuracy=27.92%, ft_time=199.34s, eval_time=6.67s
+WARNING 01-21 16:42:17 tokenizer.py:191] No tokenizer found in /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:02<11:31,  2.89s/it, est. speed input: 18.32 toks/s, output: 1.04 toks/s]Processed prompts: 100%|██████████| 240/240 [00:02<00:00, 82.86it/s, est. speed input: 4603.22 toks/s, output: 248.60 toks/s]
+Task: hyperbaton, accuracy=75.42%, ft_time=192.64s, eval_time=2.96s
+WARNING 01-21 16:42:20 tokenizer.py:191] No tokenizer found in /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:07<30:00,  7.53s/it, est. speed input: 17.65 toks/s, output: 0.40 toks/s]Processed prompts: 100%|██████████| 240/240 [00:07<00:00, 31.85it/s, est. speed input: 5533.66 toks/s, output: 95.54 toks/s]
+Task: logical_deduction_five_objects, accuracy=36.25%, ft_time=210.50s, eval_time=7.65s
+WARNING 01-21 16:42:28 tokenizer.py:191] No tokenizer found in /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:09<37:09,  9.33s/it, est. speed input: 25.62 toks/s, output: 0.32 toks/s]Processed prompts: 100%|██████████| 240/240 [00:09<00:00, 25.72it/s, est. speed input: 5606.79 toks/s, output: 77.15 toks/s]
+Task: logical_deduction_seven_objects, accuracy=42.50%, ft_time=211.65s, eval_time=9.47s
+WARNING 01-21 16:42:37 tokenizer.py:191] No tokenizer found in /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:05<23:01,  5.78s/it, est. speed input: 22.66 toks/s, output: 0.52 toks/s]Processed prompts: 100%|██████████| 240/240 [00:05<00:00, 41.49it/s, est. speed input: 5317.70 toks/s, output: 124.46 toks/s]
+Task: logical_deduction_three_objects, accuracy=68.33%, ft_time=206.23s, eval_time=5.88s
+WARNING 01-21 16:42:43 tokenizer.py:191] No tokenizer found in /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:03<15:52,  3.99s/it, est. speed input: 19.06 toks/s, output: 0.75 toks/s]Processed prompts: 100%|██████████| 240/240 [00:03<00:00, 60.14it/s, est. speed input: 4969.65 toks/s, output: 180.43 toks/s]
+Task: movie_recommendation, accuracy=88.75%, ft_time=198.68s, eval_time=4.08s
+WARNING 01-21 16:42:47 tokenizer.py:191] No tokenizer found in /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:02<10:02,  2.52s/it, est. speed input: 17.84 toks/s, output: 1.19 toks/s]Processed prompts: 100%|██████████| 240/240 [00:02<00:00, 95.04it/s, est. speed input: 4232.32 toks/s, output: 285.14 toks/s]
+Task: multistep_arithmetic_two, accuracy=1.25%, ft_time=214.83s, eval_time=2.58s
+WARNING 01-21 16:42:50 tokenizer.py:191] No tokenizer found in /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:01<04:08,  1.04s/it, est. speed input: 74.03 toks/s, output: 0.96 toks/s]Processed prompts:  11%|█         | 26/240 [00:01<00:08, 24.39it/s, est. speed input: 1505.32 toks/s, output: 19.04 toks/s]Processed prompts:  21%|██        | 50/240 [00:01<00:04, 39.60it/s, est. speed input: 2406.76 toks/s, output: 29.61 toks/s]Processed prompts:  30%|███       | 73/240 [00:02<00:03, 49.21it/s, est. speed input: 3022.02 toks/s, output: 36.30 toks/s]Processed prompts:  40%|████      | 97/240 [00:02<00:02, 56.74it/s, est. speed input: 3464.13 toks/s, output: 41.54 toks/s]Processed prompts:  50%|█████     | 121/240 [00:02<00:01, 62.04it/s, est. speed input: 3784.79 toks/s, output: 45.52 toks/s]Processed prompts:  61%|██████    | 146/240 [00:02<00:01, 66.62it/s, est. speed input: 4049.71 toks/s, output: 48.97 toks/s]Processed prompts:  71%|███████   | 170/240 [00:03<00:01, 68.78it/s, est. speed input: 4249.84 toks/s, output: 51.41 toks/s]Processed prompts:  80%|████████  | 193/240 [00:03<00:00, 69.30it/s, est. speed input: 4419.51 toks/s, output: 53.12 toks/s]Processed prompts: 100%|██████████| 240/240 [00:03<00:00, 65.27it/s, est. speed input: 5445.78 toks/s, output: 65.27 toks/s]
+Task: navigate, accuracy=42.92%, ft_time=234.77s, eval_time=3.76s
+WARNING 01-21 16:42:54 tokenizer.py:191] No tokenizer found in /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:03<12:13,  3.07s/it, est. speed input: 14.66 toks/s, output: 0.65 toks/s]Processed prompts: 100%|██████████| 240/240 [00:03<00:00, 78.09it/s, est. speed input: 4422.47 toks/s, output: 156.19 toks/s]
+Task: object_counting, accuracy=62.08%, ft_time=215.61s, eval_time=3.14s
+WARNING 01-21 16:42:57 tokenizer.py:191] No tokenizer found in /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/136 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   1%|          | 1/136 [00:05<11:40,  5.19s/it, est. speed input: 39.71 toks/s, output: 0.58 toks/s]Processed prompts: 100%|██████████| 136/136 [00:05<00:00, 26.20it/s, est. speed input: 5336.01 toks/s, output: 78.61 toks/s]
+Task: penguins_in_a_table, accuracy=47.79%, ft_time=212.46s, eval_time=5.26s
+WARNING 01-21 16:43:02 tokenizer.py:191] No tokenizer found in /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:06<25:03,  6.29s/it, est. speed input: 25.75 toks/s, output: 0.48 toks/s]Processed prompts: 100%|██████████| 240/240 [00:06<00:00, 38.13it/s, est. speed input: 5338.43 toks/s, output: 114.38 toks/s]
+Task: reasoning_about_colored_objects, accuracy=49.58%, ft_time=198.19s, eval_time=6.40s
+WARNING 01-21 16:43:09 tokenizer.py:191] No tokenizer found in /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:04<17:11,  4.32s/it, est. speed input: 19.69 toks/s, output: 0.69 toks/s]Processed prompts: 100%|██████████| 240/240 [00:04<00:00, 55.55it/s, est. speed input: 4861.52 toks/s, output: 166.64 toks/s]
+Task: ruin_names, accuracy=85.83%, ft_time=204.86s, eval_time=4.40s
+WARNING 01-21 16:43:13 tokenizer.py:191] No tokenizer found in /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:11<46:36, 11.70s/it, est. speed input: 23.59 toks/s, output: 0.26 toks/s]Processed prompts: 100%|██████████| 240/240 [00:11<00:00, 20.51it/s, est. speed input: 5755.10 toks/s, output: 61.52 toks/s]
+Task: salient_translation_error_detection, accuracy=40.42%, ft_time=208.98s, eval_time=11.88s
+WARNING 01-21 16:43:25 tokenizer.py:191] No tokenizer found in /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/168 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   1%|          | 1/168 [00:02<07:19,  2.63s/it, est. speed input: 20.91 toks/s, output: 1.14 toks/s]Processed prompts: 100%|██████████| 168/168 [00:02<00:00, 63.83it/s, est. speed input: 4811.28 toks/s, output: 191.49 toks/s]
+Task: snarks, accuracy=69.64%, ft_time=190.79s, eval_time=2.69s
+WARNING 01-21 16:43:28 tokenizer.py:191] No tokenizer found in /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:00<03:36,  1.10it/s, est. speed input: 57.42 toks/s, output: 1.10 toks/s]Processed prompts:  18%|█▊        | 44/240 [00:01<00:04, 45.31it/s, est. speed input: 1677.08 toks/s, output: 35.60 toks/s]Processed prompts:  36%|███▋      | 87/240 [00:01<00:02, 73.24it/s, est. speed input: 2626.27 toks/s, output: 55.56 toks/s]Processed prompts:  54%|█████▍    | 130/240 [00:01<00:01, 91.61it/s, est. speed input: 3247.93 toks/s, output: 68.63 toks/s]Processed prompts:  72%|███████▏  | 173/240 [00:02<00:00, 118.63it/s, est. speed input: 3911.90 toks/s, output: 82.69 toks/s]Processed prompts: 100%|██████████| 240/240 [00:02<00:00, 112.39it/s, est. speed input: 5309.97 toks/s, output: 112.39 toks/s]
+Task: sports_understanding, accuracy=65.83%, ft_time=193.29s, eval_time=2.20s
+WARNING 01-21 16:43:30 tokenizer.py:191] No tokenizer found in /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:08<33:35,  8.43s/it, est. speed input: 24.90 toks/s, output: 0.36 toks/s]Processed prompts: 100%|██████████| 240/240 [00:08<00:00, 28.44it/s, est. speed input: 5527.64 toks/s, output: 85.33 toks/s]
+Task: temporal_sequences, accuracy=100.00%, ft_time=179.13s, eval_time=8.56s
+WARNING 01-21 16:43:38 tokenizer.py:191] No tokenizer found in /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:08<33:45,  8.48s/it, est. speed input: 24.19 toks/s, output: 0.35 toks/s]Processed prompts: 100%|██████████| 240/240 [00:08<00:00, 28.31it/s, est. speed input: 5645.64 toks/s, output: 84.93 toks/s]
+Task: tracking_shuffled_objects_five_objects, accuracy=22.50%, ft_time=201.61s, eval_time=8.60s
+WARNING 01-21 16:43:47 tokenizer.py:191] No tokenizer found in /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:10<41:45, 10.49s/it, est. speed input: 24.80 toks/s, output: 0.29 toks/s]Processed prompts: 100%|██████████| 240/240 [00:10<00:00, 22.88it/s, est. speed input: 5719.90 toks/s, output: 68.65 toks/s]
+Task: tracking_shuffled_objects_seven_objects, accuracy=26.67%, ft_time=195.73s, eval_time=10.64s
+WARNING 01-21 16:43:58 tokenizer.py:191] No tokenizer found in /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:06<27:00,  6.78s/it, est. speed input: 23.75 toks/s, output: 0.44 toks/s]Processed prompts: 100%|██████████| 240/240 [00:06<00:00, 35.38it/s, est. speed input: 5536.77 toks/s, output: 106.15 toks/s]
+Task: tracking_shuffled_objects_three_objects, accuracy=32.50%, ft_time=213.65s, eval_time=6.90s
+WARNING 01-21 16:44:04 tokenizer.py:191] No tokenizer found in /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:00<03:54,  1.02it/s, est. speed input: 74.44 toks/s, output: 1.02 toks/s]Processed prompts:  12%|█▏        | 29/240 [00:01<00:07, 28.21it/s, est. speed input: 1574.58 toks/s, output: 22.11 toks/s]Processed prompts:  24%|██▍       | 57/240 [00:01<00:03, 46.30it/s, est. speed input: 2488.89 toks/s, output: 34.80 toks/s]Processed prompts:  36%|███▌      | 86/240 [00:01<00:02, 59.58it/s, est. speed input: 3112.03 toks/s, output: 43.82 toks/s]Processed prompts:  48%|████▊     | 114/240 [00:02<00:01, 67.58it/s, est. speed input: 3547.70 toks/s, output: 49.78 toks/s]Processed prompts:  59%|█████▉    | 142/240 [00:02<00:01, 73.13it/s, est. speed input: 3864.15 toks/s, output: 54.27 toks/s]Processed prompts:  71%|███████   | 170/240 [00:02<00:00, 77.08it/s, est. speed input: 4117.34 toks/s, output: 57.80 toks/s]Processed prompts:  82%|████████▎ | 198/240 [00:03<00:00, 91.89it/s, est. speed input: 4516.33 toks/s, output: 63.37 toks/s]Processed prompts: 100%|██████████| 240/240 [00:03<00:00, 75.85it/s, est. speed input: 5406.22 toks/s, output: 75.85 toks/s]
+Task: web_of_lies, accuracy=52.50%, ft_time=211.75s, eval_time=3.23s
+WARNING 01-21 16:44:08 tokenizer.py:191] No tokenizer found in /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter, using base model tokenizer instead. (Exception: Can't load tokenizer for '/tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure '/tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter' is the correct path to a directory containing all relevant files for a LlamaTokenizerFast tokenizer.)
+Processed prompts:   0%|          | 0/240 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   0%|          | 1/240 [00:02<10:43,  2.69s/it, est. speed input: 11.52 toks/s, output: 1.11 toks/s]Processed prompts:   1%|          | 2/240 [00:02<04:43,  1.19s/it, est. speed input: 22.26 toks/s, output: 2.47 toks/s]Processed prompts:   1%|▏         | 3/240 [00:02<02:48,  1.41it/s, est. speed input: 32.34 toks/s, output: 4.04 toks/s]Processed prompts:   2%|▏         | 5/240 [00:03<01:21,  2.88it/s, est. speed input: 52.46 toks/s, output: 7.40 toks/s]Processed prompts:   4%|▍         | 10/240 [00:03<00:37,  6.17it/s, est. speed input: 96.51 toks/s, output: 15.60 toks/s]Processed prompts:   9%|▉         | 21/240 [00:03<00:13, 16.54it/s, est. speed input: 199.81 toks/s, output: 36.73 toks/s]Processed prompts:  10%|█         | 25/240 [00:03<00:11, 18.81it/s, est. speed input: 231.78 toks/s, output: 44.31 toks/s]Processed prompts:  12%|█▏        | 29/240 [00:03<00:10, 21.07it/s, est. speed input: 262.48 toks/s, output: 52.70 toks/s]Processed prompts:  14%|█▍        | 33/240 [00:03<00:08, 23.23it/s, est. speed input: 293.08 toks/s, output: 61.83 toks/s]Processed prompts:  16%|█▋        | 39/240 [00:04<00:06, 28.81it/s, est. speed input: 341.45 toks/s, output: 76.28 toks/s]Processed prompts:  19%|█▉        | 45/240 [00:04<00:05, 33.59it/s, est. speed input: 388.52 toks/s, output: 91.33 toks/s]Processed prompts:  22%|██▏       | 52/240 [00:04<00:04, 40.33it/s, est. speed input: 444.71 toks/s, output: 110.14 toks/s]Processed prompts:  24%|██▍       | 57/240 [00:04<00:04, 41.34it/s, est. speed input: 481.50 toks/s, output: 123.97 toks/s]Processed prompts:  26%|██▌       | 62/240 [00:04<00:04, 42.38it/s, est. speed input: 517.85 toks/s, output: 138.28 toks/s]Processed prompts:  28%|██▊       | 67/240 [00:04<00:03, 43.35it/s, est. speed input: 553.75 toks/s, output: 153.05 toks/s]Processed prompts:  30%|███       | 72/240 [00:04<00:03, 44.32it/s, est. speed input: 589.52 toks/s, output: 168.46 toks/s]Processed prompts:  32%|███▏      | 77/240 [00:04<00:03, 45.43it/s, est. speed input: 624.76 toks/s, output: 183.95 toks/s]Processed prompts:  35%|███▍      | 83/240 [00:04<00:03, 49.42it/s, est. speed input: 669.00 toks/s, output: 203.33 toks/s]Processed prompts:  38%|███▊      | 92/240 [00:05<00:03, 47.99it/s, est. speed input: 728.01 toks/s, output: 231.60 toks/s]Processed prompts:  42%|████▏     | 101/240 [00:05<00:02, 47.83it/s, est. speed input: 787.50 toks/s, output: 261.44 toks/s]Processed prompts:  46%|████▋     | 111/240 [00:05<00:02, 49.66it/s, est. speed input: 856.38 toks/s, output: 297.58 toks/s]Processed prompts:  49%|████▉     | 118/240 [00:05<00:02, 47.35it/s, est. speed input: 898.27 toks/s, output: 321.44 toks/s]Processed prompts:  51%|█████▏    | 123/240 [00:05<00:02, 42.42it/s, est. speed input: 921.77 toks/s, output: 337.06 toks/s]Processed prompts:  53%|█████▎    | 128/240 [00:06<00:02, 39.20it/s, est. speed input: 947.35 toks/s, output: 354.01 toks/s]Processed prompts:  56%|█████▋    | 135/240 [00:06<00:02, 41.07it/s, est. speed input: 994.29 toks/s, output: 382.54 toks/s]Processed prompts:  61%|██████▏   | 147/240 [00:06<00:01, 52.91it/s, est. speed input: 1091.97 toks/s, output: 439.50 toks/s]Processed prompts:  66%|██████▌   | 158/240 [00:06<00:01, 61.00it/s, est. speed input: 1181.03 toks/s, output: 492.31 toks/s]Processed prompts:  69%|██████▉   | 165/240 [00:06<00:01, 42.27it/s, est. speed input: 1195.71 toks/s, output: 510.15 toks/s]Processed prompts:  71%|███████▏  | 171/240 [00:07<00:02, 28.60it/s, est. speed input: 1174.74 toks/s, output: 519.24 toks/s]Processed prompts: 100%|██████████| 240/240 [00:07<00:00, 33.23it/s, est. speed input: 1703.45 toks/s, output: 996.81 toks/s]
+Task: word_sorting, accuracy=47.92%, ft_time=211.50s, eval_time=7.30s
+
+Evaluation finished in 193.12s.
+Total time (finetune + eval): 5184.13s
+Saved overall experiment results to logs/current/20250121_FT_10_5_4_1e-4_64_64_0.05_5_3_gpu0.json.
+
+=== Cleaning up all finetuned adapter directories and any remaining datasets ===
+Deleted adapter directory: /tmp/boolean_expressions_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/causal_judgement_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/date_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/disambiguation_qa_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/dyck_languages_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/formal_fallacies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/geometric_shapes_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/hyperbaton_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/logical_deduction_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/logical_deduction_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/logical_deduction_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/movie_recommendation_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/multistep_arithmetic_two_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/navigate_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/object_counting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/penguins_in_a_table_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/reasoning_about_colored_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/ruin_names_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/salient_translation_error_detection_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/snarks_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/sports_understanding_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/temporal_sequences_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/tracking_shuffled_objects_five_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/tracking_shuffled_objects_seven_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/tracking_shuffled_objects_three_objects_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/web_of_lies_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Deleted adapter directory: /tmp/word_sorting_FT_10_5_4_1e-4_64_64_0.05_5_3_adapter
+Cleanup completed.
+[rank0]:[W121 16:44:16.028750236 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
