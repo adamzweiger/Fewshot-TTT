@@ -3,7 +3,11 @@
 """
 ttt.py
 
-Implements "In-Context Fine-Tune" (ICFT), the main TTT (Test-Time Training) method.
+Implements the main TTT (Test-Time Training) method.
+1. Load tasks from the BIG-Bench-Hard (BBH) dataset.
+2. Creating a multi-sample training dataset for LoRA finetuning, using few-shot examples.
+3. Fine-tune the language model with the Torchtune library and LoRA adapters.
+4. Performing inference and evaluation with the fine-tuned model, optionally using majority-vote.
 """
 
 import os
@@ -35,7 +39,7 @@ CHECKPOINT_FILES = [
 ]
 
 
-def create_icft_dataset(
+def create_ttt_dataset(
     prefix: str,
     correct_examples: list,
     num_training_steps: int,
@@ -224,21 +228,21 @@ def finetune_with_torchtune(config_filename: str):
     print("Running command:", cmd)
     ret = os.system(cmd)
     if ret != 0:
-        print(f"[ICFT] Torchtune command failed with config: {config_filename}")
+        print(f"[TTT] Torchtune command failed with config: {config_filename}")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="ICFT: In-Context Fine-Tune with multi-sample training & optional majority-vote inference, loading data from tasks_k{k}.json."
+        description="TTT: Test-Time Training with multi-sample training & optional majority-vote inference, loading data from tasks_k{k}.json."
     )
-    parser.add_argument("--exp_name", type=str, default="icft",
+    parser.add_argument("--exp_name", type=str, default="ttt",
                         help="Experiment name.")
     parser.add_argument("--model_dir", type=str, required=True,
                         help="Path to the model directory (base model).")
-    parser.add_argument("--output_file", type=str, default="icft_results.json",
+    parser.add_argument("--output_file", type=str, default="ttt_results.json",
                         help="Where to store final JSON results.")
     parser.add_argument("--k", type=int, default=10,
-                        help="Number of few-shot examples. Will load TTT/data/tasks_k{k}.json.")
+                        help="Number of few-shot examples.")
     parser.add_argument("--dataset_type", type=str, default="text_completion_dataset",
                         help="Dataset type for Torchtune finetuning.")
     parser.add_argument("--num_training_steps", type=int, default=5,
@@ -279,7 +283,7 @@ def main():
         # Path to the BBH JSON
         task_file = f"external/BIG-Bench-Hard/bbh/{task_name}.json"
         if not os.path.exists(task_file):
-            print(f"[ICFT] Skipping {task_name} because file not found: {task_file}")
+            print(f"[TTT] Skipping {task_name} because file not found: {task_file}")
             continue
 
         # Load the BBH JSON
@@ -287,12 +291,12 @@ def main():
             with open(task_file, "r") as f:
                 task_json = json.load(f)
         except Exception as e:
-            print(f"[ICFT] Error loading {task_file}: {e}")
+            print(f"[TTT] Error loading {task_file}: {e}")
             continue
 
         all_examples = task_json.get("examples", [])
         if not all_examples:
-            print(f"[ICFT] Skipping {task_name} because no examples found in JSON.")
+            print(f"[TTT] Skipping {task_name} because no examples found in JSON.")
             continue
 
         # Shuffle all examples with the chosen seed
@@ -301,7 +305,7 @@ def main():
 
         # If we don't have enough examples for k
         if len(all_examples) <= args.k:
-            print(f"[ICFT] Skipping {task_name} for k={args.k}, not enough examples.")
+            print(f"[TTT] Skipping {task_name} for k={args.k}, not enough examples.")
             continue
 
         # The first k become the training set ("correct_examples")
@@ -354,10 +358,10 @@ def main():
         }
 
     if not task_dict:
-        print("\n[ICFT] No tasks to process. Exiting.")
+        print("\n[TTT] No tasks to process. Exiting.")
         sys.exit(0)
 
-    print(f"\n=== ICFT: Loaded {len(task_dict)} tasks from BBH with k={args.k} ===")
+    print(f"\n=== TTT: Loaded {len(task_dict)} tasks from BBH with k={args.k} ===")
     print(f"Finetuning steps: {args.num_training_steps} (0 => skip), majority_vote={args.majority_vote}, leave_one_out={args.leave_one_out}\n")
 
     # -------------------------------------------------------------------------
@@ -383,10 +387,10 @@ def main():
                 f"{data_dict['answer_format']}\n\n"
             )
 
-            dataset_filename = os.path.join(data_dict["output_dir"], f"{task_name}_icft_dataset.json")
+            dataset_filename = os.path.join(data_dict["output_dir"], f"{task_name}_ttt_dataset.json")
 
             # Build the multi-sample dataset with num_training_steps random shuffles
-            create_icft_dataset(
+            create_ttt_dataset(
                 prefix=prefix,
                 correct_examples=correct_examples,
                 num_training_steps=args.num_training_steps,
@@ -421,7 +425,7 @@ def main():
                 try:
                     os.remove(dataset_filename)
                 except Exception as exc:
-                    print(f"[ICFT] Could not remove dataset file {dataset_filename}: {exc}")
+                    print(f"[TTT] Could not remove dataset file {dataset_filename}: {exc}")
 
             print(f"[PHASE 2] Finished finetuning for {task_name} in {ft_time:.2f}s")
 
@@ -441,7 +445,7 @@ def main():
         max_lora_rank=args.lora_rank,
     )
 
-    icft_results = []
+    ttt_results = []
     lora_id = 1
 
     for task_name, data_dict in task_dict.items():
@@ -469,7 +473,7 @@ def main():
             preds = eval_outputs if eval_outputs else []
             eval_time = time.perf_counter() - eval_start
             acc = compute_accuracy(preds, eval_targets)
-            icft_results.append({
+            ttt_results.append({
                 "task": task_name,
                 f"{args.exp_name}_accuracy": round(acc, 4),
                 "ft_time": 0.0,
@@ -513,7 +517,7 @@ def main():
                 prefix = build_inference_prompt(
                     correct_examples,
                     leave_one_out=args.leave_one_out,
-                    shuffle_examples=args.shuffle
+                    shuffle_examples=True
                 )
                 batch_outputs = inference_vllm(
                     llm=llm_eval,
@@ -547,7 +551,7 @@ def main():
             for i in range(min(5, len(eval_questions)))
         ]
 
-        icft_results.append({
+        ttt_results.append({
             "task": task_name,
             f"{args.exp_name}_accuracy": round(acc, 4),
             "ft_time": round(ft_times.get(task_name, 0.0), 4),
@@ -565,10 +569,10 @@ def main():
     # Save results
     try:
         with open(args.output_file, 'w') as f:
-            json.dump(icft_results, f, indent=2)
-        print(f"\n[ICFT] Results saved to {args.output_file}.")
+            json.dump(ttt_results, f, indent=2)
+        print(f"\n[TTT] Results saved to {args.output_file}.")
     except Exception as e:
-        print(f"[ICFT] Error saving results: {e}")
+        print(f"[TTT] Error saving results: {e}")
 
     # Remove LoRA adapter directories if any
     for task_name, data_dict in task_dict.items():
@@ -577,9 +581,9 @@ def main():
             try:
                 shutil.rmtree(out_dir)
             except Exception as exc:
-                print(f"[ICFT] Warning: could not remove adapter dir {out_dir}: {exc}")
+                print(f"[TTT] Warning: could not remove adapter dir {out_dir}: {exc}")
 
-    print("[ICFT] Done. Goodbye!")
+    print("[TTT] Done. Goodbye!")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=rand
+#SBATCH --job-name=eval
 #SBATCH --output=logs/current/out.log
 #SBATCH --gres=gpu:1
 #SBATCH --nodelist=dogo

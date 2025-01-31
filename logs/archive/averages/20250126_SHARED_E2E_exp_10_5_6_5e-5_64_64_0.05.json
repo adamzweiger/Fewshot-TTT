@@ -1,0 +1,110 @@
+[
+  {
+    "task": "boolean_expressions",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 75.08334
+  },
+  {
+    "task": "causal_judgement",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 56.27118
+  },
+  {
+    "task": "date_understanding",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 56.08332
+  },
+  {
+    "task": "disambiguation_qa",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 58.16666
+  },
+  {
+    "task": "dyck_languages",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 5.66666
+  },
+  {
+    "task": "formal_fallacies",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 54.24998
+  },
+  {
+    "task": "geometric_shapes",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 45.74998
+  },
+  {
+    "task": "hyperbaton",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 78.33334
+  },
+  {
+    "task": "logical_deduction_five_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 50.25
+  },
+  {
+    "task": "logical_deduction_seven_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 51.58334
+  },
+  {
+    "task": "logical_deduction_three_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 75.0
+  },
+  {
+    "task": "movie_recommendation",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 80.0
+  },
+  {
+    "task": "multistep_arithmetic_two",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 1.66666
+  },
+  {
+    "task": "navigate",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 62.41666
+  },
+  {
+    "task": "object_counting",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 51.58334
+  },
+  {
+    "task": "penguins_in_a_table",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 50.58824
+  },
+  {
+    "task": "reasoning_about_colored_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 60.24998
+  },
+  {
+    "task": "ruin_names",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 81.75
+  },
+  {
+    "task": "salient_translation_error_detection",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 45.16666
+  },
+  {
+    "task": "snarks",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 67.0238
+  },
+  {
+    "task": "sports_understanding",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 72.75
+  },
+  {
+    "task": "temporal_sequences",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 99.75
+  },
+  {
+    "task": "tracking_shuffled_objects_five_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 25.91666
+  },
+  {
+    "task": "tracking_shuffled_objects_seven_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 26.00002
+  },
+  {
+    "task": "tracking_shuffled_objects_three_objects",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 35.58334
+  },
+  {
+    "task": "web_of_lies",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 50.83334
+  },
+  {
+    "task": "word_sorting",
+    "SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05_accuracy": 40.33334
+  }
+]

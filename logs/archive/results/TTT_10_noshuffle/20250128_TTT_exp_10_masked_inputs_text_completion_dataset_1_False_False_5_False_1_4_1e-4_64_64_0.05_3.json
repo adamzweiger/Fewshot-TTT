@@ -1,0 +1,893 @@
+[
+  {
+    "task": "boolean_expressions",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 81.6667,
+    "ft_time": 203.3659,
+    "eval_time": 3.554,
+    "examples": [
+      {
+        "question": "False and False or True and not False is",
+        "prediction": "false",
+        "true_answer": "true"
+      },
+      {
+        "question": "False and ( not False ) or False is",
+        "prediction": "false",
+        "true_answer": "false"
+      },
+      {
+        "question": "not ( True ) or False or True is",
+        "prediction": "true",
+        "true_answer": "true"
+      },
+      {
+        "question": "not not not False and True or False is",
+        "prediction": "false",
+        "true_answer": "true"
+      },
+      {
+        "question": "( False ) or False and not True is",
+        "prediction": "false",
+        "true_answer": "false"
+      }
+    ]
+  },
+  {
+    "task": "causal_judgement",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 60.452,
+    "ft_time": 17.2537,
+    "eval_time": 31.9575,
+    "examples": [
+      {
+        "question": "How would a typical person answer each of the following questions about causation?\nJanet is an employee in a factory. Since she works in the maintenance department, she knows how to grease and oil all of the machines in the factory. It is her responsibility to put oil into the machines. Kate is also an employee at the factory. While she works in the human resources department, she knows how to grease and oil all of the machines in the factory. If Janet does not put oil in the machines, it is not Kate's responsibility to do so. One day, Janet forgets to put oil in an important machine. Janet noticed that she did not put oil in the machine. Kate did not notice that Janet did not put oil in the machine, and Kate also did not put oil in the machine. The machine broke down a few days later. Did Kate not putting oil in the machine cause it to break down?\nOptions:\n- Yes\n- No",
+        "prediction": "no",
+        "true_answer": "no"
+      },
+      {
+        "question": "How would a typical person answer each of the following questions about causation?\nLauren and Jane work for the same company. They each need to use a computer for work sometimes. Unfortunately, the computer isn't very powerful. If two people are logged on at the same time, it usually crashes. So the company decided to institute an official policy. It declared that Jane would be the only one permitted to use the computer in the mornings and that Lauren would be the only one permitted to use the computer in the afternoons. As expected, Jane logged on the computer the next day at 9:00 am. But Lauren decided to disobey the official policy. She also logged on at 9:00 am. The computer crashed immediately. Did Jane cause the computer to crash?\nOptions:\n- Yes\n- No",
+        "prediction": "no",
+        "true_answer": "no"
+      },
+      {
+        "question": "How would a typical person answer each of the following questions about causation?\nA machine is set up in such a way that it will short circuit if both the black wire and the red wire touch the battery at the same time. The machine will not short circuit if just one of these wires touches the battery. The black wire is designated as the one that is supposed to touch the battery, while the red wire is supposed to remain in some other part of the machine. One day, the black wire and the red wire both end up touching the battery at the same time. There is a short circuit. Did the fact that the black wire touched the battery cause the machine to short circuit?\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "no"
+      },
+      {
+        "question": "How would a typical person answer each of the following questions about causation?\nBilly and Suzy inherited an unusual type of hybrid car that has two special car batteries called Bartlett batteries. The car won't start unless it has at least one Bartlett battery. Having a second Bartlett battery isn't necessary to start the car. When they got the car, both Bartlett batteries were missing. One day, Billy and Suzy are both out of the house. Billy is visiting his friend's house, and notices that his friend has a Bartlett battery. Billy asks his friend to sell the battery to him, but his friend says that he can't sell it because he needs it for his own car. Billy waits until his friend is in the bathroom, and then steals the Bartlett battery from his friend. Meanwhile, on the other side of town, Suzy walks into an automotive parts shop and happens to notice that they have a single Bartlett battery in stock. Suzy decides to buy the Bartlett battery from the shop. When Billy and Suzy get home, they installed the two Bartlett batteries. Since all the car needed was at least one Bartlett battery, they were able to start the car. Did Billy cause the car to be able to start?\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "no"
+      },
+      {
+        "question": "How would a typical person answer each of the following questions about causation?\nThe receptionist in the philosophy department keeps her desk stocked with pens. The administrative assistants are allowed to take the pens, but faculty members are supposed to buy their own. The administrative assistants typically do take the pens. Unfortunately, so do the faculty members. The receptionist has repeatedly emailed them reminders that only administrative assistants are allowed to take the pens. On Monday morning, one of the administrative assistants encounters Professor Smith walking past the receptionist's desk. Both take pens. Later that day, the receptionist needs to take an important message... but she has a problem. There are no pens left on her desk. Did Professor Smith cause the problem?\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "yes"
+      }
+    ]
+  },
+  {
+    "task": "date_understanding",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 60.0,
+    "ft_time": 14.402,
+    "eval_time": 14.8661,
+    "examples": [
+      {
+        "question": "The deadline is Jun 1, 2021, which is 2 days away from now. What is the date one week ago from today in MM/DD/YYYY?\nOptions:\n(A) 05/23/2020\n(B) 04/13/2021\n(C) 05/24/2021\n(D) 05/23/2054\n(E) 05/23/1940\n(F) 05/23/2021",
+        "prediction": "(f)",
+        "true_answer": "(f)"
+      },
+      {
+        "question": "On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date one week from today in MM/DD/YYYY?\nOptions:\n(A) 06/25/1964\n(B) 05/25/2018\n(C) 06/24/2017\n(D) 06/25/2063\n(E) 06/25/2017\n(F) 07/25/2017",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "2015 is coming in 36 hours. What is the date one week ago from today in MM/DD/YYYY?\nOptions:\n(A) 12/22/2040\n(B) 12/23/2014\n(C) 12/22/2014\n(D) 01/05/2015\n(E) 12/22/2086\n(F) 02/06/2015",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Today is Sep 9, 1909. What is the date one year ago from today in MM/DD/YYYY?\nOptions:\n(A) 09/09/1920\n(B) 09/09/1908\n(C) 07/05/1908\n(D) 09/09/1870\n(E) 09/04/1908\n(F) 09/13/1908",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "It is 4/19/1969 today. What is the date one week from today in MM/DD/YYYY?\nOptions:\n(A) 04/26/1969\n(B) 04/05/1969\n(C) 05/11/1969\n(D) 04/27/1969\n(E) 05/14/1969\n(F) 04/25/1969",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      }
+    ]
+  },
+  {
+    "task": "disambiguation_qa",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 61.6667,
+    "ft_time": 14.6286,
+    "eval_time": 12.0581,
+    "examples": [
+      {
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The carpenter collaborated with the designer and gave him a prototype.\nOptions:\n(A) Gave the carpenter a prototype\n(B) Gave the designer a prototype\n(C) Ambiguous",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The salesperson tried to fool the writer and sold them some garbage.\nOptions:\n(A) Sold the salesperson some garbage\n(B) Sold the writer some garbage\n(C) Ambiguous",
+        "prediction": "(c)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The cook is always teaching the assistant new techniques because they like to teach others.\nOptions:\n(A) The cook likes to teach\n(B) The assistant likes to teach\n(C) Ambiguous",
+        "prediction": "(c)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The surgeon warned the nurse that they needed more time to prepare.\nOptions:\n(A) The surgeon needed more time\n(B) The nurse needed more time\n(C) Ambiguous",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: This story could not be published without the writer and her friends' support.\nOptions:\n(A) They were the writer's friends\n(B) They were the friends' friends\n(C) They were the story's friends\n(D) Ambiguous",
+        "prediction": "(d)",
+        "true_answer": "(a)"
+      }
+    ]
+  },
+  {
+    "task": "dyck_languages",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 53.3333,
+    "ft_time": 15.1345,
+    "eval_time": 6.1291,
+    "examples": [
+      {
+        "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( ( < >",
+        "prediction": ") )",
+        "true_answer": ") )"
+      },
+      {
+        "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: < [ { { < ( ) > { < { } > ( < ( ) > { < [ ( { { ( < [ ] > ) } } { ( ( [ [ { } [ ] ] ] ) ) } ) ] > } ) } }",
+        "prediction": "] > ]",
+        "true_answer": "} ] >"
+      },
+      {
+        "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: < { < [ [ ( { } ) ] ]",
+        "prediction": "> } >",
+        "true_answer": "> } >"
+      },
+      {
+        "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: < { ( { } ) < > }",
+        "prediction": "> }",
+        "true_answer": ">"
+      },
+      {
+        "question": "Complete the rest of the sequence, making sure that the parentheses are closed properly. Input: ( ( [ < < > [ < { } > ] { < [ ] > ( ( ( [ [ { < > } ] ] ) ) ) ( < < > > ) } > ]",
+        "prediction": ") )",
+        "true_answer": ") )"
+      }
+    ]
+  },
+  {
+    "task": "formal_fallacies",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 57.0833,
+    "ft_time": 15.1441,
+    "eval_time": 18.0794,
+    "examples": [
+      {
+        "question": "\"Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: To begin with, Jose is an admirer of AEK Athens FC. Moreover, every admirer of AEK Athens FC is an expert of Feyenoord. All this entails that Jose is an expert of Feyenoord.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+        "prediction": "valid",
+        "true_answer": "valid"
+      },
+      {
+        "question": "\"Some football fans admire various clubs, others love only a single team. But who is a fan of whom precisely? The following argument pertains to this question: To start with, every opponent to FC Dnipro is an opponent to West Ham United FC or an expert of SCR Altach. Now, being a backer of Chelsea FC is necessary for not being an expert of SCR Altach. Moreover, nobody is neither an opponent to West Ham United FC nor a backer of Chelsea FC. All this entails that being a backer of Chelsea FC is necessary for being an opponent to FC Dnipro.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+        "prediction": "invalid",
+        "true_answer": "invalid"
+      },
+      {
+        "question": "\"It is not always easy to see which chemicals are contained in our consumer products. The following argument pertains to this question: First premise: Whatever is not an ingredient of Shimmer Veil is an ingredient of Snowcastle. Second premise: Every ingredient of Liquid Eye liner is not an ingredient of Love Boat or not an ingredient of Shimmer Veil. Third premise: Being an ingredient of Snowcastle is necessary for not being an ingredient of Love Boat. We may conclude that everything that is an ingredient of Liquid Eye liner is an ingredient of Snowcastle, too.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+        "prediction": "valid",
+        "true_answer": "valid"
+      },
+      {
+        "question": "\"Is Siri a stepsister of Mary? Is Susan related to Kate? In large families, it is sometimes difficult to keep track of all one's relatives. The following argument seeks to clarify some such relations: First premise: Whoever is a great-grandmother of Dawn and a sister of Nancy is not a great-grandmother of Jaime. We may conclude that everyone who is not a great-grandmother of Jaime is however a great-grandmother of Dawn and a sister of Nancy.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+        "prediction": "invalid",
+        "true_answer": "invalid"
+      },
+      {
+        "question": "\"Is Fred a cousin of Robert? Is Joe related to Bob? In large families, it is sometimes difficult to keep track of all one's relatives. The following argument seeks to clarify some such relations: First premise: Being a nephew of Henry is necessary for being a brother of Edward. Second premise: Some ancestor of Carlos is a workmate of Efrain and a nephew of Henry. Third premise: Being a brother of Edward is sufficient for being a workmate of Efrain. Hence, somebody is an ancestor of Carlos and a brother of Edward.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+        "prediction": "valid",
+        "true_answer": "invalid"
+      }
+    ]
+  },
+  {
+    "task": "geometric_shapes",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 41.6667,
+    "ft_time": 14.6201,
+    "eval_time": 20.3076,
+    "examples": [
+      {
+        "question": "This SVG path element <path d=\"M 13.00,17.00 L 78.00,22.00 L 44.00,59.00 L 13.00,17.00\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+        "prediction": "(j)",
+        "true_answer": "(j)"
+      },
+      {
+        "question": "This SVG path element <path d=\"M 69.24,46.18 L 13.17,38.44 L 30.15,61.29 L 33.42,76.85 L 44.01,67.32 L 67.92,63.11 L 69.24,46.18\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+        "prediction": "(b)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "This SVG path element <path d=\"M 59.64,77.72 L 75.18,56.50 M 75.18,56.50 L 6.90,59.13 M 6.90,59.13 L 22.09,77.44 M 22.09,77.44 L 2.73,94.57 M 2.73,94.57 L 91.78,91.66 M 91.78,91.66 L 59.64,77.72\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+        "prediction": "(b)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "This SVG path element <path d=\"M 82.48,71.72 L 86.86,76.47 L 74.69,38.07 M 74.69,38.07 L 46.36,43.46 L 40.46,60.21 L 76.97,78.68 L 82.48,71.72\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+        "prediction": "(b)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "This SVG path element <path d=\"M 2.27,59.23 L 52.45,67.18\"/> draws a\nOptions:\n(A) circle\n(B) heptagon\n(C) hexagon\n(D) kite\n(E) line\n(F) octagon\n(G) pentagon\n(H) rectangle\n(I) sector\n(J) triangle",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      }
+    ]
+  },
+  {
+    "task": "hyperbaton",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 57.9167,
+    "ft_time": 14.4513,
+    "eval_time": 5.6725,
+    "examples": [
+      {
+        "question": "Which sentence has the correct adjective order:\nOptions:\n(A) silly midsize tan computer\n(B) midsize silly tan computer",
+        "prediction": "(b)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Which sentence has the correct adjective order:\nOptions:\n(A) small grey square cloth Japanese shoe\n(B) small square grey Japanese cloth shoe",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Which sentence has the correct adjective order:\nOptions:\n(A) ancient mysterious yellow walking cat\n(B) mysterious ancient yellow walking cat",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Which sentence has the correct adjective order:\nOptions:\n(A) lovely ancient triangular orange Turkish wood smoking shoe\n(B) Turkish wood smoking lovely orange ancient triangular shoe",
+        "prediction": "(b)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Which sentence has the correct adjective order:\nOptions:\n(A) green new chair\n(B) new green chair",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      }
+    ]
+  },
+  {
+    "task": "logical_deduction_five_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 37.5,
+    "ft_time": 14.893,
+    "eval_time": 22.3642,
+    "examples": [
+      {
+        "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were five golfers: Amy, Mel, Rob, Joe, and Ada. Joe finished second. Joe finished below Amy. Mel finished second-to-last. Ada finished last.\nOptions:\n(A) Amy finished last\n(B) Mel finished last\n(C) Rob finished last\n(D) Joe finished last\n(E) Ada finished last",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a quail, a hummingbird, a blue jay, a hawk, and a robin. The robin is the second from the left. The quail is the leftmost. The blue jay is to the left of the hummingbird. The hawk is the third from the left.\nOptions:\n(A) The quail is the rightmost\n(B) The hummingbird is the rightmost\n(C) The blue jay is the rightmost\n(D) The hawk is the rightmost\n(E) The robin is the rightmost",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are five vehicles: a bus, a truck, a motorcyle, a sedan, and a hatchback. The sedan is the second-oldest. The hatchback is newer than the motorcyle. The motorcyle is newer than the sedan. The hatchback is older than the truck.\nOptions:\n(A) The bus is the oldest\n(B) The truck is the oldest\n(C) The motorcyle is the oldest\n(D) The sedan is the oldest\n(E) The hatchback is the oldest",
+        "prediction": "(b)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells five fruits: watermelons, apples, mangoes, pears, and cantaloupes. The watermelons are more expensive than the cantaloupes. The mangoes are less expensive than the pears. The apples are the second-cheapest. The watermelons are less expensive than the mangoes.\nOptions:\n(A) The watermelons are the third-most expensive\n(B) The apples are the third-most expensive\n(C) The mangoes are the third-most expensive\n(D) The pears are the third-most expensive\n(E) The cantaloupes are the third-most expensive",
+        "prediction": "(d)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: an owl, a cardinal, a robin, a hummingbird, and a crow. The hummingbird is to the left of the owl. The hummingbird is to the right of the cardinal. The crow is to the left of the robin. The owl is to the left of the crow.\nOptions:\n(A) The owl is the second from the left\n(B) The cardinal is the second from the left\n(C) The robin is the second from the left\n(D) The hummingbird is the second from the left\n(E) The crow is the second from the left",
+        "prediction": "(e)",
+        "true_answer": "(d)"
+      }
+    ]
+  },
+  {
+    "task": "logical_deduction_seven_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 53.75,
+    "ft_time": 14.9318,
+    "eval_time": 29.7576,
+    "examples": [
+      {
+        "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are seven vehicles: a sedan, a minivan, a motorcyle, a limousine, a hatchback, a truck, and a tractor. The motorcyle is older than the tractor. The hatchback is older than the limousine. The hatchback is newer than the truck. The truck is newer than the tractor. The minivan is the second-newest. The sedan is the third-newest.\nOptions:\n(A) The sedan is the third-oldest\n(B) The minivan is the third-oldest\n(C) The motorcyle is the third-oldest\n(D) The limousine is the third-oldest\n(E) The hatchback is the third-oldest\n(F) The truck is the third-oldest\n(G) The tractor is the third-oldest",
+        "prediction": "(c)",
+        "true_answer": "(f)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are seven vehicles: a station wagon, a limousine, a truck, a minivan, a motorcyle, a hatchback, and a bus. The motorcyle is older than the truck. The station wagon is older than the hatchback. The motorcyle is newer than the hatchback. The bus is the second-newest. The minivan is the oldest. The limousine is older than the station wagon.\nOptions:\n(A) The station wagon is the newest\n(B) The limousine is the newest\n(C) The truck is the newest\n(D) The minivan is the newest\n(E) The motorcyle is the newest\n(F) The hatchback is the newest\n(G) The bus is the newest",
+        "prediction": "(g)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells seven fruits: watermelons, mangoes, kiwis, pears, cantaloupes, oranges, and peaches. The oranges are more expensive than the peaches. The cantaloupes are the fourth-most expensive. The pears are less expensive than the cantaloupes. The peaches are the second-most expensive. The mangoes are the cheapest. The kiwis are the third-cheapest.\nOptions:\n(A) The watermelons are the fourth-most expensive\n(B) The mangoes are the fourth-most expensive\n(C) The kiwis are the fourth-most expensive\n(D) The pears are the fourth-most expensive\n(E) The cantaloupes are the fourth-most expensive\n(F) The oranges are the fourth-most expensive\n(G) The peaches are the fourth-most expensive",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells seven fruits: apples, plums, mangoes, watermelons, oranges, kiwis, and loquats. The watermelons are less expensive than the plums. The watermelons are more expensive than the oranges. The kiwis are less expensive than the oranges. The apples are more expensive than the loquats. The plums are less expensive than the mangoes. The mangoes are the third-most expensive.\nOptions:\n(A) The apples are the second-cheapest\n(B) The plums are the second-cheapest\n(C) The mangoes are the second-cheapest\n(D) The watermelons are the second-cheapest\n(E) The oranges are the second-cheapest\n(F) The kiwis are the second-cheapest\n(G) The loquats are the second-cheapest",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Ana, Eli, Mya, Amy, Joe, Mel, and Ada. Ada finished above Mel. Ada finished third-to-last. Amy finished above Ana. Mya finished second-to-last. Joe finished above Amy. Eli finished below Ana.\nOptions:\n(A) Ana finished third-to-last\n(B) Eli finished third-to-last\n(C) Mya finished third-to-last\n(D) Amy finished third-to-last\n(E) Joe finished third-to-last\n(F) Mel finished third-to-last\n(G) Ada finished third-to-last",
+        "prediction": "(g)",
+        "true_answer": "(g)"
+      }
+    ]
+  },
+  {
+    "task": "logical_deduction_three_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 65.4167,
+    "ft_time": 14.6747,
+    "eval_time": 15.963,
+    "examples": [
+      {
+        "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: peaches, pears, and mangoes. The mangoes are less expensive than the peaches. The mangoes are more expensive than the pears.\nOptions:\n(A) The peaches are the most expensive\n(B) The pears are the most expensive\n(C) The mangoes are the most expensive",
+        "prediction": "(c)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: watermelons, apples, and mangoes. The apples are less expensive than the mangoes. The mangoes are less expensive than the watermelons.\nOptions:\n(A) The watermelons are the second-most expensive\n(B) The apples are the second-most expensive\n(C) The mangoes are the second-most expensive",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: apples, peaches, and mangoes. The mangoes are less expensive than the peaches. The apples are less expensive than the mangoes.\nOptions:\n(A) The apples are the cheapest\n(B) The peaches are the cheapest\n(C) The mangoes are the cheapest",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+        "prediction": "(b)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a brown book, a yellow book, and an orange book. The yellow book is the leftmost. The orange book is to the right of the brown book.\nOptions:\n(A) The brown book is the leftmost\n(B) The yellow book is the leftmost\n(C) The orange book is the leftmost",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      }
+    ]
+  },
+  {
+    "task": "movie_recommendation",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 91.25,
+    "ft_time": 14.2204,
+    "eval_time": 9.9424,
+    "examples": [
+      {
+        "question": "Find a movie similar to Apollo 13, Jurassic Park, Die Hard With a Vengeance, Forrest Gump:\nOptions:\n(A) Killer Movie\n(B) Stealth\n(C) The Last Man on Earth\n(D) True Lies",
+        "prediction": "(a)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Find a movie similar to Independence Day, The Silence of the Lambs, Indiana Jones and the Temple of Doom, Fargo:\nOptions:\n(A) Care Bears Movie II A New Generation\n(B) Noises Off\n(C) The Fugitive\n(D) Lights Out",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Find a movie similar to Spider-Man, Spider-Man 2, The Matrix, Independence Day:\nOptions:\n(A) Jurassic World Fallen Kingdom\n(B) The Fifth Element\n(C) Across the Universe\n(D) Insomnia",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Find a movie similar to Braveheart, Dances with Wolves, The Shawshank Redemption, The Usual Suspects:\nOptions:\n(A) 3000 Miles to Graceland\n(B) Crimson Tide\n(C) Best Men\n(D) A Very Harold & Kumar 3D Christmas",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Find a movie similar to Aladdin, Terminator 2 Judgment Day, Batman, The Mask:\nOptions:\n(A) WarGames\n(B) King Kong\n(C) Foreign Correspondent\n(D) Pretty Woman",
+        "prediction": "(a)",
+        "true_answer": "(d)"
+      }
+    ]
+  },
+  {
+    "task": "multistep_arithmetic_two",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 1.6667,
+    "ft_time": 14.5894,
+    "eval_time": 5.3302,
+    "examples": [
+      {
+        "question": "((-9 - -9 + 0 + -3) + (-2 - -1 - 1 + 2)) =",
+        "prediction": "-3",
+        "true_answer": "-3"
+      },
+      {
+        "question": "((3 - 3 - -3 + -2) + (8 - 2 + -8 - -6)) =",
+        "prediction": "6",
+        "true_answer": "5"
+      },
+      {
+        "question": "((1 - 7 - -8 * 3) + (-7 - -2 + -3 * 6)) =",
+        "prediction": "-24",
+        "true_answer": "-5"
+      },
+      {
+        "question": "((-8 + 6 - 8 * -9) - (9 - 9 * -2 + -1)) =",
+        "prediction": "77",
+        "true_answer": "44"
+      },
+      {
+        "question": "((-3 * 0 * 4 - -7) + (-9 * -6 - -8 + 1)) =",
+        "prediction": "53",
+        "true_answer": "70"
+      }
+    ]
+  },
+  {
+    "task": "navigate",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 57.0833,
+    "ft_time": 14.0724,
+    "eval_time": 9.3463,
+    "examples": [
+      {
+        "question": "If you follow these instructions, do you return to the starting point? Take 10 steps. Turn around. Take 4 steps. Take 6 steps. Turn around.\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "If you follow these instructions, do you return to the starting point? Take 7 steps. Take 7 steps. Take 10 steps. Take 1 step. Turn left. Take 7 steps.\nOptions:\n- Yes\n- No",
+        "prediction": "no",
+        "true_answer": "no"
+      },
+      {
+        "question": "If you follow these instructions, do you return to the starting point? Take 7 steps. Turn right. Turn right. Take 6 steps. Turn right.\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "no"
+      },
+      {
+        "question": "If you follow these instructions, do you return to the starting point? Take 8 steps. Take 1 step. Turn left. Turn left. Take 9 steps.\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "If you follow these instructions, do you return to the starting point? Always face forward. Take 2 steps forward. Take 2 steps backward.\nOptions:\n- Yes\n- No",
+        "prediction": "yes",
+        "true_answer": "yes"
+      }
+    ]
+  },
+  {
+    "task": "object_counting",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 55.4167,
+    "ft_time": 14.4212,
+    "eval_time": 5.9023,
+    "examples": [
+      {
+        "question": "I have a drum, an accordion, and a violin. How many musical instruments do I have?",
+        "prediction": "3",
+        "true_answer": "3"
+      },
+      {
+        "question": "I have an orange, three strawberries, an apple, three bananas, three raspberries, a peach, a blackberry, a grape, a plum, and two nectarines. How many fruits do I have?",
+        "prediction": "13",
+        "true_answer": "17"
+      },
+      {
+        "question": "I have a yam, a cauliflower, a bed, two cabbages, a garlic, an oven, a carrot, a head of broccoli, a potato, a stalk of celery, a lettuce head, and a toaster. How many vegetables do I have?",
+        "prediction": "11",
+        "true_answer": "10"
+      },
+      {
+        "question": "I have a lettuce head, a cauliflower, a yam, two cabbages, four heads of broccoli, a potato, a garlic, a carrot, a stalk of celery, and an onion. How many vegetables do I have?",
+        "prediction": "11",
+        "true_answer": "14"
+      },
+      {
+        "question": "I have three oranges, a pig, a frog, a cow, three bananas, a nectarine, and a snail. How many animals do I have?",
+        "prediction": "6",
+        "true_answer": "4"
+      }
+    ]
+  },
+  {
+    "task": "penguins_in_a_table",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 45.5882,
+    "ft_time": 14.9566,
+    "eval_time": 14.0567,
+    "examples": [
+      {
+        "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nWe then delete the penguin named Bernard from the table.\nWhat is the cumulated weight of the penguins?\nOptions:\n(A) 37\n(B) 49\n(C) 50\n(D) 62\n(E) 63",
+        "prediction": "(c)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nWe then delete the penguin named Bernard from the table.\nHow many animals are listed in the table?\nOptions:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5",
+        "prediction": "(c)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We then delete the penguin named Bernard from the table.\nWhich is the oldest penguin?\nOptions:\n(A) Louis\n(B) Bernard\n(C) Vincent\n(D) Gwen\n(E) James",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  Which penguin is younger than Vincent and older than Louis?\nOptions:\n(A) Louis\n(B) Bernard\n(C) Vincent\n(D) Gwen\n(E) James",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Here is a table where the first line is a header and each subsequent line is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard, 5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis is 7, the weight of Gwen is 15 kg, the height of Bernard is 80 cm.  We now add a penguin to the table:\nJames, 12, 90, 12\nWe then delete the penguin named Bernard from the table.\nHow many penguins are less than 10 years old?\nOptions:\n(A) 1\n(B) 2\n(C) 3\n(D) 4\n(E) 5",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      }
+    ]
+  },
+  {
+    "task": "reasoning_about_colored_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 56.6667,
+    "ft_time": 14.551,
+    "eval_time": 18.7962,
+    "examples": [
+      {
+        "question": "On the desk, you see several things arranged in a row: a fuchsia pencil, a mauve stress ball, a blue teddy bear, and a gold necklace. What is the color of the thing directly to the right of the mauve thing?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "On the table, you see a bunch of items arranged in a row: a mauve sheet of paper, a purple booklet, and a blue necklace. What is the color of the left-most item?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+        "prediction": "(i)",
+        "true_answer": "(i)"
+      },
+      {
+        "question": "On the table, you see a green pencil and a mauve dog leash. What color is the pencil?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "On the desk, you see a bunch of objects arranged in a row: a silver puzzle, a green keychain, and a fuchsia envelope. What is the color of the left-most object?\nOptions:\n(A) red\n(B) orange\n(C) yellow\n(D) green\n(E) blue\n(F) brown\n(G) magenta\n(H) fuchsia\n(I) mauve\n(J) teal\n(K) turquoise\n(L) burgundy\n(M) silver\n(N) gold\n(O) black\n(P) grey\n(Q) purple\n(R) pink",
+        "prediction": "(m)",
+        "true_answer": "(m)"
+      },
+      {
+        "question": "On the nightstand, you see a brown notebook, a yellow keychain, an orange fidget spinner, a purple pen, and a blue bracelet. How many items are neither red nor brown?\nOptions:\n(A) zero\n(B) one\n(C) two\n(D) three\n(E) four\n(F) five\n(G) six",
+        "prediction": "(e)",
+        "true_answer": "(e)"
+      }
+    ]
+  },
+  {
+    "task": "ruin_names",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 87.0833,
+    "ft_time": 14.0232,
+    "eval_time": 9.6326,
+    "examples": [
+      {
+        "question": "Which of the following is a humorous edit of this artist or movie name: 'free willy'?\nOptions:\n(A) frre willy\n(B) freeh willy\n(C) tree willy\n(D) frees willy",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Which of the following is a humorous edit of this artist or movie name: 'the godfather'?\nOptions:\n(A) the godfathers\n(B) uthe godfather\n(C) the gondfather\n(D) the bodfather",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Which of the following is a humorous edit of this artist or movie name: 'a few good men'?\nOptions:\n(A) a few goofd men\n(B) a few food men\n(C) ad few good men\n(D) a fewagood men",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Which of the following is a humorous edit of this artist or movie name: 'weezer'?\nOptions:\n(A) weezej\n(B) weepzer\n(C) tweezer\n(D) wemezer",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Which of the following is a humorous edit of this artist or movie name: 'breaking benjamin'?\nOptions:\n(A) breaking benjamins\n(B) breaking benjaqmin\n(C) reaking benjamin\n(D) breaking oenjamin",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      }
+    ]
+  },
+  {
+    "task": "salient_translation_error_detection",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 44.1667,
+    "ft_time": 15.3396,
+    "eval_time": 39.5112,
+    "examples": [
+      {
+        "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Elbenberg ist ein Stadtteil der nordhessischen Kleinstadt Naumburg im Landkreis Kassel.\nTranslation: Elbenberg is a district of Naumburg in the district of Tossel in northern Hesse, Germany.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+        "prediction": "(e)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Bry-sur-Marne ist eine franz\u00f6sische Gemeinde im Gro\u00dfraum Paris, etwa 12 km in \u00f6stlicher Richtung vom Zentrum der Metropole entfernt.\nTranslation: Bry-sur-Marne is a commune in the greater Paris area, about 12 mm east of the city centre.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Richard Raphael Roland Risse war ein deutscher Historien-, Genre- und Bildnismaler der D\u00fcsseldorfer Schule.\nTranslation: Risse was a German historical, genre and portrait painter of the D\u00fcsseldorf School.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+        "prediction": "(e)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Gret Haller ist eine Schweizer Publizistin und ehemalige Politikerin.\nTranslation: Gret Haller is a Canadian publicist and former politician.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+        "prediction": "(d)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "The following translations from German to English contain a particular error. That error will be one of the following types: Named Entities: An entity (names, places, locations, etc.) is changed to a different entity. Numerical Values: Numerical values (ordinals or cardinals), dates, and/or units are changed. Modifiers or Adjectives: The modifiers and adjectives pertaining to a noun are changed. Negation or Antonyms: Introduce or remove a negation or change comparatives to their antonyms. Facts: Trivial factual errors not pertaining to the above classes are introduced in the translations. Dropped Content: A significant clause in the translation is removed. Please identify that error.  Source: Schwechat ist eine Stadtgemeinde mit 19.570 Einwohnern s\u00fcd\u00f6stlich von Wien, am Fluss Schwechat.\nTranslation: Schwechat is a municipality on the dam Schwechat.\nThe translation contains an error pertaining to\nOptions:\n(A) Modifiers or Adjectives\n(B) Numerical Values\n(C) Negation or Antonyms\n(D) Named Entities\n(E) Dropped Content\n(F) Facts",
+        "prediction": "(f)",
+        "true_answer": "(f)"
+      }
+    ]
+  },
+  {
+    "task": "snarks",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 82.1429,
+    "ft_time": 14.4617,
+    "eval_time": 5.589,
+    "examples": [
+      {
+        "question": "Which statement is sarcastic?\nOptions:\n(A) We all know diamonds are worthless\n(B) We all know diamonds are valuable",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Which statement is sarcastic?\nOptions:\n(A) Just like we're all better off for not spinning our own clothes, mining our own steel, and forging our own tools\n(B) Just like we're all worse off for not spinning our own clothes, mining our own steel, and forging our own tools",
+        "prediction": "(a)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Which statement is sarcastic?\nOptions:\n(A) You forget, he was just a fresh-faced 40 year old\n(B) You forget, he was just a fresh-faced 18 year old",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Which statement is sarcastic?\nOptions:\n(A) Hmm, stifling of free speech and political opinions . . . I've seen that before\n(B) Hmm, stifling of free speech and political opinions . . . never seen that before",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Which statement is sarcastic?\nOptions:\n(A) You're welcome my dear friend. Always glad to feed the elephants, that woefully endangered species\n(B) You're welcome my dear friend. Always glad to feed the trolls, that woefully endangered species",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      }
+    ]
+  },
+  {
+    "task": "sports_understanding",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 73.3333,
+    "ft_time": 14.2754,
+    "eval_time": 3.9184,
+    "examples": [
+      {
+        "question": "Is the following sentence plausible? \"LaMelo Ball launched the half court shot in the Western Conference Finals.\"",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "Is the following sentence plausible? \"Delon Wright went for it on fourth down.\"",
+        "prediction": "yes",
+        "true_answer": "no"
+      },
+      {
+        "question": "Is the following sentence plausible? \"Gerard Pique scored a corner kick.\"",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "Is the following sentence plausible? \"Drew Brees was flagged on the play.\"",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "Is the following sentence plausible? \"Robert Woods converted the first down.\"",
+        "prediction": "yes",
+        "true_answer": "yes"
+      }
+    ]
+  },
+  {
+    "task": "temporal_sequences",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 99.5833,
+    "ft_time": 14.7408,
+    "eval_time": 26.2653,
+    "examples": [
+      {
+        "question": "Today, David went to the gas station. Between what times could they have gone?\nWe know that:\nDavid woke up at 7am.\nMichael saw David waiting at the train station from 7am to 12pm.\nThomas saw David sitting on a rooftop from 12pm to 2pm.\nTiffany saw David getting a coffee at the cafe from 2pm to 3pm.\nJames saw David fixing their computer at the electronic store from 3pm to 5pm.\nMark saw David reading at the library from 5pm to 6pm.\nThe gas station was closed after 8pm.\nBetween what times could David have gone to the gas station?\nOptions:\n(A) 2pm to 3pm\n(B) 6pm to 8pm\n(C) 5pm to 6pm\n(D) 7am to 12pm",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Today, Richard went to the coffee shop. Between what times could they have gone?\nWe know that:\nRichard woke up at 10am.\nJason saw Richard waiting at the train station from 10am to 12pm.\nSean saw Richard walking in the garden from 12pm to 3pm.\nDavid saw Richard fixing their computer at the electronic store from 3pm to 5pm.\nThe coffee shop was closed after 7pm.\nBetween what times could Richard have gone to the coffee shop?\nOptions:\n(A) 5pm to 7pm\n(B) 3pm to 5pm\n(C) 12pm to 3pm\n(D) 10am to 12pm",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Today, William went to the art studio. Between what times could they have gone?\nWe know that:\nWilliam woke up at 6am.\nWilliam saw William working out at the gym from 6am to 7am.\nSean saw William taking photos near the Eiffel Tower from 9am to 12pm.\nSusan saw William working at the office from 12pm to 8pm.\nNancy saw William buying a bike at the bike shop from 8pm to 10pm.\nThe art studio was closed after 10pm.\nBetween what times could William have gone to the art studio?\nOptions:\n(A) 8pm to 10pm\n(B) 9am to 12pm\n(C) 6am to 7am\n(D) 7am to 9am",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Today, Kimberly went to the football field. Between what times could they have gone?\nWe know that:\nKimberly woke up at 6am.\nWilliam saw Kimberly buying a phone at the electronics store from 6am to 8am.\nJason saw Kimberly waiting at the train station from 8am to 9am.\nTiffany saw Kimberly walking towards the Statue of Liberty from 9am to 1pm.\nLinda saw Kimberly stretching at a yoga studio from 3pm to 8pm.\nSean saw Kimberly driving to the water park from 8pm to 9pm.\nThe football field was closed after 9pm.\nBetween what times could Kimberly have gone to the football field?\nOptions:\n(A) 8am to 9am\n(B) 9am to 1pm\n(C) 1pm to 3pm\n(D) 8pm to 9pm",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Today, Andrew went to the coffee shop. Between what times could they have gone?\nWe know that:\nAndrew woke up at 8am.\nElizabeth saw Andrew fixing their computer at the electronic store from 11am to 3pm.\nJennifer saw Andrew buying a bike at the bike shop from 3pm to 4pm.\nAnthony saw Andrew buying cookies at a bakery from 4pm to 6pm.\nBetty saw Andrew watching a movie at the theater from 6pm to 8pm.\nThe coffee shop was closed after 8pm.\nBetween what times could Andrew have gone to the coffee shop?\nOptions:\n(A) 3pm to 4pm\n(B) 6pm to 8pm\n(C) 8am to 11am\n(D) 11am to 3pm",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      }
+    ]
+  },
+  {
+    "task": "tracking_shuffled_objects_five_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 19.1667,
+    "ft_time": 14.707,
+    "eval_time": 25.9912,
+    "examples": [
+      {
+        "question": "Alice, Bob, Claire, Dave, and Eve are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a pink ball, Bob has a red present, Claire has a green present, Dave has a orange ball, and Eve has a black ball.\nAs the event progresses, pairs of people swap gifts. First, Alice and Dave swap their gifts. Then, Dave and Eve swap their gifts. Then, Dave and Alice swap their gifts. Then, Bob and Claire swap their gifts. Finally, Bob and Eve swap their gifts. At the end of the event, Bob has the\nOptions:\n(A) pink ball\n(B) red present\n(C) green present\n(D) orange ball\n(E) black ball",
+        "prediction": "(e)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Jamie, Bob is dancing with Patrick, Claire is dancing with Karl, Dave is dancing with Helga, and Eve is dancing with Izzi.\nThroughout the song, the dancers often trade partners. First, Claire and Alice switch partners. Then, Alice and Dave switch partners. Then, Alice and Bob switch partners. Then, Bob and Eve switch partners. Finally, Dave and Bob switch partners. At the end of the dance, Eve is dancing with\nOptions:\n(A) Jamie\n(B) Patrick\n(C) Karl\n(D) Helga\n(E) Izzi",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, and Eve are playing a game. At the start of the game, they are each holding a ball: Alice has a brown ball, Bob has a purple ball, Claire has a black ball, Dave has a green ball, and Eve has a yellow ball.\nAs the game progresses, pairs of players trade balls. First, Claire and Alice swap balls. Then, Bob and Alice swap balls. Then, Eve and Dave swap balls. Then, Dave and Claire swap balls. Finally, Alice and Bob swap balls. At the end of the game, Claire has the\nOptions:\n(A) brown ball\n(B) purple ball\n(C) black ball\n(D) green ball\n(E) yellow ball",
+        "prediction": "(d)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Ophelia, Bob is dancing with Izzi, Claire is dancing with Helga, Dave is dancing with Patrick, and Eve is dancing with Lola.\nThroughout the song, the dancers often trade partners. First, Eve and Claire switch partners. Then, Claire and Dave switch partners. Then, Claire and Alice switch partners. Then, Bob and Alice switch partners. Finally, Dave and Claire switch partners. At the end of the dance, Dave is dancing with\nOptions:\n(A) Ophelia\n(B) Izzi\n(C) Helga\n(D) Patrick\n(E) Lola",
+        "prediction": "(d)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Great Gatsby, Bob gets The Pearl, Claire gets Ulysses, Dave gets Hound of the Baskervilles, and Eve gets Moby Dick.\nAs the semester proceeds, they start trading around the new books. First, Dave and Claire swap books. Then, Claire and Eve swap books. Then, Alice and Claire swap books. Then, Claire and Bob swap books. Finally, Dave and Eve swap books. At the end of the semester, Claire has\nOptions:\n(A) The Great Gatsby\n(B) The Pearl\n(C) Ulysses\n(D) Hound of the Baskervilles\n(E) Moby Dick",
+        "prediction": "(e)",
+        "true_answer": "(b)"
+      }
+    ]
+  },
+  {
+    "task": "tracking_shuffled_objects_seven_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 21.25,
+    "ft_time": 15.8292,
+    "eval_time": 34.66,
+    "examples": [
+      {
+        "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Great Gatsby, Bob gets Catch-22, Claire gets The Fellowship of the Ring, Dave gets Ulysses, Eve gets Frankenstein, Fred gets The Pearl, and Gertrude gets The Odyssey.\nAs the semester proceeds, they start trading around the new books. First, Fred and Alice swap books. Then, Gertrude and Eve swap books. Then, Alice and Eve swap books. Then, Dave and Gertrude swap books. Then, Gertrude and Claire swap books. Then, Alice and Claire swap books. Finally, Dave and Bob swap books. At the end of the semester, Dave has\nOptions:\n(A) The Great Gatsby\n(B) Catch-22\n(C) The Fellowship of the Ring\n(D) Ulysses\n(E) Frankenstein\n(F) The Pearl\n(G) The Odyssey",
+        "prediction": "(b)",
+        "true_answer": "(b)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Ulysses, Bob gets Frankenstein, Claire gets Moby Dick, Dave gets The Odyssey, Eve gets The Great Gatsby, Fred gets Lolita, and Gertrude gets The Pearl.\nAs the semester proceeds, they start trading around the new books. First, Bob and Claire swap books. Then, Eve and Alice swap books. Then, Alice and Dave swap books. Then, Gertrude and Dave swap books. Then, Alice and Bob swap books. Then, Eve and Claire swap books. Finally, Alice and Fred swap books. At the end of the semester, Gertrude has\nOptions:\n(A) Ulysses\n(B) Frankenstein\n(C) Moby Dick\n(D) The Odyssey\n(E) The Great Gatsby\n(F) Lolita\n(G) The Pearl",
+        "prediction": "(d)",
+        "true_answer": "(e)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are playing a game. At the start of the game, they are each holding a ball: Alice has a black ball, Bob has a green ball, Claire has a white ball, Dave has a red ball, Eve has a brown ball, Fred has a purple ball, and Gertrude has a orange ball.\nAs the game progresses, pairs of players trade balls. First, Bob and Claire swap balls. Then, Dave and Eve swap balls. Then, Fred and Bob swap balls. Then, Dave and Gertrude swap balls. Then, Fred and Bob swap balls. Then, Gertrude and Fred swap balls. Finally, Alice and Fred swap balls. At the end of the game, Eve has the\nOptions:\n(A) black ball\n(B) green ball\n(C) white ball\n(D) red ball\n(E) brown ball\n(F) purple ball\n(G) orange ball",
+        "prediction": "(d)",
+        "true_answer": "(d)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing fullback, Bob is playing benchwarmer, Claire is playing cheerleader, Dave is playing left midfielder, Eve is playing right winger, Fred is playing left winger, and Gertrude is playing goalkeeper.\nAs the game progresses, pairs of players occasionally swap positions. First, Eve and Bob trade positions. Then, Gertrude and Bob trade positions. Then, Bob and Dave trade positions. Then, Gertrude and Dave trade positions. Then, Bob and Claire trade positions. Then, Fred and Bob trade positions. Finally, Alice and Eve trade positions. At the end of the match, Gertrude is playing\nOptions:\n(A) fullback\n(B) benchwarmer\n(C) cheerleader\n(D) left midfielder\n(E) right winger\n(F) left winger\n(G) goalkeeper",
+        "prediction": "(e)",
+        "true_answer": "(g)"
+      },
+      {
+        "question": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Jamie, Bob is dancing with Ophelia, Claire is dancing with Lola, Dave is dancing with Patrick, Eve is dancing with Rodrigo, Fred is dancing with Melissa, and Gertrude is dancing with Karl.\nThroughout the song, the dancers often trade partners. First, Eve and Dave switch partners. Then, Fred and Eve switch partners. Then, Alice and Gertrude switch partners. Then, Dave and Bob switch partners. Then, Alice and Claire switch partners. Then, Alice and Gertrude switch partners. Finally, Bob and Claire switch partners. At the end of the dance, Gertrude is dancing with\nOptions:\n(A) Jamie\n(B) Ophelia\n(C) Lola\n(D) Patrick\n(E) Rodrigo\n(F) Melissa\n(G) Karl",
+        "prediction": "(d)",
+        "true_answer": "(c)"
+      }
+    ]
+  },
+  {
+    "task": "tracking_shuffled_objects_three_objects",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 28.75,
+    "ft_time": 14.3656,
+    "eval_time": 18.2692,
+    "examples": [
+      {
+        "question": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a pink ball, Bob has a orange ball, and Claire has a white present.\nAs the event progresses, pairs of people swap gifts. First, Bob and Claire swap their gifts. Then, Alice and Claire swap their gifts. Finally, Bob and Claire swap their gifts. At the end of the event, Bob has the\nOptions:\n(A) pink ball\n(B) orange ball\n(C) white present",
+        "prediction": "(c)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a yellow present, Bob has a orange ball, and Claire has a green present.\nAs the event progresses, pairs of people swap gifts. First, Claire and Bob swap their gifts. Then, Alice and Claire swap their gifts. Finally, Bob and Alice swap their gifts. At the end of the event, Alice has the\nOptions:\n(A) yellow present\n(B) orange ball\n(C) green present",
+        "prediction": "(a)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Alice, Bob, and Claire are playing a game. At the start of the game, they are each holding a ball: Alice has a purple ball, Bob has a yellow ball, and Claire has a orange ball.\nAs the game progresses, pairs of players trade balls. First, Claire and Bob swap balls. Then, Bob and Alice swap balls. Finally, Claire and Bob swap balls. At the end of the game, Claire has the\nOptions:\n(A) purple ball\n(B) yellow ball\n(C) orange ball",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      },
+      {
+        "question": "Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing left winger, Bob is playing fullback, and Claire is playing right winger.\nAs the game progresses, pairs of players occasionally swap positions. First, Alice and Claire trade positions. Then, Alice and Bob trade positions. Finally, Claire and Alice trade positions. At the end of the match, Bob is playing\nOptions:\n(A) left winger\n(B) fullback\n(C) right winger",
+        "prediction": "(c)",
+        "true_answer": "(c)"
+      },
+      {
+        "question": "Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Lola, Bob is dancing with Patrick, and Claire is dancing with Melissa.\nThroughout the song, the dancers often trade partners. First, Alice and Claire switch partners. Then, Bob and Claire switch partners. Finally, Claire and Alice switch partners. At the end of the dance, Bob is dancing with\nOptions:\n(A) Lola\n(B) Patrick\n(C) Melissa",
+        "prediction": "(a)",
+        "true_answer": "(a)"
+      }
+    ]
+  },
+  {
+    "task": "web_of_lies",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 51.6667,
+    "ft_time": 14.7964,
+    "eval_time": 8.3568,
+    "examples": [
+      {
+        "question": "Question: Leda tells the truth. Alexis says Leda lies. Sal says Alexis lies. Phoebe says Sal tells the truth. Gwenn says Phoebe tells the truth. Does Gwenn tell the truth?",
+        "prediction": "yes",
+        "true_answer": "yes"
+      },
+      {
+        "question": "Question: Kandi tells the truth. Michaela says Kandi lies. Vernell says Michaela lies. Antwan says Vernell tells the truth. Sal says Antwan lies. Does Sal tell the truth?",
+        "prediction": "no",
+        "true_answer": "no"
+      },
+      {
+        "question": "Question: Phoebe tells the truth. Christie says Phoebe tells the truth. Fletcher says Christie tells the truth. Amberly says Fletcher lies. Raymond says Amberly tells the truth. Does Raymond tell the truth?",
+        "prediction": "yes",
+        "true_answer": "no"
+      },
+      {
+        "question": "Question: Elanor lies. Tamika says Elanor lies. Ka says Tamika tells the truth. Shaunda says Ka lies. Conception says Shaunda lies. Does Conception tell the truth?",
+        "prediction": "no",
+        "true_answer": "yes"
+      },
+      {
+        "question": "Question: Jamey lies. Vernell says Jamey tells the truth. Millicent says Vernell lies. Rashida says Millicent tells the truth. Vina says Rashida tells the truth. Does Vina tell the truth?",
+        "prediction": "no",
+        "true_answer": "yes"
+      }
+    ]
+  },
+  {
+    "task": "word_sorting",
+    "TTT_exp_10_masked_inputs_text_completion_dataset_1_False_False_5_False_1_4_1e-4_64_64_0.05_3_accuracy": 56.25,
+    "ft_time": 13.8956,
+    "eval_time": 11.3533,
+    "examples": [
+      {
+        "question": "Sort the following words alphabetically: List: dynastic inflammable prick tristan vitiate tackle stagnate conglomerate nebulae phosphide",
+        "prediction": "conglomerate dynastic inflammable nebulae phosphide prick stagnate tackle tristan vitiate",
+        "true_answer": "conglomerate dynastic inflammable nebulae phosphide prick stagnate tackle tristan vitiate"
+      },
+      {
+        "question": "Sort the following words alphabetically: List: summand cure gloria tyke doubtful extoller entropy crackle procedural cottrell litigant bologna",
+        "prediction": "bologna crackle cottrell cure doubtful entropy extoller gloria litigant procedural summand tyke",
+        "true_answer": "bologna cottrell crackle cure doubtful entropy extoller gloria litigant procedural summand tyke"
+      },
+      {
+        "question": "Sort the following words alphabetically: List: shreveport gamut berg multiplexor bluish puerto subliminal",
+        "prediction": "berg bluish gamut multiplexor puerto shreveport subliminal",
+        "true_answer": "berg bluish gamut multiplexor puerto shreveport subliminal"
+      },
+      {
+        "question": "Sort the following words alphabetically: List: ecosystem cloudy ferret knotty",
+        "prediction": "cloudy ecosystem ferret knotty",
+        "true_answer": "cloudy ecosystem ferret knotty"
+      },
+      {
+        "question": "Sort the following words alphabetically: List: broaden envy",
+        "prediction": "broaden envy",
+        "true_answer": "broaden envy"
+      }
+    ]
+  }
+]

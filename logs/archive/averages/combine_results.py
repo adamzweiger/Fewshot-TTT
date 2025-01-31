@@ -12,7 +12,7 @@ to specify the input files explicitly.
 
 Example:
 cd ~/Fewshot-TTT/logs/archive/averages
-python3 combine_results.py 20250111_random_guessing.json 20250121_ZSL_average.json 20250121_FSL_10_average.json 20250121_FT_10_5_4_1e-4_64_64_0.05_average.json 20250121_ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05.json 
+python3 combine_results.py 20250111_random_guessing.json 20250121_ZSL_average.json 20250121_FSL_10_average.json 20250121_FT_10_5_4_1e-4_64_64_0.05_average.json 20250126_SHARED_E2E_exp_10_5_6_5e-5_64_64_0.05.json 20250121_ICFT_main_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_1e-4_64_64_0.05.json 20250126_SHARED_TTT_exp_10_masked_inputs_text_completion_dataset_40_True_False_5_False_5_1_5e-5_64_64_0.05.json
 """
 
 

@@ -1,6 +1,6 @@
 # Fewshot-TTT
 
-**Fewshot-TTT** is a repository for experimenting with test-time training for BIG-Bench-Hard tasks using **vLLM** for inference and **Torchtune** for **LoRA** finetuning.
+This repository is an implementation of test-time training for few-shot learning using **vLLM** for inference and **Torchtune** for **LoRA** finetuning.
 
 ## Repository Structure
 
@@ -24,8 +24,8 @@ TTT/
 │   ├── graphResults.py          # Utility for graphing results
 │   └── methods/
 │       ├── baseline.py          # Zero-/few-shot baseline
-│       ├── ft.py                # Finetuning without ICL (E2E)
-│       └── icft.py              # Main TTT method (in-context fine-tuning)
+│       ├── e2e.py               # Direct I/O finetuning without ICL
+│       └── ttt.py               # Main TTT method (in-context fine-tuning)
 │
 ├── README.md                    # Project documentation
 └── requirements.txt             # List of dependencies
